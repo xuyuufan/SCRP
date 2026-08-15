@@ -10,6 +10,7 @@ from experiments import (
     save_protocol_config,
     save_split_manifest,
 )
+from scrp import SCRPConfig, SCRPEnvironment, load_instance_json
 
 
 MANIFEST_PATH = "experiments/splits/scrp_split_v1.json"
@@ -98,6 +99,27 @@ def test_test_seeds_are_fixed_and_ds1_ds2_share_base_schedule():
     seeds = schedule.seeds("test", ref.base_instance_id, 50)
     assert seeds == schedule.seeds("test", ref.base_instance_id, 50)
     assert len(seeds) == len(set(seeds)) == 50
+
+
+def test_crn_scenario_ids_pair_within_variant_not_across_ds1_ds2():
+    ds1 = load_instance_json("data/phase3_sanity/S05_T03_mu050/ds1_001.json")
+    ds2 = load_instance_json("data/phase3_sanity/S05_T03_mu050/ds2_001.json")
+    scenario_seed = 3_000_000_000_000
+
+    def paired_algorithm_ids(instance):
+        config = SCRPConfig(instance.num_stacks, instance.max_tiers)
+        first_algorithm_env = SCRPEnvironment(config, instance)
+        second_algorithm_env = SCRPEnvironment(config, instance)
+        first_algorithm_env.reset(seed=scenario_seed)
+        second_algorithm_env.reset(seed=scenario_seed)
+        return first_algorithm_env.scenario_id, second_algorithm_env.scenario_id
+
+    ds1_first, ds1_second = paired_algorithm_ids(ds1)
+    ds2_first, ds2_second = paired_algorithm_ids(ds2)
+
+    assert ds1_first == ds1_second
+    assert ds2_first == ds2_second
+    assert ds1_first != ds2_first
 
 
 def test_manifest_save_load_is_identical(tmp_path):
