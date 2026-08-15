@@ -1,0 +1,52 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+
+# Python caches, environments, and build products
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary runtime and experiment artifacts
+logs/
+tmp/
+temp/
+outputs/
+runs/
+wandb/
+checkpoints/
+*.log
+
+# Model checkpoints are ignored unless explicitly reviewed for reproducibility.
+*.pt
+*.pth
+*.ckpt
+!scrp/trained_models/scrp_phase_2_5_sanity.pt
