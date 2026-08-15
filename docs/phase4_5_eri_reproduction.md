@@ -128,6 +128,9 @@ Invalid actions and truncated episodes were both zero. ERI and the Phase 4
 MinBlockingGreedy rule are mathematically equivalent under the present public
 state model, so their matching development traces are expected. The ERI name
 adds audited published provenance; it does not create a stronger rule.
+Consequently, `MinBlockingGreedyBaseline` and `ERIBaseline` must not be treated
+as two independent strong baselines in formal reporting; they are two labels
+for the same current public-precedence scoring rule, with different provenance.
 
 **NOT A PERFORMANCE RESULT.** This small training-split development subset is
 only a pipeline/fidelity check. It supports no statistical-significance,
