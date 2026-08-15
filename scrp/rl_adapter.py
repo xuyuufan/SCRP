@@ -9,7 +9,7 @@ import numpy as np
 
 from .environment import SCRPEnvironment
 from .models import SCRPState
-from .observation import O1ObservationAdapter
+from .observation import O1ObservationAdapter, O2ObservationAdapter, SCRP_O2_MMAX
 
 
 @dataclass(frozen=True)
@@ -34,11 +34,30 @@ class SCRPRLAdapter:
         self,
         core_env: SCRPEnvironment,
         observation_adapter: Optional[O1ObservationAdapter] = None,
+        *,
+        observation_version: str = "O1",
+        o2_mmax: int = SCRP_O2_MMAX,
     ) -> None:
         self.core_env = core_env
-        self.observation_adapter = observation_adapter or O1ObservationAdapter(
-            core_env.instance, core_env.config
-        )
+        if observation_adapter is not None:
+            if observation_version != "O1":
+                raise ValueError(
+                    "observation_version cannot be combined with a custom adapter"
+                )
+            self.observation_adapter = observation_adapter
+            self.observation_version = getattr(observation_adapter, "VERSION", "O1")
+        elif observation_version == "O1":
+            self.observation_adapter = O1ObservationAdapter(
+                core_env.instance, core_env.config
+            )
+            self.observation_version = "O1"
+        elif observation_version == "O2":
+            self.observation_adapter = O2ObservationAdapter(
+                core_env.instance, core_env.config, mmax=o2_mmax
+            )
+            self.observation_version = "O2"
+        else:
+            raise ValueError("observation_version must be O1 or O2")
         self.action_space = _DiscreteActionSpace(core_env.instance.num_stacks)
 
     def reset(self, seed: Optional[int] = None) -> Tuple[np.ndarray, Dict[str, Any]]:
@@ -73,6 +92,22 @@ class SCRPRLAdapter:
             "terminated": state.terminated,
             "scenario_id": self.core_env.scenario_id,
         }
+
+    def get_observation_metadata(self, dataset_version: str) -> Dict[str, Any]:
+        if not dataset_version:
+            raise ValueError("dataset_version must be non-empty")
+        metadata = {
+            "problem_type": "SCRP",
+            "observation_version": self.observation_version,
+            "num_stacks": self.core_env.instance.num_stacks,
+            "max_tiers": self.core_env.instance.max_tiers,
+            "feature_dim": self.observation_adapter.FEATURES_PER_NODE,
+            "decision_mode": "low",
+            "dataset_version": dataset_version,
+        }
+        if self.observation_version == "O2":
+            metadata["Mmax"] = self.observation_adapter.mmax
+        return metadata
 
     def get_state_snapshot(self) -> Dict[str, Any]:
         state = self.core_env.state

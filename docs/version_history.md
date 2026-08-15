@@ -2,6 +2,7 @@
 
 | Phase | Git Branch | Git Tag | Main Changes | Tests | Status |
 |---|---|---|---|---|---|
+| Phase 5 | `phase/scrp-phase-5-o2` | — | O2 full revealed-order observation, audited Mmax=6, O1/O2 versioning and network smoke integration | 147 passed (20 Phase 5 cases) | Observation implementation; PR pending |
 | Phase 4.5 | `phase/scrp-phase-4.5-eri` | — | Clean-room published ERI reproduction, golden fidelity cases, four-algorithm CRN development check | 127 passed (16 Phase 4.5 cases) | Fidelity-audited; PR pending |
 | Phase 4 | `phase/scrp-phase-4-baselines` | — | Leakage-safe Tier 0 baselines, unified rollout/evaluation, paired development verification | 110 passed (16 Phase 4 cases) | Validated development baseline layer; PR pending |
 | Phase 3.5 | `phase/scrp-phase-3.5` | — | Frozen static split, DS1/DS2 linkage, scenario schedule, and formal evaluation protocol | 94 passed | Validated protocol design; untagged |

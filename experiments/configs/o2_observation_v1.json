@@ -1,0 +1,6 @@
+{
+  "observation_version": "O2",
+  "feature_dim": 12,
+  "Mmax": 6,
+  "dataset_version": "ku-galle-bacci-ds1-ds2-ec672df"
+}
