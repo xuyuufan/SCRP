@@ -46,10 +46,16 @@ validation split_base = 2,000,000,000,000
 test split_base       = 3,000,000,000,000
 ```
 
-The three streams are disjoint, deterministic, and auditable. DS1 and DS2
-variants of one base layout use the same root seeds. Every compared algorithm
-must use the same `(instance_id, scenario_seed)` so the existing sampler yields
-the same `scenario_id` and hidden permutations for that static instance.
+The three streams are disjoint, deterministic, and auditable.
+
+**Common Random Numbers scope.** DS1 and DS2 variants of one base layout may
+reuse the same numeric root-seed schedule for reproducibility, but their batch
+structures differ and therefore define different stochastic scenario spaces.
+CRN pairing is defined only across algorithms evaluated on the same dataset and
+static variant: those algorithms must use the same `(instance_id,
+scenario_seed)` and obtain the same `scenario_id`. A DS1 scenario and its
+corresponding DS2 scenario are not a CRN pair, and matching `scenario_id` values
+between DS1 and DS2 are neither required nor implied.
 
 Training uses a dynamic large pool: `scenario_index` is the per-base visit
 number, so revisiting a layout yields a new scenario without materializing
