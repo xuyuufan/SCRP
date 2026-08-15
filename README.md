@@ -1,10 +1,20 @@
 # SCRP
 
 Research code for the Stochastic Container Relocation Problem (SCRP). The
-current checkpoint contains the SCRP core environment, partial-information
-scenario handling, the O1 observation/RL adapter, and the Phase 2.5 LOW-only
-policy-gradient sanity-training path built on the existing hierarchical policy
-network.
+current worktree contains the SCRP core environment, partial-information
+scenario handling, the O1 observation/RL adapter, the Phase 2.5 LOW-only
+policy-gradient sanity-training path, and the Phase 3 paper-instance data
+loader/schema built on the original Ku/Galle benchmark files.
+
+## Paper instances
+
+The Phase 3 audit, Ku-to-Galle-to-Bacci dataset mapping, static JSON schema,
+source findings, and small reproduction results are documented in
+[`docs/phase3_dataset_reproduction.md`](docs/phase3_dataset_reproduction.md).
+The public API in `scrp.datasets` parses original Ku CRPTW text files, derives
+Galle/Bacci DS2 by merging adjacent batches, and saves scenario-free static
+instances. A small converted set and separate scenario rollout report live in
+[`data/phase3_sanity`](data/phase3_sanity).
 
 ## Validation
 

@@ -1,0 +1,68 @@
+{
+  "schema_version": "scrp-static-instance-v1",
+  "instance_id": "ku2016-T271014_0503_003",
+  "source_dataset": "Ku2016_CRPTW_Galle2017_existing_Bacci2022_DS1",
+  "num_stacks": 5,
+  "max_tiers": 3,
+  "num_containers": 8,
+  "batch_order": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "stacks": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7
+    ],
+    [
+      8
+    ]
+  ],
+  "container_batch": {
+    "1": 4,
+    "2": 3,
+    "3": 3,
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 1,
+    "8": 2
+  },
+  "metadata": {
+    "paper": [
+      "Ku & Arthanari (2016)",
+      "Galle et al. (2017/2018)",
+      "Bacci et al. (2022)"
+    ],
+    "original_instance_id": "T271014_0503_003",
+    "converted_instance_id": "ku2016-T271014_0503_003",
+    "original_file": "T271014_0503_003.txt",
+    "parameter_group": "S05_T03_mu0.5",
+    "fill_rate": 0.5,
+    "original_bay_id": 1,
+    "original_header_field_6": 4,
+    "observed_num_time_windows": 4,
+    "original_label_to_batch": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4
+    },
+    "id_assignment_rule": "stack-major, then bottom-to-top, consecutive integers from 1",
+    "stack_orientation": "bottom-to-top",
+    "source_row_rule": "first value of each validated-equal tier pair is the time-window label"
+  }
+}

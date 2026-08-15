@@ -2,6 +2,37 @@
 
 This file records research milestones rather than every file-level edit.
 
+## Phase 3 — 2026-08-15
+
+### Added
+
+- Added a strict parser for the exact Ku CRPTW benchmark text format and
+  deterministic stack-major/bottom-to-top container ID assignment.
+- Added the scenario-free `scrp-static-instance-v1` JSON schema, lossless
+  save/load functions, benchmark feasibility validation, and future-order
+  leakage rejection.
+- Added the exact Galle/Bacci DS2 adjacent-batch merge transformation
+  `w' = ceil(w/2)` without changing container identity or physical layout.
+- Added a paper reproduction audit and 18 small DS1/DS2 converted artifacts
+  covering three parameter groups, with scenario results stored separately.
+
+### Validation
+
+- Parsed all 1,440 public original files at Galle repository commit
+  `ec672df26dae12de42ba3c4e95a4a9002e4410f6`: 48 parameter groups and exactly
+  30 instances per group.
+- Saved/reloaded nine DS1 instances and their nine DS2 derivatives, then ran
+  random-legal and current LOW-network rollouts for three scenario seeds each;
+  all 54 pairs terminated and matched scenario IDs.
+- `82 passed` with `0 failed` and `0 skipped` (pytest runtime 12.11 seconds).
+
+### Notes
+
+- No paper-spec generator was added because exact source files are public and
+  the papers do not disclose enough RNG detail for bit-identical regeneration.
+- No baseline, formal training, hyperparameter tuning, or performance claim is
+  part of this phase.
+
 ## Phase 2.5 — 2026-08-15
 
 ### Added
