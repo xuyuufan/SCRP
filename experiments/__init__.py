@@ -14,6 +14,17 @@ from .protocol import (
     save_protocol_config,
     save_split_manifest,
 )
+from .evaluation import (
+    AlgorithmEpisode,
+    BaselineAlgorithm,
+    EvaluationCase,
+    LowPolicyAlgorithm,
+    RelocationSummary,
+    aggregate_relocations,
+    assert_paired_scenarios,
+    evaluate_algorithm_on_schedule,
+    save_raw_results,
+)
 
 __all__ = [
     "BaseInstanceRef",
@@ -28,4 +39,13 @@ __all__ = [
     "load_split_manifest",
     "save_protocol_config",
     "save_split_manifest",
+    "AlgorithmEpisode",
+    "BaselineAlgorithm",
+    "EvaluationCase",
+    "LowPolicyAlgorithm",
+    "RelocationSummary",
+    "aggregate_relocations",
+    "assert_paired_scenarios",
+    "evaluate_algorithm_on_schedule",
+    "save_raw_results",
 ]
