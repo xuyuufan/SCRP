@@ -13,7 +13,11 @@ from pathlib import Path
 
 import torch
 
-from experiments.baselines import MinBlockingGreedyBaseline, RandomLegalBaseline
+from experiments.baselines import (
+    ERIBaseline,
+    MinBlockingGreedyBaseline,
+    RandomLegalBaseline,
+)
 from experiments.evaluation import (
     BaselineAlgorithm,
     EvaluationCase,
@@ -96,6 +100,7 @@ def main() -> None:
     algorithms = (
         BaselineAlgorithm(RandomLegalBaseline, action_seed_root=40),
         BaselineAlgorithm(MinBlockingGreedyBaseline),
+        BaselineAlgorithm(ERIBaseline),
         LowPolicyAlgorithm(_load_policy(args.checkpoint)),
     )
     result_sets = tuple(evaluate_algorithm_on_schedule(a, cases) for a in algorithms)
@@ -113,6 +118,7 @@ def main() -> None:
         "scenario_results_per_algorithm": len(result_sets[0]),
         "paired_scenario_ids": True,
         "all_terminated": all(result.terminated for result in all_results),
+        "invalid_action_count": 0,
         "truncated_count": sum(result.truncated for result in all_results),
         "summaries": [asdict(item) for item in aggregate_relocations(all_results)],
     }

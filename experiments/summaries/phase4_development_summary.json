@@ -7,11 +7,13 @@
   "algorithms": [
     "random_legal_v1",
     "min_blocking_greedy_v1",
+    "eri_reproduction_v1",
     "current_o1_low"
   ],
   "scenario_results_per_algorithm": 72,
   "paired_scenario_ids": true,
   "all_terminated": true,
+  "invalid_action_count": 0,
   "truncated_count": 0,
   "summaries": [
     {
@@ -21,6 +23,14 @@
       "std": 2.521115832151238,
       "minimum": 0,
       "maximum": 10
+    },
+    {
+      "algorithm": "eri_reproduction_v1",
+      "count": 72,
+      "mean": 3.1944444444444446,
+      "std": 1.7168501201031727,
+      "minimum": 0,
+      "maximum": 6
     },
     {
       "algorithm": "min_blocking_greedy_v1",
