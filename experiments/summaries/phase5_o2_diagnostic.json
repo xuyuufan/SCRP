@@ -1,0 +1,55 @@
+{
+  "status": "diagnostic_only",
+  "training_performed": false,
+  "performance_claim": false,
+  "source_instance_count": 1440,
+  "Mmax_DS1": 4,
+  "Mmax_DS2": 6,
+  "Mmax_combined": 6,
+  "configured_Mmax": 6,
+  "collision": {
+    "physical_bay_identical": true,
+    "current_target_identical": true,
+    "revealed_orders_different": true,
+    "O1_shape": [
+      48
+    ],
+    "O2_shape": [
+      120
+    ],
+    "O1_identical": true,
+    "O2_identical": false,
+    "O2_node_shape": [
+      10,
+      12
+    ]
+  },
+  "artifacts": [
+    {
+      "dataset": "DS1",
+      "instance_id": "ku2016-T271014_0503_001",
+      "max_batch_size": 3,
+      "O1_shape": [
+        72
+      ],
+      "O2_shape": [
+        144
+      ],
+      "real_revealed_nodes": 1,
+      "padding_nodes": 5
+    },
+    {
+      "dataset": "DS2",
+      "instance_id": "ku2016-T281014_0704_001-merge2",
+      "max_batch_size": 6,
+      "O1_shape": [
+        96
+      ],
+      "O2_shape": [
+        168
+      ],
+      "real_revealed_nodes": 4,
+      "padding_nodes": 2
+    }
+  ]
+}

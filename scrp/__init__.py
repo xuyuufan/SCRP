@@ -22,7 +22,17 @@ from .models import (
     is_guaranteed_restricted_feasible,
 )
 from .scenario import Scenario, ScenarioSampler
-from .observation import O1ObservationAdapter
+from .observation import (
+    O1ObservationAdapter,
+    O2ObservationAdapter,
+    SCRPObservationConfig,
+    SCRP_O2_FEATURE_NAMES,
+    SCRP_O2_FEATURE_SCALE,
+    O2_FEATURE_SCALE,
+    SCRP_O2_MMAX,
+    load_observation_config,
+    save_observation_config,
+)
 from .rl_adapter import SCRPRLAdapter
 from .datasets import (
     STATIC_INSTANCE_SCHEMA_VERSION,
@@ -44,6 +54,7 @@ __all__ = [
     "Location",
     "NoLegalRelocationError",
     "O1ObservationAdapter",
+    "O2ObservationAdapter",
     "Phase",
     "SCRPConfig",
     "SCRPEnvironment",
@@ -51,6 +62,11 @@ __all__ = [
     "SCRPInstance",
     "SCRPRLAdapter",
     "SCRPState",
+    "SCRPObservationConfig",
+    "SCRP_O2_FEATURE_NAMES",
+    "SCRP_O2_FEATURE_SCALE",
+    "O2_FEATURE_SCALE",
+    "SCRP_O2_MMAX",
     "Scenario",
     "ScenarioSampler",
     "Stack",
@@ -63,8 +79,10 @@ __all__ = [
     "instance_from_record",
     "instance_to_record",
     "load_instance_json",
+    "load_observation_config",
     "merge_adjacent_batches",
     "parse_ku_crptw",
     "save_instance_json",
+    "save_observation_config",
     "validate_paper_instance",
 ]
