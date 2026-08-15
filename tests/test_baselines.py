@@ -8,6 +8,7 @@ import torch
 
 from experiments.baselines import (
     BaselineActionError,
+    ERIBaseline,
     MinBlockingGreedyBaseline,
     RandomLegalBaseline,
     run_baseline_episode,
@@ -63,7 +64,7 @@ def make_env(order=(1, 3, 2, 4)) -> SCRPEnvironment:
 
 
 def test_baseline_api_has_no_scenario_parameter():
-    for baseline_type in (RandomLegalBaseline, MinBlockingGreedyBaseline):
+    for baseline_type in (RandomLegalBaseline, MinBlockingGreedyBaseline, ERIBaseline):
         parameters = inspect.signature(baseline_type.select_destination).parameters
         assert tuple(parameters) == (
             "self", "instance", "state", "legal_destinations"
@@ -142,7 +143,10 @@ def test_public_state_mutation_cannot_modify_environment():
     assert env.state.stacks[0].containers == [1, 2]
 
 
-@pytest.mark.parametrize("baseline", [RandomLegalBaseline(), MinBlockingGreedyBaseline()])
+@pytest.mark.parametrize(
+    "baseline",
+    [RandomLegalBaseline(), MinBlockingGreedyBaseline(), ERIBaseline()],
+)
 def test_rollout_terminates_with_reward_and_decision_invariants(baseline):
     result = run_baseline_episode(make_env(), baseline, 3, action_seed=10)
     assert result.terminated and not result.truncated
@@ -201,12 +205,13 @@ def test_raw_result_jsonl_round_trip(tmp_path):
     assert records == [result.to_record() for result in results]
 
 
-def test_random_greedy_and_current_low_receive_paired_scenario_ids():
+def test_random_greedy_eri_and_current_low_receive_paired_scenario_ids():
     torch.manual_seed(0)
     policy = make_scrp_o1_policy(embed_dim=16, num_heads=4, ffn_dim=32)
     algorithms = (
         BaselineAlgorithm(RandomLegalBaseline),
         BaselineAlgorithm(MinBlockingGreedyBaseline),
+        BaselineAlgorithm(ERIBaseline),
         LowPolicyAlgorithm(policy),
     )
     result_sets = [evaluate_algorithm_on_schedule(a, [evaluation_case()]) for a in algorithms]

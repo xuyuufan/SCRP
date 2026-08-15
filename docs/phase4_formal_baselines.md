@@ -116,6 +116,20 @@ Before adding a stronger published baseline:
 4. validate against published small examples or original outputs before running
    any formal test split.
 
-EM is the most practical next heuristic candidate because Galle supplies
-inspectable code and the paper describes it directly. It still must not be
-labelled reproduced until licensing and fidelity checks pass.
+EM was the most practical candidate identified at the end of Phase 4 because
+Galle supplies inspectable code and the paper describes it directly. Phase 4.5
+instead selected the older published ERI rule because its complete equation,
+revelation semantics, and deterministic Galle tie-break can be audited with a
+smaller fidelity surface.
+
+## 7. Phase 4.5 status update
+
+**ERI status: reproduced.**
+
+`eri_reproduction_v1` is now reproduced through an independent clean-room
+implementation. Its score and tie behavior are covered by hand-written golden
+cases, its public-information boundary is regression-tested, and it runs through
+the same rollout/evaluation harness as Random, MinBlockingGreedy, and O1 LOW.
+The Galle repository remains unlicensed, so its code was inspected but neither
+copied nor redistributed. See `phase4_5_eri_reproduction.md` for the complete
+specification, evidence, deviations, and recommendation.
