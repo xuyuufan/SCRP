@@ -1,0 +1,150 @@
+{
+  "schema_version": "scrp-static-instance-v1",
+  "instance_id": "ku2016-T271014_1006_001",
+  "source_dataset": "Ku2016_CRPTW_Galle2017_existing_Bacci2022_DS1",
+  "num_stacks": 10,
+  "max_tiers": 6,
+  "num_containers": 30,
+  "batch_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "stacks": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    [
+      19,
+      20,
+      21,
+      22
+    ],
+    [
+      23,
+      24,
+      25
+    ],
+    [
+      26,
+      27,
+      28
+    ],
+    [
+      29,
+      30
+    ]
+  ],
+  "container_batch": {
+    "1": 12,
+    "2": 3,
+    "3": 14,
+    "4": 7,
+    "5": 6,
+    "6": 14,
+    "7": 10,
+    "8": 2,
+    "9": 18,
+    "10": 3,
+    "11": 2,
+    "12": 13,
+    "13": 16,
+    "14": 8,
+    "15": 7,
+    "16": 11,
+    "17": 1,
+    "18": 6,
+    "19": 10,
+    "20": 15,
+    "21": 17,
+    "22": 4,
+    "23": 15,
+    "24": 13,
+    "25": 9,
+    "26": 10,
+    "27": 5,
+    "28": 3,
+    "29": 1,
+    "30": 15
+  },
+  "metadata": {
+    "paper": [
+      "Ku & Arthanari (2016)",
+      "Galle et al. (2017/2018)",
+      "Bacci et al. (2022)"
+    ],
+    "original_instance_id": "T271014_1006_001",
+    "converted_instance_id": "ku2016-T271014_1006_001",
+    "original_file": "T271014_1006_001.txt",
+    "parameter_group": "S10_T06_mu0.5",
+    "fill_rate": 0.5,
+    "original_bay_id": 1,
+    "original_header_field_6": 18,
+    "observed_num_time_windows": 18,
+    "original_label_to_batch": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18
+    },
+    "id_assignment_rule": "stack-major, then bottom-to-top, consecutive integers from 1",
+    "stack_orientation": "bottom-to-top",
+    "source_row_rule": "first value of each validated-equal tier pair is the time-window label"
+  }
+}

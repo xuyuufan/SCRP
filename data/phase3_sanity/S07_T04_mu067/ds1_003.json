@@ -1,0 +1,108 @@
+{
+  "schema_version": "scrp-static-instance-v1",
+  "instance_id": "ku2016-T281014_0704_003",
+  "source_dataset": "Ku2016_CRPTW_Galle2017_existing_Bacci2022_DS1",
+  "num_stacks": 7,
+  "max_tiers": 4,
+  "num_containers": 19,
+  "batch_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "stacks": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4
+    ],
+    [
+      5,
+      6,
+      7,
+      8
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      17,
+      18,
+      19
+    ]
+  ],
+  "container_batch": {
+    "1": 8,
+    "2": 6,
+    "3": 4,
+    "4": 3,
+    "5": 5,
+    "6": 1,
+    "7": 7,
+    "8": 4,
+    "9": 2,
+    "10": 8,
+    "11": 4,
+    "12": 5,
+    "13": 10,
+    "14": 8,
+    "15": 7,
+    "16": 11,
+    "17": 9,
+    "18": 7,
+    "19": 5
+  },
+  "metadata": {
+    "paper": [
+      "Ku & Arthanari (2016)",
+      "Galle et al. (2017/2018)",
+      "Bacci et al. (2022)"
+    ],
+    "original_instance_id": "T281014_0704_003",
+    "converted_instance_id": "ku2016-T281014_0704_003",
+    "original_file": "T281014_0704_003.txt",
+    "parameter_group": "S07_T04_mu0.67",
+    "fill_rate": 0.67,
+    "original_bay_id": 1,
+    "original_header_field_6": 11,
+    "observed_num_time_windows": 11,
+    "original_label_to_batch": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11
+    },
+    "id_assignment_rule": "stack-major, then bottom-to-top, consecutive integers from 1",
+    "stack_orientation": "bottom-to-top",
+    "source_row_rule": "first value of each validated-equal tier pair is the time-window label"
+  }
+}

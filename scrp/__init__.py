@@ -24,6 +24,16 @@ from .models import (
 from .scenario import Scenario, ScenarioSampler
 from .observation import O1ObservationAdapter
 from .rl_adapter import SCRPRLAdapter
+from .datasets import (
+    STATIC_INSTANCE_SCHEMA_VERSION,
+    instance_from_record,
+    instance_to_record,
+    load_instance_json,
+    merge_adjacent_batches,
+    parse_ku_crptw,
+    save_instance_json,
+    validate_paper_instance,
+)
 
 __all__ = [
     "Container",
@@ -44,9 +54,17 @@ __all__ = [
     "Scenario",
     "ScenarioSampler",
     "Stack",
+    "STATIC_INSTANCE_SCHEMA_VERSION",
     "StateInvariantError",
     "StepLimitError",
     "TransitionEvent",
     "TransitionResult",
     "is_guaranteed_restricted_feasible",
+    "instance_from_record",
+    "instance_to_record",
+    "load_instance_json",
+    "merge_adjacent_batches",
+    "parse_ku_crptw",
+    "save_instance_json",
+    "validate_paper_instance",
 ]

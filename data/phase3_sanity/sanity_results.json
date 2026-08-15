@@ -1,0 +1,814 @@
+{
+  "schema": "scrp-phase3-sanity-v1",
+  "results": [
+    {
+      "instance_id": "ku2016-T271014_0503_001",
+      "variant": "DS1",
+      "S": 5,
+      "T": 3,
+      "N": 8,
+      "num_batches": 4,
+      "batch_sizes": [
+        3,
+        1,
+        2,
+        2
+      ],
+      "static_file": "data/phase3_sanity/S05_T03_mu050/ds1_001.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "50334615fa44319e7955f4ab2f8a8038f6f890188100fe58b2c0a5b0e61d4a92",
+          "random_relocations": 2,
+          "low_network_relocations": 2,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "af473f8e63ee95a94e3c740e4ab0ab4808b92981f1e257504570972cb3c439e6",
+          "random_relocations": 2,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "094f7a484e9d73f8a675b92a6c3d94390d3f36ecd1bc557f7ef6354b60f4986e",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_0503_001-merge2",
+      "variant": "DS2",
+      "S": 5,
+      "T": 3,
+      "N": 8,
+      "num_batches": 2,
+      "batch_sizes": [
+        4,
+        4
+      ],
+      "static_file": "data/phase3_sanity/S05_T03_mu050/ds2_001.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "5e7f8692cdf43d157e2614d64fa0417a4b6fc3d8f699c97c8eecae7f2f1e3a2e",
+          "random_relocations": 2,
+          "low_network_relocations": 2,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "b1ae1f76c33038165c8930dbce11c9a09911361c1515380f830c17e8a601682c",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "1e6e78de9e209f9501f778859de3840b67bf3882feb73ec71be9fcde4b5e1509",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_0503_002",
+      "variant": "DS1",
+      "S": 5,
+      "T": 3,
+      "N": 8,
+      "num_batches": 3,
+      "batch_sizes": [
+        3,
+        2,
+        3
+      ],
+      "static_file": "data/phase3_sanity/S05_T03_mu050/ds1_002.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "1d6e691f7c8918ac0f497c8f79af0c877c2aa77ca6cc552afb3f1cc5ced2b734",
+          "random_relocations": 0,
+          "low_network_relocations": 0,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "f657eadc8e79a6c69089780277818e0adfbba354a452961bf3ff6dde6f846808",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "68e126be19f9db6a5a6312430ac0f8e83c1f1ad0ae44931c45f570ba8ceba1d5",
+          "random_relocations": 0,
+          "low_network_relocations": 0,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_0503_002-merge2",
+      "variant": "DS2",
+      "S": 5,
+      "T": 3,
+      "N": 8,
+      "num_batches": 2,
+      "batch_sizes": [
+        5,
+        3
+      ],
+      "static_file": "data/phase3_sanity/S05_T03_mu050/ds2_002.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "3c7c94df9b03fef7d5f9cc350d3b8143e263100515fbd8cdede861bbe4da6d47",
+          "random_relocations": 2,
+          "low_network_relocations": 2,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "ac7abd754d5e7bf037baa09e6b00d42a591df159113ef09e145452f5ce329ae1",
+          "random_relocations": 2,
+          "low_network_relocations": 2,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "67b6e2a43aabacbc069f17fcbbe9ad9c2cfd55e314df31bcd822f271263e0b0a",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_0503_003",
+      "variant": "DS1",
+      "S": 5,
+      "T": 3,
+      "N": 8,
+      "num_batches": 4,
+      "batch_sizes": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "static_file": "data/phase3_sanity/S05_T03_mu050/ds1_003.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "cc0fec8b1e412651f2d3fa9f24bde4b567a7843a4468d3b2f952aa2ab1009574",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "468f92a719b39105ef36f9d608ee608782ee3b7d5ecd0c841c2ffad816b1a74b",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "9f82f261913161ab4039d2c416e89b2b375efe5653eefa7a3d5f7b84e675d8a1",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_0503_003-merge2",
+      "variant": "DS2",
+      "S": 5,
+      "T": 3,
+      "N": 8,
+      "num_batches": 2,
+      "batch_sizes": [
+        3,
+        5
+      ],
+      "static_file": "data/phase3_sanity/S05_T03_mu050/ds2_003.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "eda5cb913d1f38ea18390fbd042ac9e3ceaf701fb47cc0892b4ee7b310e12923",
+          "random_relocations": 2,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "c0ba989d497ba8ff1e623f2f27b57513b86b433dd2f49a688e827c6803fb9094",
+          "random_relocations": 3,
+          "low_network_relocations": 3,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "79df2dd3308fa303a6b23289745d1eb7601c73a6b049c21e77fe115a20f9fa79",
+          "random_relocations": 1,
+          "low_network_relocations": 1,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T281014_0704_001",
+      "variant": "DS1",
+      "S": 7,
+      "T": 4,
+      "N": 19,
+      "num_batches": 11,
+      "batch_sizes": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        3,
+        3,
+        2,
+        1,
+        1
+      ],
+      "static_file": "data/phase3_sanity/S07_T04_mu067/ds1_001.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "1e51446291e6a4e6ef2f1831f3679dcbbce98b59f23ae10199f7b5e4e44cd01e",
+          "random_relocations": 14,
+          "low_network_relocations": 19,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "f6935d5677ea02f5bf44765de5a5048e3fc3842f5df7361c841e2c854981b2fd",
+          "random_relocations": 13,
+          "low_network_relocations": 18,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "4c2e3dbb64582b38227933ade60cbf67589a477851df51dcdbfc5d520d7e1abb",
+          "random_relocations": 12,
+          "low_network_relocations": 18,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T281014_0704_001-merge2",
+      "variant": "DS2",
+      "S": 7,
+      "T": 4,
+      "N": 19,
+      "num_batches": 6,
+      "batch_sizes": [
+        4,
+        2,
+        3,
+        6,
+        3,
+        1
+      ],
+      "static_file": "data/phase3_sanity/S07_T04_mu067/ds2_001.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "fe29e89798ebb180b23c324601f91d7ab1db7c2443596639c721cf4b9932913c",
+          "random_relocations": 16,
+          "low_network_relocations": 16,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "7c89be83f938c23b283a8a1bc09a8ca46596ccb9a962d4fb2753cdc000e03b45",
+          "random_relocations": 13,
+          "low_network_relocations": 18,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "8c166fa441f7ceb7e94496c2feda09af8c6fd60fe2161de873e7d52124c7167f",
+          "random_relocations": 15,
+          "low_network_relocations": 21,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T281014_0704_002",
+      "variant": "DS1",
+      "S": 7,
+      "T": 4,
+      "N": 19,
+      "num_batches": 10,
+      "batch_sizes": [
+        2,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        3
+      ],
+      "static_file": "data/phase3_sanity/S07_T04_mu067/ds1_002.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "d70ce7da315b536eea1fb9437580be8b4e2881530b699301c6e05405c7d9e609",
+          "random_relocations": 10,
+          "low_network_relocations": 8,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "c9b9ca32ecd5b970d5330125b28b968c7295f6323976b2a9d0fd823115940ef3",
+          "random_relocations": 8,
+          "low_network_relocations": 7,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "db3b2ca70c5943dd9f56a6b78fedb0e98022eec366f8cc92d35ad25ca66ec79f",
+          "random_relocations": 7,
+          "low_network_relocations": 7,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T281014_0704_002-merge2",
+      "variant": "DS2",
+      "S": 7,
+      "T": 4,
+      "N": 19,
+      "num_batches": 5,
+      "batch_sizes": [
+        4,
+        4,
+        3,
+        4,
+        4
+      ],
+      "static_file": "data/phase3_sanity/S07_T04_mu067/ds2_002.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "9868c3aab49a6ee13f240ae1172f406499971a0efdcbd2b5734b250ddadc3ba8",
+          "random_relocations": 10,
+          "low_network_relocations": 8,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "b3af5d9abf11f79936f9720531a96c62ed872d8d261afcd62322467cfdc321fb",
+          "random_relocations": 8,
+          "low_network_relocations": 8,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "e041833e02fba35915ad4c75b364de3a520f92dd728aa186c79b296f0de012e4",
+          "random_relocations": 8,
+          "low_network_relocations": 9,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T281014_0704_003",
+      "variant": "DS1",
+      "S": 7,
+      "T": 4,
+      "N": 19,
+      "num_batches": 11,
+      "batch_sizes": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "static_file": "data/phase3_sanity/S07_T04_mu067/ds1_003.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "25ada4d04265ca7403dc07e41f145e65d5e325518670c29fb4e48bc4cc2293a2",
+          "random_relocations": 12,
+          "low_network_relocations": 15,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "cea13a39a9527eaa9cc1bf7196993bfac96a2102aab408d1ea7e75fb7d667d11",
+          "random_relocations": 13,
+          "low_network_relocations": 15,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "1e102ddfd01f43555c08ffbf88257c0d93b12254c1461ca03a26c0bf9bd9bb03",
+          "random_relocations": 15,
+          "low_network_relocations": 18,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T281014_0704_003-merge2",
+      "variant": "DS2",
+      "S": 7,
+      "T": 4,
+      "N": 19,
+      "num_batches": 6,
+      "batch_sizes": [
+        2,
+        4,
+        4,
+        6,
+        2,
+        1
+      ],
+      "static_file": "data/phase3_sanity/S07_T04_mu067/ds2_003.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "5c89f70c030f72e0b34882c12c6777f997d3e5811a29e5827de24d5ec29615ca",
+          "random_relocations": 12,
+          "low_network_relocations": 14,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "7167b9ed3d563274ed49bbd3c3eacfee517bda8ef42c4f338631d8f2a2402030",
+          "random_relocations": 13,
+          "low_network_relocations": 13,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "b835006c41039112d3d589b1731950f5b2c37ea8cf635d4a58c7c2f3949515e6",
+          "random_relocations": 14,
+          "low_network_relocations": 15,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_1006_001",
+      "variant": "DS1",
+      "S": 10,
+      "T": 6,
+      "N": 30,
+      "num_batches": 18,
+      "batch_sizes": [
+        2,
+        2,
+        3,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1
+      ],
+      "static_file": "data/phase3_sanity/S10_T06_mu050/ds1_001.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "35ab8ee562d0fdfa83f37c626d7e423d31f3e97c444b89c698cf748d27dacd5d",
+          "random_relocations": 15,
+          "low_network_relocations": 23,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "b0fc0efa67843599c61e0ce7879732490e7c3a2fdef7a9ef1b95c2509bbd0602",
+          "random_relocations": 14,
+          "low_network_relocations": 17,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "c0123aa4602dfef188053b215b3b12ecef23735fb80964bd99f2eb2ff56eb998",
+          "random_relocations": 14,
+          "low_network_relocations": 23,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_1006_001-merge2",
+      "variant": "DS2",
+      "S": 10,
+      "T": 6,
+      "N": 30,
+      "num_batches": 9,
+      "batch_sizes": [
+        4,
+        4,
+        3,
+        3,
+        4,
+        2,
+        4,
+        4,
+        2
+      ],
+      "static_file": "data/phase3_sanity/S10_T06_mu050/ds2_001.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "635e61d32d8e3e8326c4c0ec82687f560d4e9c8d96698fb5855c90fd55823944",
+          "random_relocations": 14,
+          "low_network_relocations": 15,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "0f127884b8d8c924822e7c2acf5fae84fec36ad52106818645886044b9001d9d",
+          "random_relocations": 16,
+          "low_network_relocations": 22,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "18953af2c33bd15807e4d83ec6d2d893f9cde05b5a321be751539c47200acb91",
+          "random_relocations": 16,
+          "low_network_relocations": 25,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_1006_002",
+      "variant": "DS1",
+      "S": 10,
+      "T": 6,
+      "N": 30,
+      "num_batches": 17,
+      "batch_sizes": [
+        2,
+        3,
+        3,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "static_file": "data/phase3_sanity/S10_T06_mu050/ds1_002.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "01ae070db478d7d784e2c920e0a8052e04214640e2ba0d1cab54cf070f524e99",
+          "random_relocations": 30,
+          "low_network_relocations": 33,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "e17b31753413d26ec2ad928bef30c879a3d9caa653a4d82dbb566b02bc645fa9",
+          "random_relocations": 29,
+          "low_network_relocations": 42,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "ba8a6f613435c8d786ef1f0456e674f6a34ed009712ad4ff6c9cd560125615c3",
+          "random_relocations": 28,
+          "low_network_relocations": 37,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_1006_002-merge2",
+      "variant": "DS2",
+      "S": 10,
+      "T": 6,
+      "N": 30,
+      "num_batches": 9,
+      "batch_sizes": [
+        5,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2
+      ],
+      "static_file": "data/phase3_sanity/S10_T06_mu050/ds2_002.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "ffe945861bd5a5da362a77d6bb4d9c031ba86d43dbd59de18eb93e118ad51b65",
+          "random_relocations": 29,
+          "low_network_relocations": 36,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "31658e92ba5442bdaebb82f98515bae0844bfafaa6c07092fc4eed43b5652a59",
+          "random_relocations": 23,
+          "low_network_relocations": 29,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "a0984cb652068a1314b1b3c7ec08d03234ade13e9150eee53998f0559b74c51e",
+          "random_relocations": 27,
+          "low_network_relocations": 24,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_1006_003",
+      "variant": "DS1",
+      "S": 10,
+      "T": 6,
+      "N": 30,
+      "num_batches": 16,
+      "batch_sizes": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        1,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        2
+      ],
+      "static_file": "data/phase3_sanity/S10_T06_mu050/ds1_003.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "7e08ed7074ad9dbe3722b439c9a9291e6254cd9b2e292c1afbce5dd042b2bd78",
+          "random_relocations": 27,
+          "low_network_relocations": 38,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "a7f8d98d2b34175517409f914eb2a3531a392cfe1589755fe47028fc7a0dc6f8",
+          "random_relocations": 31,
+          "low_network_relocations": 34,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "5f9cc8122c3da1cc7378919ce03de6655dd1f3b4b7f45d4265623d9348f9c091",
+          "random_relocations": 28,
+          "low_network_relocations": 43,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    },
+    {
+      "instance_id": "ku2016-T271014_1006_003-merge2",
+      "variant": "DS2",
+      "S": 10,
+      "T": 6,
+      "N": 30,
+      "num_batches": 8,
+      "batch_sizes": [
+        2,
+        4,
+        5,
+        4,
+        6,
+        2,
+        4,
+        3
+      ],
+      "static_file": "data/phase3_sanity/S10_T06_mu050/ds2_003.json",
+      "scenarios": [
+        {
+          "scenario_seed": 101,
+          "scenario_id": "5f8d69b44e4426b5c7e8fc7be95c037d6f575b7c40522eb66dc3e4fb90b3bc88",
+          "random_relocations": 26,
+          "low_network_relocations": 40,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 202,
+          "scenario_id": "7a911cdb766a3ce8de8c8f75edb849229e868ac4648df97f91adab2bf2ea75b9",
+          "random_relocations": 32,
+          "low_network_relocations": 25,
+          "random_terminated": true,
+          "low_network_terminated": true
+        },
+        {
+          "scenario_seed": 303,
+          "scenario_id": "124d1f6f362cd9ad619cc0908e2d05b0d1909ad6c20e3ff17e9e02727bf986c3",
+          "random_relocations": 40,
+          "low_network_relocations": 38,
+          "random_terminated": true,
+          "low_network_terminated": true
+        }
+      ]
+    }
+  ]
+}
