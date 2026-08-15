@@ -16,6 +16,16 @@ Galle/Bacci DS2 by merging adjacent batches, and saves scenario-free static
 instances. A small converted set and separate scenario rollout report live in
 [`data/phase3_sanity`](data/phase3_sanity).
 
+## Formal experiment protocol
+
+Phase 3.5 defines the static-instance split, DS1/DS2 linkage, disjoint scenario
+seed streams, common-random-number evaluation records, and development/formal
+rollout budgets. See
+[`experiments/protocols/formal_protocol_v1.md`](experiments/protocols/formal_protocol_v1.md).
+The frozen manifest is
+[`experiments/splits/scrp_split_v1.json`](experiments/splits/scrp_split_v1.json).
+No formal training or baseline implementation is included.
+
 ## Validation
 
 Run the test suite from the repository root:

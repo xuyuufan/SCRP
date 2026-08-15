@@ -1,0 +1,12 @@
+{
+  "protocol_version": "scrp-formal-protocol-v1",
+  "dataset_version": "ku-galle-bacci-ds1-ds2-ec672df",
+  "split_manifest_version": "scrp-static-split-v1",
+  "observation_version": "O1",
+  "training_scenario_policy": "dynamic_per_base_instance_visit",
+  "training_dataset_strategy": "mixed_ds1_ds2_base_balanced",
+  "validation_scenarios_per_instance": 20,
+  "development_scenarios_per_instance": 10,
+  "formal_test_scenarios_per_instance": 50,
+  "common_random_numbers": true
+}

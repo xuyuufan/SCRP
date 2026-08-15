@@ -2,6 +2,27 @@
 
 This file records research milestones rather than every file-level edit.
 
+## Phase 3.5 — 2026-08-16
+
+### Added
+
+- Added a deterministic, parameter-group-stratified 20/5/5 static-instance
+  split with 960 train, 240 validation, and 240 test base layouts.
+- Added explicit base-instance linkage so every DS1/DS2 pair always shares its
+  split assignment.
+- Added disjoint dynamic-train, fixed-validation, and fixed-test scenario seed
+  schedules, plus versioned protocol and scenario-result schemas.
+- Added the frozen 1,440-instance split manifest, formal protocol document,
+  machine-readable config, raw-result ignore policy, and validation tests.
+
+### Notes
+
+- Development uses 10 scenarios per static variant; the formal design uses 20
+  for validation and 50 for final test with common random numbers.
+- Phase 3.5 is protocol design only: no formal training, baselines, O2,
+  hyperparameter tuning, or performance evaluation was started.
+- `94 passed` with `0 failed` and `0 skipped` (pytest runtime 13.92 seconds).
+
 ## Phase 3 — 2026-08-15
 
 ### Added
