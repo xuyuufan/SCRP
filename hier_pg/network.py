@@ -72,6 +72,8 @@ class _MultiHeadAttention(nn.Module):
         V = split(self.v_proj(value))
         scores = torch.matmul(Q, K.transpose(-2, -1)) / self.scale
         if mask is not None:
+            if mask.dim() == 2:
+                mask = mask[:, None, None, :]
             if mask.dim() == 3:
                 mask = mask.unsqueeze(1)
             scores = scores.masked_fill(mask, float("-inf"))
@@ -149,10 +151,16 @@ class _PointerDecoder(nn.Module):
         self.pointer_k     = nn.Linear(embed_dim, embed_dim, bias=False)
         self.pointer_q     = nn.Linear(embed_dim, embed_dim, bias=False)
 
-    def _build_query(self, encoder_output: torch.Tensor) -> torch.Tensor:
+    def _build_query(self, encoder_output, node_padding_mask=None):
         """Build (B, 1, D) context query."""
         stack_emb  = encoder_output[:, :-1, :]               # (B, S, D)
-        global_emb = stack_emb.mean(dim=1, keepdim=True)     # (B, 1, D)
+        if node_padding_mask is None:
+            global_emb = stack_emb.mean(dim=1, keepdim=True)
+        else:
+            real = (~node_padding_mask[:, :-1]).unsqueeze(-1).to(stack_emb.dtype)
+            global_emb = (stack_emb * real).sum(dim=1, keepdim=True) / real.sum(
+                dim=1, keepdim=True
+            ).clamp_min(1.0)
         if self.query_mode == "target_global":
             target_emb = encoder_output[:, -1:, :]           # (B, 1, D) — last node
             return target_emb + global_emb
@@ -170,9 +178,11 @@ class _PointerDecoder(nn.Module):
         scores  = scores.masked_fill(action_mask.bool(), float("-inf"))
         return F.log_softmax(scores, dim=-1)
 
-    def forward(self, encoder_output, action_mask, greedy=False):
-        query     = self._build_query(encoder_output)
-        context   = self.cross_attn(query, encoder_output, encoder_output)
+    def forward(self, encoder_output, action_mask, greedy=False, node_padding_mask=None):
+        query     = self._build_query(encoder_output, node_padding_mask)
+        context   = self.cross_attn(
+            query, encoder_output, encoder_output, node_padding_mask
+        )
         context   = self.norm(query + context)
         log_probs = self._pointer_scores(context, encoder_output, action_mask)
         if greedy:
@@ -182,10 +192,12 @@ class _PointerDecoder(nn.Module):
         log_prob = log_probs.gather(1, action.unsqueeze(1)).squeeze(1)
         return action, log_prob
 
-    def evaluate(self, encoder_output, action_mask, actions):
+    def evaluate(self, encoder_output, action_mask, actions, node_padding_mask=None):
         """Re-evaluate log-prob and entropy for a batch of actions."""
-        query     = self._build_query(encoder_output)
-        context   = self.cross_attn(query, encoder_output, encoder_output)
+        query     = self._build_query(encoder_output, node_padding_mask)
+        context   = self.cross_attn(
+            query, encoder_output, encoder_output, node_padding_mask
+        )
         context   = self.norm(query + context)
         log_probs = self._pointer_scores(context, encoder_output, action_mask)
         selected  = log_probs.gather(1, actions.long().unsqueeze(1)).squeeze(1)
@@ -291,9 +303,9 @@ class HierPolicyNetwork(nn.Module):
             raw = torch.cat([raw, pad], dim=-1)
         return raw / self.feature_scale
 
-    def encode(self, flat_obs: "torch.Tensor") -> "torch.Tensor":
+    def encode(self, flat_obs: "torch.Tensor", node_padding_mask=None) -> "torch.Tensor":
         """Return (B, N, D) encoder output shared by both decoders."""
-        return self.encoder(self._reshape(flat_obs))
+        return self.encoder(self._reshape(flat_obs), node_padding_mask)
 
     # ── High-level: source stack selection ──────────────────────── #
 
@@ -303,20 +315,27 @@ class HierPolicyNetwork(nn.Module):
         high_mask:   "torch.Tensor",   # (B, S) True = forbidden
         greedy:      bool = False,
         enc_out:     "torch.Tensor | None" = None,
+        node_padding_mask=None,
     ):
         """Select source stack (which target-group position to process)."""
         if enc_out is None:
-            enc_out = self.encode(flat_obs)
-        return self.high_decoder(enc_out, high_mask, greedy=greedy)
+            enc_out = self.encode(flat_obs, node_padding_mask)
+        return self.high_decoder(
+            enc_out, high_mask, greedy=greedy,
+            node_padding_mask=node_padding_mask,
+        )
 
     def evaluate_high(
         self,
         flat_obs:  "torch.Tensor",
         high_mask: "torch.Tensor",
         actions:   "torch.Tensor",
+        node_padding_mask=None,
     ):
-        enc_out = self.encode(flat_obs)
-        return self.high_decoder.evaluate(enc_out, high_mask, actions)
+        enc_out = self.encode(flat_obs, node_padding_mask)
+        return self.high_decoder.evaluate(
+            enc_out, high_mask, actions, node_padding_mask
+        )
 
     # ── Low-level: destination stack selection ───────────────────── #
 
@@ -326,20 +345,27 @@ class HierPolicyNetwork(nn.Module):
         low_mask:    "torch.Tensor",   # (B, S) True = forbidden
         greedy:      bool = False,
         enc_out:     "torch.Tensor | None" = None,
+        node_padding_mask=None,
     ):
         """Select destination stack for a blocking container relocation."""
         if enc_out is None:
-            enc_out = self.encode(flat_obs)
-        return self.low_decoder(enc_out, low_mask, greedy=greedy)
+            enc_out = self.encode(flat_obs, node_padding_mask)
+        return self.low_decoder(
+            enc_out, low_mask, greedy=greedy,
+            node_padding_mask=node_padding_mask,
+        )
 
     def evaluate_low(
         self,
         flat_obs: "torch.Tensor",
         low_mask: "torch.Tensor",
         actions:  "torch.Tensor",
+        node_padding_mask=None,
     ):
-        enc_out = self.encode(flat_obs)
-        return self.low_decoder.evaluate(enc_out, low_mask, actions)
+        enc_out = self.encode(flat_obs, node_padding_mask)
+        return self.low_decoder.evaluate(
+            enc_out, low_mask, actions, node_padding_mask
+        )
 
     # ── Convenience: auto-dispatch based on mode ─────────────────── #
 
@@ -350,6 +376,7 @@ class HierPolicyNetwork(nn.Module):
         greedy:      bool = False,
         enc_out:     "torch.Tensor | None" = None,
         mode:        str  = "high",
+        node_padding_mask=None,
     ):
         """
         Dispatch to high or low decoder.
@@ -358,11 +385,17 @@ class HierPolicyNetwork(nn.Module):
               "low"  → destination-stack selection (env._mode="low")
         """
         if enc_out is None:
-            enc_out = self.encode(flat_obs)
+            enc_out = self.encode(flat_obs, node_padding_mask)
         if mode == "high":
-            return self.high_decoder(enc_out, action_mask, greedy=greedy)
+            return self.high_decoder(
+                enc_out, action_mask, greedy=greedy,
+                node_padding_mask=node_padding_mask,
+            )
         else:
-            return self.low_decoder(enc_out, action_mask, greedy=greedy)
+            return self.low_decoder(
+                enc_out, action_mask, greedy=greedy,
+                node_padding_mask=node_padding_mask,
+            )
 
     def evaluate_actions(
         self,
@@ -370,9 +403,14 @@ class HierPolicyNetwork(nn.Module):
         action_mask: "torch.Tensor",
         actions:     "torch.Tensor",
         mode:        str = "high",
+        node_padding_mask=None,
     ):
-        enc_out = self.encode(flat_obs)
+        enc_out = self.encode(flat_obs, node_padding_mask)
         if mode == "high":
-            return self.high_decoder.evaluate(enc_out, action_mask, actions)
+            return self.high_decoder.evaluate(
+                enc_out, action_mask, actions, node_padding_mask
+            )
         else:
-            return self.low_decoder.evaluate(enc_out, action_mask, actions)
+            return self.low_decoder.evaluate(
+                enc_out, action_mask, actions, node_padding_mask
+            )
