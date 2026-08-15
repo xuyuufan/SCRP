@@ -1,0 +1,54 @@
+{
+  "status": "training_readiness_sanity_only",
+  "formal_training_started": false,
+  "performance_claim": false,
+  "split_used": "train",
+  "validation_used": false,
+  "test_used": false,
+  "base_layouts": 12,
+  "stack_buckets": [
+    5,
+    7,
+    10
+  ],
+  "variants": [
+    "DS1",
+    "DS2"
+  ],
+  "O2_episodes": 100,
+  "O1_episodes": 4,
+  "total_episodes": 104,
+  "metrics_finite": true,
+  "gradients_finite": true,
+  "policy_parameters_changed": true,
+  "invalid_actions": 0,
+  "truncations": 0,
+  "baseline_updates": 1,
+  "baseline_parameters_have_gradients": false,
+  "paired_scenario_ids": "enforced_by_assertion",
+  "paired_rollouts": 104,
+  "checkpoint_round_trip": true,
+  "O2_loss_range": [
+    -0.34319084882736206,
+    0.3223017454147339
+  ],
+  "O2_entropy_range": [
+    1.1239616870880127,
+    2.0710878372192383
+  ],
+  "O2_grad_norm_range": [
+    1.1961603164672852,
+    6.922283172607422
+  ],
+  "O2_last_iteration": {
+    "mean_policy_relocations": 2.5,
+    "mean_baseline_relocations": 1.5,
+    "mean_return": -2.5,
+    "mean_advantage": -1.6,
+    "loss": -0.10987512022256851,
+    "policy_loss": -0.09146176278591156,
+    "entropy": 1.8413358926773071,
+    "grad_norm": 4.066816806793213
+  },
+  "hyperparameter_status": "NOT FINAL HYPERPARAMETERS"
+}
