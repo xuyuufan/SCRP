@@ -45,6 +45,7 @@ from .datasets import (
     validate_paper_instance,
 )
 from .formal_training import (
+    BaselineRefreshRecord,
     BaseBalancedTrainingSampler,
     FormalTrainingConfig,
     KuTrainingInstanceProvider,
@@ -54,12 +55,14 @@ from .formal_training import (
     load_formal_training_config,
     make_node_padding_mask,
     make_scrp_policy,
+    policy_state_sha256,
     save_formal_training_config,
 )
 
 __all__ = [
     "Container",
     "BaseBalancedTrainingSampler",
+    "BaselineRefreshRecord",
     "EpisodeTerminatedError",
     "EventKind",
     "InstanceValidationError",
@@ -102,6 +105,7 @@ __all__ = [
     "merge_adjacent_batches",
     "make_node_padding_mask",
     "make_scrp_policy",
+    "policy_state_sha256",
     "parse_ku_crptw",
     "save_instance_json",
     "save_formal_training_config",
