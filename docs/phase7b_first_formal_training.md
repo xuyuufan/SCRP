@@ -84,6 +84,16 @@ non-duplicate required milestones (1,000, 2,500, 5,000, 10,000, 15,000, and
 files are gitignored; their hashes and inventory are recorded in the completion
 artifact.
 
+The committed training artifact contains 100-episode aggregate windows, not
+per-episode or per-iteration rows. The committed validation artifact contains
+only the ten checkpoint-level DS1/DS2 distributions and selection records. Its
+larger per-instance and parameter-group derivative is retained locally at
+`experiments/raw_results/formal-o2-mixed-seed20260816-run1/validation-full-derived.json`,
+which is gitignored. The authoritative local derivative is 2,288,965 bytes with
+SHA-256
+`be02cff39c29ce4d36cf9c843791c522385f9926b0790f1cfb514ef3709c5bca`;
+it contains no scenario-level rows.
+
 Formal test episode usage is exactly 0. ERI training or checkpoint-selection
 usage is exactly 0. Formal test evaluation requires separate Phase 8
 authorization and was not run.
