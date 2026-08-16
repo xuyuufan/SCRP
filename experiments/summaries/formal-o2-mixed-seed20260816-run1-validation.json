@@ -1,0 +1,515 @@
+{
+  "run_id": "formal-o2-mixed-seed20260816-run1",
+  "artifact_class": "compact_checkpoint_validation_summary",
+  "selection_metric": "equal_variant_equal_instance_mean_relocations",
+  "validation_cadence_episodes": 2500,
+  "history": [
+    {
+      "training_episode": 2500,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.616666666666667,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.707291666666666,
+          "std": 7.719204013668757,
+          "standard_error": 0.11141711288053241,
+          "ci95_low": 10.488914125420823,
+          "ci95_high": 10.92566920791251
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.707291666666666,
+          "std": 7.667982048830415,
+          "standard_error": 0.4949661129022937,
+          "ci95_low": 9.737158085378171,
+          "ci95_high": 11.677425247955162
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.526041666666666,
+          "std": 7.747052687111127,
+          "standard_error": 0.11181907385824556,
+          "ci95_low": 10.306876281904504,
+          "ci95_high": 10.745207051428828
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.526041666666666,
+          "std": 7.644782381151238,
+          "standard_error": 0.49346858079297706,
+          "ci95_low": 9.558843248312431,
+          "ci95_high": 11.4932400850209
+        }
+      },
+      "combined_equal_variant_mean": 10.616666666666667,
+      "baseline_state_version": 9,
+      "model_state_sha256": "382189b8e5352f13417af711517b449cd085105adbf886588d8d87a9d34a5cd3",
+      "wall_seconds": 278.8989596000174,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 5000,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.551458333333333,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.648333333333333,
+          "std": 7.696260172524677,
+          "standard_error": 0.11108594705901294,
+          "ci95_low": 10.430604877097668,
+          "ci95_high": 10.866061789568999
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.648333333333333,
+          "std": 7.649344143771189,
+          "standard_error": 0.49376304130391746,
+          "ci95_low": 9.680557772377655,
+          "ci95_high": 11.616108894289011
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.454583333333334,
+          "std": 7.654664877557977,
+          "standard_error": 0.11048557069036179,
+          "ci95_low": 10.238031614780224,
+          "ci95_high": 10.671135051886443
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.454583333333334,
+          "std": 7.5578743215807,
+          "standard_error": 0.4878586896701788,
+          "ci95_low": 9.498380301579783,
+          "ci95_high": 11.410786365086885
+        }
+      },
+      "combined_equal_variant_mean": 10.551458333333333,
+      "baseline_state_version": 12,
+      "model_state_sha256": "49d0cdd5cb345ee4bc26b068248a7c86834544b5b6a7b3e22a35e84a6a3550f7",
+      "wall_seconds": 495.5358332999749,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 7500,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.587395833333332,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.696875,
+          "std": 7.690403861259895,
+          "standard_error": 0.11100141848688344,
+          "ci95_low": 10.479312219765708,
+          "ci95_high": 10.914437780234293
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.696875,
+          "std": 7.641577296778197,
+          "standard_error": 0.4932616934863108,
+          "ci95_low": 9.730082080766831,
+          "ci95_high": 11.66366791923317
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.477916666666667,
+          "std": 7.691456538349709,
+          "standard_error": 0.11101661257191278,
+          "ci95_low": 10.260324106025719,
+          "ci95_high": 10.695509227307616
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.477916666666665,
+          "std": 7.5916886281864935,
+          "standard_error": 0.49004139377597533,
+          "ci95_low": 9.517435534865754,
+          "ci95_high": 11.438397798467577
+        }
+      },
+      "combined_equal_variant_mean": 10.587395833333332,
+      "baseline_state_version": 17,
+      "model_state_sha256": "1ec560812472421fd9d76290049f97ad7061091ad5abab946820d4e1bc78608e",
+      "wall_seconds": 470.2238937999937,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 10000,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.462916666666668,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.611458333333333,
+          "std": 7.86201550016745,
+          "standard_error": 0.11347841913486718,
+          "ci95_low": 10.389040631828994,
+          "ci95_high": 10.833876034837672
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.611458333333333,
+          "std": 7.814606801005638,
+          "standard_error": 0.5044306999575675,
+          "ci95_low": 9.622774161416501,
+          "ci95_high": 11.600142505250165
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.314375,
+          "std": 7.652439261869063,
+          "standard_error": 0.1104534466949341,
+          "ci95_low": 10.097886244477928,
+          "ci95_high": 10.530863755522072
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.314375000000002,
+          "std": 7.55545825205431,
+          "standard_error": 0.4877027330528623,
+          "ci95_low": 9.358477643216391,
+          "ci95_high": 11.270272356783613
+        }
+      },
+      "combined_equal_variant_mean": 10.462916666666668,
+      "baseline_state_version": 18,
+      "model_state_sha256": "8cef437c9a6ea0a9f173ab56d40b247d510b1ab9e67dd3972d2428db3b2cf23a",
+      "wall_seconds": 1114.2824442000128,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 12500,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.439687500000002,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.518958333333334,
+          "std": 7.586526299040412,
+          "standard_error": 0.10950207502412893,
+          "ci95_low": 10.304334266286041,
+          "ci95_high": 10.733582400380627
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.518958333333334,
+          "std": 7.532122628803102,
+          "standard_error": 0.4861964250491074,
+          "ci95_low": 9.566013340237083,
+          "ci95_high": 11.471903326429585
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.360416666666667,
+          "std": 7.570691769092853,
+          "standard_error": 0.10927352327093605,
+          "ci95_low": 10.146240561055633,
+          "ci95_high": 10.574592772277702
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.360416666666667,
+          "std": 7.471490852425642,
+          "standard_error": 0.4822826607130928,
+          "ci95_low": 9.415142651669006,
+          "ci95_high": 11.305690681664329
+        }
+      },
+      "combined_equal_variant_mean": 10.439687500000002,
+      "baseline_state_version": 18,
+      "model_state_sha256": "c68a94045199aa4771c6f9e3155952b0eb5f61e6ac580ae1ae9f88d97398d5cd",
+      "wall_seconds": 346.04011379997246,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 15000,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.292083333333334,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.390625,
+          "std": 7.570417884656208,
+          "standard_error": 0.10926957008960546,
+          "ci95_low": 10.176456642624373,
+          "ci95_high": 10.604793357375627
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.390625,
+          "std": 7.518277980484694,
+          "standard_error": 0.4853027568429191,
+          "ci95_low": 9.439431596587879,
+          "ci95_high": 11.341818403412121
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.193541666666667,
+          "std": 7.458647542936828,
+          "standard_error": 0.10765630416762795,
+          "ci95_low": 9.982535310498116,
+          "ci95_high": 10.404548022835217
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.193541666666667,
+          "std": 7.35807059529099,
+          "standard_error": 0.47496141459634167,
+          "ci95_low": 9.262617294057836,
+          "ci95_high": 11.124466039275497
+        }
+      },
+      "combined_equal_variant_mean": 10.292083333333334,
+      "baseline_state_version": 19,
+      "model_state_sha256": "4f2333d26aaf312caa025b7bf9a7ed68bafd1f909519626503d9841d0350a125",
+      "wall_seconds": 332.1966042999993,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 17500,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.420625000000001,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.43375,
+          "std": 7.612392322950543,
+          "standard_error": 0.1098754189208134,
+          "ci95_low": 10.218394178915206,
+          "ci95_high": 10.649105821084794
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.433750000000002,
+          "std": 7.551108047206434,
+          "standard_error": 0.48742192853738875,
+          "ci95_low": 9.47840302006672,
+          "ci95_high": 11.389096979933283
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.4075,
+          "std": 7.612009052064386,
+          "standard_error": 0.10986988688208102,
+          "ci95_low": 10.192155021711121,
+          "ci95_high": 10.62284497828888
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.4075,
+          "std": 7.4988301737601315,
+          "standard_error": 0.4840474063168443,
+          "ci95_low": 9.458767083618985,
+          "ci95_high": 11.356232916381016
+        }
+      },
+      "combined_equal_variant_mean": 10.420625000000001,
+      "baseline_state_version": 19,
+      "model_state_sha256": "ecacfb54cf872c88a4ac1b8fbac58e095135248a02891344dbfa4b2bd450ca41",
+      "wall_seconds": 339.85019159998046,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 20000,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.499479166666667,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.573125,
+          "std": 7.789028101595959,
+          "standard_error": 0.11242493677954966,
+          "ci95_low": 10.352772123912082,
+          "ci95_high": 10.793477876087916
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.573125000000001,
+          "std": 7.7322625084094225,
+          "standard_error": 0.499115398726228,
+          "ci95_low": 9.594858818496593,
+          "ci95_high": 11.551391181503408
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.425833333333333,
+          "std": 7.726406209923691,
+          "standard_error": 0.11152106762919596,
+          "ci95_low": 10.207252040780109,
+          "ci95_high": 10.644414625886558
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.425833333333333,
+          "std": 7.620668008292192,
+          "standard_error": 0.4919120047181884,
+          "ci95_low": 9.461685804085684,
+          "ci95_high": 11.389980862580982
+        }
+      },
+      "combined_equal_variant_mean": 10.499479166666667,
+      "baseline_state_version": 21,
+      "model_state_sha256": "4436e3a4c9fce8a71297aae9f139e40ce272b249b804ad444c451c2bb49d51c8",
+      "wall_seconds": 352.8411103000399,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 22500,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.342604166666668,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.394166666666667,
+          "std": 7.712188871680378,
+          "standard_error": 0.11131585802764755,
+          "ci95_low": 10.175987584932479,
+          "ci95_high": 10.612345748400855
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.394166666666667,
+          "std": 7.652050572476491,
+          "standard_error": 0.49393774052563966,
+          "ci95_low": 9.426048695236414,
+          "ci95_high": 11.36228463809692
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.291041666666667,
+          "std": 7.66478913310897,
+          "standard_error": 0.11063170173205454,
+          "ci95_low": 10.07420353127184,
+          "ci95_high": 10.507879802061494
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.291041666666667,
+          "std": 7.550532204241915,
+          "standard_error": 0.48738475803386194,
+          "ci95_low": 9.335767540920298,
+          "ci95_high": 11.246315792413036
+        }
+      },
+      "combined_equal_variant_mean": 10.342604166666668,
+      "baseline_state_version": 25,
+      "model_state_sha256": "0b6cff0ae9c060063984948ecf960ad8225680477aec0169adcb7bed4500bc2c",
+      "wall_seconds": 352.55150289996527,
+      "ERI_used": false,
+      "formal_test_used": false
+    },
+    {
+      "training_episode": 25000,
+      "validation_scenarios_per_static_variant": 20,
+      "validation_episode_count": 9600,
+      "selection_metric": "equal_variant_equal_instance_mean_relocations",
+      "selection_formula": "(mean(DS1 per-instance means) + mean(DS2 per-instance means)) / 2",
+      "selection_score": 10.347708333333333,
+      "DS1": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.454791666666667,
+          "std": 7.669243322692834,
+          "standard_error": 0.11069599242093618,
+          "ci95_low": 10.237827521521632,
+          "ci95_high": 10.671755811811702
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.454791666666665,
+          "std": 7.61933430074709,
+          "standard_error": 0.4918259142663402,
+          "ci95_low": 9.490812874704638,
+          "ci95_high": 11.418770458628693
+        }
+      },
+      "DS2": {
+        "episode_distribution": {
+          "count": 4800,
+          "mean": 10.240625,
+          "std": 7.521159678532377,
+          "standard_error": 0.10855858912547066,
+          "ci95_low": 10.027850165314078,
+          "ci95_high": 10.453399834685921
+        },
+        "equal_instance_distribution": {
+          "count": 240,
+          "mean": 10.240625,
+          "std": 7.4264035925229415,
+          "standard_error": 0.47937229060093806,
+          "ci95_low": 9.30105531042216,
+          "ci95_high": 11.180194689577839
+        }
+      },
+      "combined_equal_variant_mean": 10.347708333333333,
+      "baseline_state_version": 27,
+      "model_state_sha256": "68ecf418f56877b27c05694a0379a74db9b8b8632d3e2314479973a61553fc34",
+      "wall_seconds": 333.27368879999267,
+      "ERI_used": false,
+      "formal_test_used": false
+    }
+  ],
+  "formal_test_episode_usage": 0,
+  "local_full_derived_artifact": {
+    "gitignored_path": "experiments/raw_results/formal-o2-mixed-seed20260816-run1/validation-full-derived.json",
+    "sha256": "be02cff39c29ce4d36cf9c843791c522385f9926b0790f1cfb514ef3709c5bca",
+    "bytes": 2288965,
+    "contents": "per-instance and parameter-group validation aggregates; no scenario-level rows"
+  }
+}

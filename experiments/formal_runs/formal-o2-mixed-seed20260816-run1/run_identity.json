@@ -1,0 +1,25 @@
+{
+  "run_id": "formal-o2-mixed-seed20260816-run1",
+  "code_sha": "f4140432ccc12a917e9cd2459fdb49bf1e1aff27",
+  "config_path": "experiments/configs/training_protocol_v1_candidate.json",
+  "config_sha256": "b284e0d1c9a8d750e4314b4bd7323af45f79d7cf2be3401ca22ec8b742793be3",
+  "split_manifest_version": "scrp-static-split-v1",
+  "dataset_version": "ku-galle-bacci-ds1-ds2-ec672df",
+  "observation_version": "O2",
+  "Mmax": 6,
+  "root_seed": 20260816,
+  "planned_episodes": 25000,
+  "validation_cadence_episodes": 2500,
+  "validation_scenarios_per_static_variant": 20,
+  "checkpoint_selection_metric": "equal_variant_equal_instance_mean_relocations",
+  "durable_milestone_episodes": [
+    1000,
+    2500,
+    5000,
+    10000,
+    15000,
+    20000,
+    25000
+  ],
+  "formal_test_episode_usage": 0
+}
