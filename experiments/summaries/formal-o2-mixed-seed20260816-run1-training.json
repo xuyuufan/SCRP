@@ -1,0 +1,7258 @@
+{
+  "run_id": "formal-o2-mixed-seed20260816-run1",
+  "completed_episodes": 25000,
+  "planned_episodes": 25000,
+  "windows": [
+    {
+      "episode": 100,
+      "iteration": 25,
+      "window_episodes": 100,
+      "loss": 0.025270988382399082,
+      "policy_loss": 0.04098464086651802,
+      "entropy": 1.5713652992248535,
+      "grad_norm": 1.5464122772216797,
+      "mean_policy_relocations": 13.39,
+      "mean_baseline_relocations": 11.99,
+      "mean_advantage": -8.542815583665506,
+      "baseline_updates": 0,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 16,
+        "7": 12,
+        "8": 8,
+        "9": 28,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 200,
+      "iteration": 50,
+      "window_episodes": 100,
+      "loss": 0.04106365405023098,
+      "policy_loss": 0.05739513117820025,
+      "entropy": 1.6331477785110473,
+      "grad_norm": 1.71078759431839,
+      "mean_policy_relocations": 13.12,
+      "mean_baseline_relocations": 12.77,
+      "mean_advantage": -7.67197598154502,
+      "baseline_updates": 2,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 16,
+        "8": 16,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 300,
+      "iteration": 75,
+      "window_episodes": 100,
+      "loss": -0.0446526581980288,
+      "policy_loss": -0.03057412263005972,
+      "entropy": 1.4078537154197692,
+      "grad_norm": 1.6129060173034668,
+      "mean_policy_relocations": 12.19,
+      "mean_baseline_relocations": 11.45,
+      "mean_advantage": -7.627444914590085,
+      "baseline_updates": 2,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 16,
+        "7": 8,
+        "8": 24,
+        "9": 20,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 400,
+      "iteration": 100,
+      "window_episodes": 100,
+      "loss": -0.0188636115193367,
+      "policy_loss": -0.005682298056781292,
+      "entropy": 1.3181313109397887,
+      "grad_norm": 1.4523512840270996,
+      "mean_policy_relocations": 13.97,
+      "mean_baseline_relocations": 13.6,
+      "mean_advantage": -8.83306867435312,
+      "baseline_updates": 3,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 0,
+        "7": 28,
+        "8": 24,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 63,
+        "DS2": 37
+      }
+    },
+    {
+      "episode": 500,
+      "iteration": 125,
+      "window_episodes": 100,
+      "loss": 0.04458600297570228,
+      "policy_loss": 0.05764769092202186,
+      "entropy": 1.3061688137054444,
+      "grad_norm": 1.5080876207351686,
+      "mean_policy_relocations": 11.96,
+      "mean_baseline_relocations": 12.12,
+      "mean_advantage": -7.3000344691036965,
+      "baseline_updates": 3,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 16,
+        "7": 12,
+        "8": 20,
+        "9": 32,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 600,
+      "iteration": 150,
+      "window_episodes": 100,
+      "loss": 0.024684440586715938,
+      "policy_loss": 0.03442602284252644,
+      "entropy": 0.9741582274436951,
+      "grad_norm": 1.1981583046913147,
+      "mean_policy_relocations": 10.75,
+      "mean_baseline_relocations": 10.97,
+      "mean_advantage": -7.1058173065693,
+      "baseline_updates": 3,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 24,
+        "7": 20,
+        "8": 16,
+        "9": 8,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 700,
+      "iteration": 175,
+      "window_episodes": 100,
+      "loss": -0.042809512838721274,
+      "policy_loss": -0.034153902865946294,
+      "entropy": 0.865561089515686,
+      "grad_norm": 1.304011025428772,
+      "mean_policy_relocations": 10.7,
+      "mean_baseline_relocations": 10.74,
+      "mean_advantage": -6.563936833867044,
+      "baseline_updates": 3,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 20,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 800,
+      "iteration": 200,
+      "window_episodes": 100,
+      "loss": -0.09118035083636641,
+      "policy_loss": -0.0832499899994582,
+      "entropy": 0.7930362272262573,
+      "grad_norm": 1.264778299331665,
+      "mean_policy_relocations": 11.27,
+      "mean_baseline_relocations": 11.24,
+      "mean_advantage": -6.329469394721209,
+      "baseline_updates": 4,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 12,
+        "8": 20,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 900,
+      "iteration": 225,
+      "window_episodes": 100,
+      "loss": -0.00010037628933787346,
+      "policy_loss": 0.007882915753871202,
+      "entropy": 0.7983293116092682,
+      "grad_norm": 1.157292582988739,
+      "mean_policy_relocations": 11.32,
+      "mean_baseline_relocations": 10.88,
+      "mean_advantage": -7.318786451680187,
+      "baseline_updates": 4,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 4,
+        "8": 4,
+        "9": 24,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 1000,
+      "iteration": 250,
+      "window_episodes": 100,
+      "loss": -0.09553689543157816,
+      "policy_loss": -0.08423939857631922,
+      "entropy": 1.1297497510910035,
+      "grad_norm": 1.2003285300731659,
+      "mean_policy_relocations": 12.35,
+      "mean_baseline_relocations": 11.55,
+      "mean_advantage": -7.956353236487813,
+      "baseline_updates": 5,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 28,
+        "8": 4,
+        "9": 16,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 1100,
+      "iteration": 275,
+      "window_episodes": 100,
+      "loss": -0.15660132937133311,
+      "policy_loss": -0.14719823263585569,
+      "entropy": 0.9403098726272583,
+      "grad_norm": 1.0320940494537354,
+      "mean_policy_relocations": 12.39,
+      "mean_baseline_relocations": 11.72,
+      "mean_advantage": -7.9704146604805794,
+      "baseline_updates": 6,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 12,
+        "8": 36,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 1200,
+      "iteration": 300,
+      "window_episodes": 100,
+      "loss": -0.1387739723548293,
+      "policy_loss": -0.12997795328497885,
+      "entropy": 0.8796021139621735,
+      "grad_norm": 1.1111494755744935,
+      "mean_policy_relocations": 11.9,
+      "mean_baseline_relocations": 11.35,
+      "mean_advantage": -7.29131395804872,
+      "baseline_updates": 6,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 28,
+        "7": 20,
+        "8": 12,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 1300,
+      "iteration": 325,
+      "window_episodes": 100,
+      "loss": -0.1454962445050478,
+      "policy_loss": -0.13634592697024345,
+      "entropy": 0.9150317788124085,
+      "grad_norm": 1.1330178624391556,
+      "mean_policy_relocations": 11.52,
+      "mean_baseline_relocations": 11.25,
+      "mean_advantage": -6.881962376563973,
+      "baseline_updates": 6,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 3,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 28,
+        "7": 0,
+        "8": 4,
+        "9": 16,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 1400,
+      "iteration": 350,
+      "window_episodes": 100,
+      "loss": -0.1428197133168578,
+      "policy_loss": -0.13303537406027316,
+      "entropy": 0.9784339427947998,
+      "grad_norm": 1.109023278951645,
+      "mean_policy_relocations": 11.36,
+      "mean_baseline_relocations": 11.04,
+      "mean_advantage": -7.331418074230018,
+      "baseline_updates": 7,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 1500,
+      "iteration": 375,
+      "window_episodes": 100,
+      "loss": -0.0940728148072958,
+      "policy_loss": -0.08092434925027192,
+      "entropy": 1.3148464751243591,
+      "grad_norm": 1.0668277764320373,
+      "mean_policy_relocations": 12.99,
+      "mean_baseline_relocations": 12.16,
+      "mean_advantage": -8.375573669655846,
+      "baseline_updates": 7,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 20,
+        "7": 12,
+        "8": 24,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 1600,
+      "iteration": 400,
+      "window_episodes": 100,
+      "loss": -0.054204087182879446,
+      "policy_loss": -0.04046391125768423,
+      "entropy": 1.374017686843872,
+      "grad_norm": 1.0942802357673644,
+      "mean_policy_relocations": 11.89,
+      "mean_baseline_relocations": 10.98,
+      "mean_advantage": -7.360502290122358,
+      "baseline_updates": 7,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 24,
+        "8": 12,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 1700,
+      "iteration": 425,
+      "window_episodes": 100,
+      "loss": -0.06908674113452434,
+      "policy_loss": -0.05750538531690836,
+      "entropy": 1.1581356406211853,
+      "grad_norm": 1.0465288066864014,
+      "mean_policy_relocations": 11.85,
+      "mean_baseline_relocations": 11.32,
+      "mean_advantage": -7.695117217031802,
+      "baseline_updates": 7,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 20,
+        "8": 12,
+        "9": 4,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 1800,
+      "iteration": 450,
+      "window_episodes": 100,
+      "loss": -0.10790345896035433,
+      "policy_loss": -0.09556473340839147,
+      "entropy": 1.2338725328445435,
+      "grad_norm": 1.219113301038742,
+      "mean_policy_relocations": 12.17,
+      "mean_baseline_relocations": 11.6,
+      "mean_advantage": -7.951944199622202,
+      "baseline_updates": 7,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 16,
+        "8": 24,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 1900,
+      "iteration": 475,
+      "window_episodes": 100,
+      "loss": -0.1244645132124424,
+      "policy_loss": -0.1148258701665327,
+      "entropy": 0.9638641166687012,
+      "grad_norm": 1.419869590997696,
+      "mean_policy_relocations": 10.38,
+      "mean_baseline_relocations": 10.09,
+      "mean_advantage": -6.703326250771707,
+      "baseline_updates": 8,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 28,
+        "7": 16,
+        "8": 16,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 2000,
+      "iteration": 500,
+      "window_episodes": 100,
+      "loss": -0.11371537316590548,
+      "policy_loss": -0.104062629789114,
+      "entropy": 0.9652743148803711,
+      "grad_norm": 1.0756062245368958,
+      "mean_policy_relocations": 12.05,
+      "mean_baseline_relocations": 11.66,
+      "mean_advantage": -7.501977705224466,
+      "baseline_updates": 8,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 0,
+        "7": 32,
+        "8": 16,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 2100,
+      "iteration": 525,
+      "window_episodes": 100,
+      "loss": -0.13399531714618207,
+      "policy_loss": -0.12292124796658754,
+      "entropy": 1.1074068999290467,
+      "grad_norm": 1.3778432309627533,
+      "mean_policy_relocations": 12.65,
+      "mean_baseline_relocations": 11.81,
+      "mean_advantage": -7.7913992551812905,
+      "baseline_updates": 8,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 8,
+        "8": 20,
+        "9": 28,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 2200,
+      "iteration": 550,
+      "window_episodes": 100,
+      "loss": -0.10004993859678507,
+      "policy_loss": -0.08985266983509063,
+      "entropy": 1.0197269558906554,
+      "grad_norm": 1.0810776698589324,
+      "mean_policy_relocations": 11.27,
+      "mean_baseline_relocations": 10.65,
+      "mean_advantage": -7.218688173484704,
+      "baseline_updates": 8,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 28,
+        "8": 20,
+        "9": 20,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 2300,
+      "iteration": 575,
+      "window_episodes": 100,
+      "loss": -0.1261472274363041,
+      "policy_loss": -0.11351658845320343,
+      "entropy": 1.2630638337135316,
+      "grad_norm": 1.274928433895111,
+      "mean_policy_relocations": 11.01,
+      "mean_baseline_relocations": 9.78,
+      "mean_advantage": -7.041677248907669,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 16,
+        "8": 20,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 40,
+        "DS2": 60
+      }
+    },
+    {
+      "episode": 2400,
+      "iteration": 600,
+      "window_episodes": 100,
+      "loss": -0.11034923851490021,
+      "policy_loss": -0.09955085474997759,
+      "entropy": 1.0798380875587463,
+      "grad_norm": 1.4157332873344421,
+      "mean_policy_relocations": 9.26,
+      "mean_baseline_relocations": 8.55,
+      "mean_advantage": -6.141717454446808,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 20,
+        "7": 12,
+        "8": 16,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 2500,
+      "iteration": 625,
+      "window_episodes": 100,
+      "loss": -0.09779418960213661,
+      "policy_loss": -0.08561142392456532,
+      "entropy": 1.2182765984535218,
+      "grad_norm": 1.2487825858592987,
+      "mean_policy_relocations": 11.24,
+      "mean_baseline_relocations": 10.38,
+      "mean_advantage": -6.894639962172755,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 8,
+        "7": 24,
+        "8": 16,
+        "9": 16,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 2600,
+      "iteration": 650,
+      "window_episodes": 100,
+      "loss": -0.17778622958809137,
+      "policy_loss": -0.1673130005877465,
+      "entropy": 1.0473228526115417,
+      "grad_norm": 1.1684703493118287,
+      "mean_policy_relocations": 11.15,
+      "mean_baseline_relocations": 10.52,
+      "mean_advantage": -7.710296192303963,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 20,
+        "8": 12,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 63,
+        "DS2": 37
+      }
+    },
+    {
+      "episode": 2700,
+      "iteration": 675,
+      "window_episodes": 100,
+      "loss": -0.07750148861669004,
+      "policy_loss": -0.0707437466736883,
+      "entropy": 0.6757741570472717,
+      "grad_norm": 1.4611374473571777,
+      "mean_policy_relocations": 11.65,
+      "mean_baseline_relocations": 11.61,
+      "mean_advantage": -6.775045052378083,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 4,
+        "7": 12,
+        "8": 24,
+        "9": 24,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 2800,
+      "iteration": 700,
+      "window_episodes": 100,
+      "loss": -0.009048236142843962,
+      "policy_loss": -0.0029458475857973097,
+      "entropy": 0.6102389144897461,
+      "grad_norm": 1.300077223777771,
+      "mean_policy_relocations": 9.9,
+      "mean_baseline_relocations": 9.85,
+      "mean_advantage": -6.716279767560496,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 32,
+        "6": 16,
+        "7": 8,
+        "8": 20,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 2900,
+      "iteration": 725,
+      "window_episodes": 100,
+      "loss": -0.030336249209940432,
+      "policy_loss": -0.02401770032942295,
+      "entropy": 0.6318550002574921,
+      "grad_norm": 1.2934539890289307,
+      "mean_policy_relocations": 9.76,
+      "mean_baseline_relocations": 9.83,
+      "mean_advantage": -6.242958350564433,
+      "baseline_updates": 9,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 24,
+        "7": 24,
+        "8": 8,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 3000,
+      "iteration": 750,
+      "window_episodes": 100,
+      "loss": 0.023883256912231445,
+      "policy_loss": 0.03043948896229267,
+      "entropy": 0.6556232178211212,
+      "grad_norm": 1.6561052656173707,
+      "mean_policy_relocations": 9.67,
+      "mean_baseline_relocations": 9.6,
+      "mean_advantage": -5.767070639301411,
+      "baseline_updates": 10,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 12,
+        "8": 8,
+        "9": 32,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 3100,
+      "iteration": 775,
+      "window_episodes": 100,
+      "loss": 0.009117864202708006,
+      "policy_loss": 0.016405875384807585,
+      "entropy": 0.7288011074066162,
+      "grad_norm": 1.435903961658478,
+      "mean_policy_relocations": 9.96,
+      "mean_baseline_relocations": 9.74,
+      "mean_advantage": -5.895360422091196,
+      "baseline_updates": 10,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 8,
+        "7": 16,
+        "8": 28,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 3200,
+      "iteration": 800,
+      "window_episodes": 100,
+      "loss": -0.03865466184914112,
+      "policy_loss": -0.031090289186686278,
+      "entropy": 0.7564373087882995,
+      "grad_norm": 1.4454417634010315,
+      "mean_policy_relocations": 11.13,
+      "mean_baseline_relocations": 10.62,
+      "mean_advantage": -6.654932464714489,
+      "baseline_updates": 10,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 8,
+        "7": 8,
+        "8": 16,
+        "9": 24,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 3300,
+      "iteration": 825,
+      "window_episodes": 100,
+      "loss": -0.127079276740551,
+      "policy_loss": -0.11807193080661818,
+      "entropy": 0.9007344961166381,
+      "grad_norm": 1.3153555989265442,
+      "mean_policy_relocations": 10.71,
+      "mean_baseline_relocations": 10.14,
+      "mean_advantage": -6.880556892198514,
+      "baseline_updates": 10,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 28,
+        "8": 20,
+        "9": 8,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 3400,
+      "iteration": 850,
+      "window_episodes": 100,
+      "loss": -0.08901227608323098,
+      "policy_loss": -0.07680045272223651,
+      "entropy": 1.221182370185852,
+      "grad_norm": 1.2655692458152772,
+      "mean_policy_relocations": 11.17,
+      "mean_baseline_relocations": 10.13,
+      "mean_advantage": -7.1100729174781305,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 24,
+        "8": 16,
+        "9": 24,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 3500,
+      "iteration": 875,
+      "window_episodes": 100,
+      "loss": -0.008166885636746883,
+      "policy_loss": 0.008631452708505094,
+      "entropy": 1.679833869934082,
+      "grad_norm": 0.9188285899162293,
+      "mean_policy_relocations": 13.09,
+      "mean_baseline_relocations": 10.83,
+      "mean_advantage": -8.154775033576577,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 4,
+        "8": 16,
+        "9": 28,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 3600,
+      "iteration": 900,
+      "window_episodes": 100,
+      "loss": 0.009045805893838405,
+      "policy_loss": 0.025307673327624798,
+      "entropy": 1.6261868000030517,
+      "grad_norm": 1.0101266115903855,
+      "mean_policy_relocations": 11.26,
+      "mean_baseline_relocations": 9.04,
+      "mean_advantage": -6.993781577731703,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 32,
+        "7": 16,
+        "8": 12,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 3700,
+      "iteration": 925,
+      "window_episodes": 100,
+      "loss": -0.01732260163873434,
+      "policy_loss": -0.0008963186480104923,
+      "entropy": 1.642628355026245,
+      "grad_norm": 0.7944062876701355,
+      "mean_policy_relocations": 11.69,
+      "mean_baseline_relocations": 9.28,
+      "mean_advantage": -7.902072475295558,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 4,
+        "7": 28,
+        "8": 12,
+        "9": 12,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 3800,
+      "iteration": 950,
+      "window_episodes": 100,
+      "loss": -0.05335151880979538,
+      "policy_loss": -0.0380545050278306,
+      "entropy": 1.529701328277588,
+      "grad_norm": 1.720575522184372,
+      "mean_policy_relocations": 11.31,
+      "mean_baseline_relocations": 9.59,
+      "mean_advantage": -7.016887407916504,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 8,
+        "7": 24,
+        "8": 24,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 3900,
+      "iteration": 975,
+      "window_episodes": 100,
+      "loss": -0.0824169347807765,
+      "policy_loss": -0.06812356157228351,
+      "entropy": 1.4293374037742614,
+      "grad_norm": 1.492588884830475,
+      "mean_policy_relocations": 12.82,
+      "mean_baseline_relocations": 10.96,
+      "mean_advantage": -8.297768721407078,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 16,
+        "8": 28,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 4000,
+      "iteration": 1000,
+      "window_episodes": 100,
+      "loss": -0.09761349387466907,
+      "policy_loss": -0.0860164287686348,
+      "entropy": 1.159706585407257,
+      "grad_norm": 1.7157622051239014,
+      "mean_policy_relocations": 10.87,
+      "mean_baseline_relocations": 10.01,
+      "mean_advantage": -7.164809328010614,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 20,
+        "8": 16,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 4100,
+      "iteration": 1025,
+      "window_episodes": 100,
+      "loss": -0.11651994027197361,
+      "policy_loss": -0.10605286529287695,
+      "entropy": 1.0467076182365418,
+      "grad_norm": 1.7024527764320374,
+      "mean_policy_relocations": 11.14,
+      "mean_baseline_relocations": 10.8,
+      "mean_advantage": -6.999059419146547,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 20,
+        "7": 8,
+        "8": 12,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 58,
+        "DS2": 42
+      }
+    },
+    {
+      "episode": 4200,
+      "iteration": 1050,
+      "window_episodes": 100,
+      "loss": -0.09165967002511025,
+      "policy_loss": -0.0804345277696848,
+      "entropy": 1.122514147758484,
+      "grad_norm": 1.906525319814682,
+      "mean_policy_relocations": 11.24,
+      "mean_baseline_relocations": 10.6,
+      "mean_advantage": -6.81326698055767,
+      "baseline_updates": 11,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 0,
+        "6": 28,
+        "7": 16,
+        "8": 20,
+        "9": 28,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 4300,
+      "iteration": 1075,
+      "window_episodes": 100,
+      "loss": -0.06203399740159512,
+      "policy_loss": -0.04842999274842441,
+      "entropy": 1.3604004454612733,
+      "grad_norm": 1.536092985868454,
+      "mean_policy_relocations": 12.29,
+      "mean_baseline_relocations": 11.11,
+      "mean_advantage": -7.930171273466118,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 8,
+        "7": 20,
+        "8": 4,
+        "9": 16,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 4400,
+      "iteration": 1100,
+      "window_episodes": 100,
+      "loss": -0.052684212401509285,
+      "policy_loss": -0.040404875464737415,
+      "entropy": 1.2279336500167846,
+      "grad_norm": 1.9785398435592652,
+      "mean_policy_relocations": 9.74,
+      "mean_baseline_relocations": 8.67,
+      "mean_advantage": -6.3962156309788725,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 12,
+        "8": 16,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 4500,
+      "iteration": 1125,
+      "window_episodes": 100,
+      "loss": -0.07405308336019516,
+      "policy_loss": -0.06263296503573657,
+      "entropy": 1.142011947631836,
+      "grad_norm": 1.9284567511081696,
+      "mean_policy_relocations": 10.22,
+      "mean_baseline_relocations": 9.47,
+      "mean_advantage": -6.284349217397701,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 16,
+        "7": 8,
+        "8": 28,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 4600,
+      "iteration": 1150,
+      "window_episodes": 100,
+      "loss": -0.11523464340716601,
+      "policy_loss": -0.10530016981065274,
+      "entropy": 0.9934475135803222,
+      "grad_norm": 1.7977168953418732,
+      "mean_policy_relocations": 9.68,
+      "mean_baseline_relocations": 8.93,
+      "mean_advantage": -6.559631029716078,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 36,
+        "7": 4,
+        "8": 12,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 4700,
+      "iteration": 1175,
+      "window_episodes": 100,
+      "loss": -0.03529080152511597,
+      "policy_loss": -0.028249402279034257,
+      "entropy": 0.7041399872303009,
+      "grad_norm": 1.3594646835327149,
+      "mean_policy_relocations": 10.18,
+      "mean_baseline_relocations": 9.74,
+      "mean_advantage": -6.406798235656921,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 28,
+        "7": 16,
+        "8": 12,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 4800,
+      "iteration": 1200,
+      "window_episodes": 100,
+      "loss": -0.16251082418486476,
+      "policy_loss": -0.15477659087628126,
+      "entropy": 0.7734233558177948,
+      "grad_norm": 1.4316845679283141,
+      "mean_policy_relocations": 10.57,
+      "mean_baseline_relocations": 9.91,
+      "mean_advantage": -6.815804979589267,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 8,
+        "7": 20,
+        "8": 20,
+        "9": 24,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 4900,
+      "iteration": 1225,
+      "window_episodes": 100,
+      "loss": -0.22862824879586696,
+      "policy_loss": -0.2195349783077836,
+      "entropy": 0.9093274188041687,
+      "grad_norm": 1.143328173160553,
+      "mean_policy_relocations": 11.02,
+      "mean_baseline_relocations": 9.97,
+      "mean_advantage": -7.484148304444728,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 16,
+        "8": 28,
+        "9": 12,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 5000,
+      "iteration": 1250,
+      "window_episodes": 100,
+      "loss": -0.27849669128656385,
+      "policy_loss": -0.2696599081158638,
+      "entropy": 0.883678252696991,
+      "grad_norm": 1.3237839233875275,
+      "mean_policy_relocations": 10.42,
+      "mean_baseline_relocations": 9.45,
+      "mean_advantage": -6.679108293761414,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 12,
+        "8": 28,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 5100,
+      "iteration": 1275,
+      "window_episodes": 100,
+      "loss": -0.24069039821624755,
+      "policy_loss": -0.23300395876169205,
+      "entropy": 0.7686439800262451,
+      "grad_norm": 1.3450689911842346,
+      "mean_policy_relocations": 10.99,
+      "mean_baseline_relocations": 10.08,
+      "mean_advantage": -7.025420430156663,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 32,
+        "7": 16,
+        "8": 20,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 5200,
+      "iteration": 1300,
+      "window_episodes": 100,
+      "loss": -0.10155263170599937,
+      "policy_loss": -0.09527236644178629,
+      "entropy": 0.6280264627933502,
+      "grad_norm": 1.5727287364006042,
+      "mean_policy_relocations": 9.35,
+      "mean_baseline_relocations": 8.93,
+      "mean_advantage": -5.657142408998688,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 12,
+        "7": 16,
+        "8": 12,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 5300,
+      "iteration": 1325,
+      "window_episodes": 100,
+      "loss": -0.22418903306126595,
+      "policy_loss": -0.21695491686463356,
+      "entropy": 0.72341193318367,
+      "grad_norm": 1.3480078125,
+      "mean_policy_relocations": 11.25,
+      "mean_baseline_relocations": 10.17,
+      "mean_advantage": -6.974780887943521,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 24,
+        "8": 12,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 39,
+        "DS2": 61
+      }
+    },
+    {
+      "episode": 5400,
+      "iteration": 1350,
+      "window_episodes": 100,
+      "loss": -0.16341633453965188,
+      "policy_loss": -0.15686533089727164,
+      "entropy": 0.6551004552841186,
+      "grad_norm": 1.3648802208900452,
+      "mean_policy_relocations": 10.43,
+      "mean_baseline_relocations": 9.8,
+      "mean_advantage": -6.506336412907578,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 12,
+        "8": 20,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 5500,
+      "iteration": 1375,
+      "window_episodes": 100,
+      "loss": -0.2133161374181509,
+      "policy_loss": -0.20673126079142093,
+      "entropy": 0.6584876453876496,
+      "grad_norm": 1.2918541181087493,
+      "mean_policy_relocations": 10.28,
+      "mean_baseline_relocations": 9.6,
+      "mean_advantage": -6.316823149787294,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 12,
+        "7": 20,
+        "8": 12,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 5600,
+      "iteration": 1400,
+      "window_episodes": 100,
+      "loss": -0.15194343462586402,
+      "policy_loss": -0.14476849736645817,
+      "entropy": 0.7174938142299652,
+      "grad_norm": 1.3695004403591156,
+      "mean_policy_relocations": 10.43,
+      "mean_baseline_relocations": 9.65,
+      "mean_advantage": -6.505116149814018,
+      "baseline_updates": 12,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 32,
+        "7": 20,
+        "8": 0,
+        "9": 20,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 5700,
+      "iteration": 1425,
+      "window_episodes": 100,
+      "loss": -0.27419162133708597,
+      "policy_loss": -0.264355457406491,
+      "entropy": 0.9836165595054627,
+      "grad_norm": 1.6849783372879028,
+      "mean_policy_relocations": 9.91,
+      "mean_baseline_relocations": 8.99,
+      "mean_advantage": -6.413369341353359,
+      "baseline_updates": 13,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 24,
+        "7": 20,
+        "8": 12,
+        "9": 4,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 5800,
+      "iteration": 1450,
+      "window_episodes": 100,
+      "loss": -0.17044516459107398,
+      "policy_loss": -0.16363087967038153,
+      "entropy": 0.6814283835887909,
+      "grad_norm": 1.6593643593788148,
+      "mean_policy_relocations": 9.99,
+      "mean_baseline_relocations": 9.86,
+      "mean_advantage": -6.196429452216169,
+      "baseline_updates": 14,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 16,
+        "8": 12,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 5900,
+      "iteration": 1475,
+      "window_episodes": 100,
+      "loss": -0.10570422619581223,
+      "policy_loss": -0.09898316339822485,
+      "entropy": 0.672106317281723,
+      "grad_norm": 1.365182604789734,
+      "mean_policy_relocations": 10.46,
+      "mean_baseline_relocations": 10.27,
+      "mean_advantage": -6.636060634467813,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 28,
+        "7": 16,
+        "8": 8,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 6000,
+      "iteration": 1500,
+      "window_episodes": 100,
+      "loss": -0.296937101483345,
+      "policy_loss": -0.2858128586038947,
+      "entropy": 1.112424352169037,
+      "grad_norm": 1.5765124094486236,
+      "mean_policy_relocations": 10.98,
+      "mean_baseline_relocations": 10.19,
+      "mean_advantage": -6.873712107551318,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 16,
+        "7": 16,
+        "8": 4,
+        "9": 32,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 6100,
+      "iteration": 1525,
+      "window_episodes": 100,
+      "loss": -0.17714249357581138,
+      "policy_loss": -0.16946697782725095,
+      "entropy": 0.7675515115261078,
+      "grad_norm": 1.4060744005441665,
+      "mean_policy_relocations": 10.16,
+      "mean_baseline_relocations": 9.69,
+      "mean_advantage": -6.372608832465152,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 12,
+        "7": 16,
+        "8": 16,
+        "9": 12,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 6200,
+      "iteration": 1550,
+      "window_episodes": 100,
+      "loss": -0.1019878003001213,
+      "policy_loss": -0.09557502197334543,
+      "entropy": 0.6412779343128204,
+      "grad_norm": 1.3819078874588013,
+      "mean_policy_relocations": 9.67,
+      "mean_baseline_relocations": 9.34,
+      "mean_advantage": -6.060584005451082,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 24,
+        "7": 8,
+        "8": 12,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 6300,
+      "iteration": 1575,
+      "window_episodes": 100,
+      "loss": 0.0482435018569231,
+      "policy_loss": 0.05376919169444591,
+      "entropy": 0.552568883895874,
+      "grad_norm": 1.4652891194820403,
+      "mean_policy_relocations": 9.03,
+      "mean_baseline_relocations": 9.01,
+      "mean_advantage": -5.6315794624782685,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 16,
+        "7": 12,
+        "8": 16,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 6400,
+      "iteration": 1600,
+      "window_episodes": 100,
+      "loss": 0.020047890227288007,
+      "policy_loss": 0.025998199079185724,
+      "entropy": 0.5950309562683106,
+      "grad_norm": 1.287085349559784,
+      "mean_policy_relocations": 11.75,
+      "mean_baseline_relocations": 11.59,
+      "mean_advantage": -6.863365672906663,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 12,
+        "7": 20,
+        "8": 28,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 38,
+        "DS2": 62
+      }
+    },
+    {
+      "episode": 6500,
+      "iteration": 1625,
+      "window_episodes": 100,
+      "loss": 0.024739500023424624,
+      "policy_loss": 0.03073234354611486,
+      "entropy": 0.5992842674255371,
+      "grad_norm": 1.1802556133270263,
+      "mean_policy_relocations": 9.78,
+      "mean_baseline_relocations": 9.64,
+      "mean_advantage": -6.112906739241172,
+      "baseline_updates": 15,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 3,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 4,
+        "7": 20,
+        "8": 20,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 6600,
+      "iteration": 1650,
+      "window_episodes": 100,
+      "loss": -0.045912772864103314,
+      "policy_loss": -0.03971285201609134,
+      "entropy": 0.6199920833110809,
+      "grad_norm": 1.3325904059410094,
+      "mean_policy_relocations": 10.09,
+      "mean_baseline_relocations": 10.03,
+      "mean_advantage": -6.680104015274513,
+      "baseline_updates": 16,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 12,
+        "8": 28,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 6700,
+      "iteration": 1675,
+      "window_episodes": 100,
+      "loss": 0.03387947827577591,
+      "policy_loss": 0.039933181343367326,
+      "entropy": 0.6053703427314758,
+      "grad_norm": 1.4344932824373244,
+      "mean_policy_relocations": 9.88,
+      "mean_baseline_relocations": 9.62,
+      "mean_advantage": -6.001453420874956,
+      "baseline_updates": 16,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 4,
+        "8": 16,
+        "9": 12,
+        "10": 44
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 6800,
+      "iteration": 1700,
+      "window_episodes": 100,
+      "loss": 0.02597231522202492,
+      "policy_loss": 0.03144565863534808,
+      "entropy": 0.5473342537879944,
+      "grad_norm": 1.2426858448982239,
+      "mean_policy_relocations": 10.39,
+      "mean_baseline_relocations": 10.3,
+      "mean_advantage": -6.1129888965011965,
+      "baseline_updates": 16,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 12,
+        "7": 24,
+        "8": 16,
+        "9": 12,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 61,
+        "DS2": 39
+      }
+    },
+    {
+      "episode": 6900,
+      "iteration": 1725,
+      "window_episodes": 100,
+      "loss": -0.05799192264676094,
+      "policy_loss": -0.052095906944014135,
+      "entropy": 0.5896016192436219,
+      "grad_norm": 1.463443979024887,
+      "mean_policy_relocations": 10.4,
+      "mean_baseline_relocations": 10.22,
+      "mean_advantage": -6.303828545264236,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 20,
+        "7": 8,
+        "8": 12,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 7000,
+      "iteration": 1750,
+      "window_episodes": 100,
+      "loss": 0.02725126126781106,
+      "policy_loss": 0.03271752574946731,
+      "entropy": 0.5466263902187347,
+      "grad_norm": 1.3807048225402831,
+      "mean_policy_relocations": 11.98,
+      "mean_baseline_relocations": 11.79,
+      "mean_advantage": -7.886969990208269,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 28,
+        "8": 4,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 7100,
+      "iteration": 1775,
+      "window_episodes": 100,
+      "loss": 0.014426058195531367,
+      "policy_loss": 0.02001242883503437,
+      "entropy": 0.5586370265483857,
+      "grad_norm": 1.250007449388504,
+      "mean_policy_relocations": 10.22,
+      "mean_baseline_relocations": 9.75,
+      "mean_advantage": -5.954340227260389,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 20,
+        "8": 12,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 7200,
+      "iteration": 1800,
+      "window_episodes": 100,
+      "loss": -0.11434818595647812,
+      "policy_loss": -0.10848640471696853,
+      "entropy": 0.5861782062053681,
+      "grad_norm": 1.4606060194969177,
+      "mean_policy_relocations": 9.97,
+      "mean_baseline_relocations": 9.84,
+      "mean_advantage": -6.481048237203127,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 32,
+        "7": 8,
+        "8": 32,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 7300,
+      "iteration": 1825,
+      "window_episodes": 100,
+      "loss": -0.1340529226511717,
+      "policy_loss": -0.12778435185551643,
+      "entropy": 0.62685711145401,
+      "grad_norm": 1.463029625415802,
+      "mean_policy_relocations": 10.75,
+      "mean_baseline_relocations": 10.44,
+      "mean_advantage": -6.275693989485087,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 28,
+        "8": 12,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 7400,
+      "iteration": 1850,
+      "window_episodes": 100,
+      "loss": -0.28878146052360537,
+      "policy_loss": -0.2808544582873583,
+      "entropy": 0.7927003586292267,
+      "grad_norm": 1.027090768814087,
+      "mean_policy_relocations": 10.27,
+      "mean_baseline_relocations": 9.64,
+      "mean_advantage": -6.648215922676774,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 28,
+        "7": 8,
+        "8": 20,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 7500,
+      "iteration": 1875,
+      "window_episodes": 100,
+      "loss": -0.26827601477503776,
+      "policy_loss": -0.2601234947890043,
+      "entropy": 0.8152519595623017,
+      "grad_norm": 1.4708880960941315,
+      "mean_policy_relocations": 12.01,
+      "mean_baseline_relocations": 11.12,
+      "mean_advantage": -7.348780416559822,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 12,
+        "8": 16,
+        "9": 24,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 7600,
+      "iteration": 1900,
+      "window_episodes": 100,
+      "loss": -0.28170537561178205,
+      "policy_loss": -0.27350313514471053,
+      "entropy": 0.8202241921424865,
+      "grad_norm": 1.4788522076606752,
+      "mean_policy_relocations": 11.32,
+      "mean_baseline_relocations": 10.51,
+      "mean_advantage": -6.718951846444728,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 16,
+        "8": 8,
+        "9": 16,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 7700,
+      "iteration": 1925,
+      "window_episodes": 100,
+      "loss": -0.16611921563744544,
+      "policy_loss": -0.16003368314355612,
+      "entropy": 0.6085531401634217,
+      "grad_norm": 1.3942304396629333,
+      "mean_policy_relocations": 10.24,
+      "mean_baseline_relocations": 9.79,
+      "mean_advantage": -6.4487463933634,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 24,
+        "8": 12,
+        "9": 8,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 7800,
+      "iteration": 1950,
+      "window_episodes": 100,
+      "loss": -0.026844836995005606,
+      "policy_loss": -0.0219838890992105,
+      "entropy": 0.48609476804733276,
+      "grad_norm": 1.3410318326950073,
+      "mean_policy_relocations": 10.5,
+      "mean_baseline_relocations": 10.26,
+      "mean_advantage": -6.210327128492408,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 16,
+        "8": 20,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 7900,
+      "iteration": 1975,
+      "window_episodes": 100,
+      "loss": -0.1754517626017332,
+      "policy_loss": -0.16994049102067948,
+      "entropy": 0.5511270916461944,
+      "grad_norm": 1.7090695190429688,
+      "mean_policy_relocations": 9.65,
+      "mean_baseline_relocations": 9.3,
+      "mean_advantage": -6.23935661047912,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 36,
+        "6": 20,
+        "7": 16,
+        "8": 8,
+        "9": 12,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 8000,
+      "iteration": 2000,
+      "window_episodes": 100,
+      "loss": -0.15002576156519354,
+      "policy_loss": -0.1437801930308342,
+      "entropy": 0.6245567071437835,
+      "grad_norm": 1.475367977619171,
+      "mean_policy_relocations": 11.42,
+      "mean_baseline_relocations": 11.2,
+      "mean_advantage": -7.0790882698303506,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 20,
+        "8": 16,
+        "9": 12,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 8100,
+      "iteration": 2025,
+      "window_episodes": 100,
+      "loss": -0.1834288564324379,
+      "policy_loss": -0.17681491732597351,
+      "entropy": 0.661394031047821,
+      "grad_norm": 1.3580130743980408,
+      "mean_policy_relocations": 9.87,
+      "mean_baseline_relocations": 9.36,
+      "mean_advantage": -6.217874879603513,
+      "baseline_updates": 17,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 32,
+        "7": 16,
+        "8": 4,
+        "9": 16,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 8200,
+      "iteration": 2050,
+      "window_episodes": 100,
+      "loss": -0.18810114074498416,
+      "policy_loss": -0.18044898973428644,
+      "entropy": 0.7652152144908905,
+      "grad_norm": 1.8009729766845703,
+      "mean_policy_relocations": 9.92,
+      "mean_baseline_relocations": 9.73,
+      "mean_advantage": -6.076425571379136,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 0,
+        "6": 24,
+        "7": 20,
+        "8": 20,
+        "9": 12,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 8300,
+      "iteration": 2075,
+      "window_episodes": 100,
+      "loss": -0.12012898094952107,
+      "policy_loss": -0.11167313918471336,
+      "entropy": 0.8455840992927551,
+      "grad_norm": 1.9873992228507995,
+      "mean_policy_relocations": 10.07,
+      "mean_baseline_relocations": 9.39,
+      "mean_advantage": -6.193677849799096,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 3,
+      "S_bucket_counts": {
+        "5": 36,
+        "6": 12,
+        "7": 24,
+        "8": 8,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 8400,
+      "iteration": 2100,
+      "window_episodes": 100,
+      "loss": -0.056519263908267024,
+      "policy_loss": -0.04629846416413784,
+      "entropy": 1.0220799469947814,
+      "grad_norm": 2.8582571959495544,
+      "mean_policy_relocations": 10.2,
+      "mean_baseline_relocations": 8.93,
+      "mean_advantage": -6.742449969900594,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 8,
+        "7": 16,
+        "8": 20,
+        "9": 40,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 8500,
+      "iteration": 2125,
+      "window_episodes": 100,
+      "loss": -0.0538073243200779,
+      "policy_loss": -0.04373717024922371,
+      "entropy": 1.0070153021812438,
+      "grad_norm": 2.124558939933777,
+      "mean_policy_relocations": 12.1,
+      "mean_baseline_relocations": 9.82,
+      "mean_advantage": -7.509955985446071,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 16,
+        "7": 28,
+        "8": 16,
+        "9": 28,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 8600,
+      "iteration": 2150,
+      "window_episodes": 100,
+      "loss": -0.011080761291086674,
+      "policy_loss": -0.0012357765063643455,
+      "entropy": 0.9844984531402587,
+      "grad_norm": 2.540943912267685,
+      "mean_policy_relocations": 11.82,
+      "mean_baseline_relocations": 9.91,
+      "mean_advantage": -7.424847801032667,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 24,
+        "8": 24,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 8700,
+      "iteration": 2175,
+      "window_episodes": 100,
+      "loss": -0.0668326336145401,
+      "policy_loss": -0.05684352364391088,
+      "entropy": 0.9989108872413636,
+      "grad_norm": 2.029764828681946,
+      "mean_policy_relocations": 11.94,
+      "mean_baseline_relocations": 11.28,
+      "mean_advantage": -7.271246422329674,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 28,
+        "7": 8,
+        "8": 12,
+        "9": 16,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 8800,
+      "iteration": 2200,
+      "window_episodes": 100,
+      "loss": -0.1239235819876194,
+      "policy_loss": -0.11363785114139319,
+      "entropy": 1.028573203086853,
+      "grad_norm": 2.132882947921753,
+      "mean_policy_relocations": 11.79,
+      "mean_baseline_relocations": 11.04,
+      "mean_advantage": -7.242503399495416,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 8,
+        "7": 16,
+        "8": 20,
+        "9": 12,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 8900,
+      "iteration": 2225,
+      "window_episodes": 100,
+      "loss": -0.17431024320423602,
+      "policy_loss": -0.1647648326307535,
+      "entropy": 0.9545409202575683,
+      "grad_norm": 1.6115826177597046,
+      "mean_policy_relocations": 11.27,
+      "mean_baseline_relocations": 10.69,
+      "mean_advantage": -6.934978650508501,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 24,
+        "8": 12,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 9000,
+      "iteration": 2250,
+      "window_episodes": 100,
+      "loss": -0.14619852498173713,
+      "policy_loss": -0.1379539692029357,
+      "entropy": 0.8244556355476379,
+      "grad_norm": 1.4398666667938231,
+      "mean_policy_relocations": 10.89,
+      "mean_baseline_relocations": 10.55,
+      "mean_advantage": -6.571818745390066,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 8,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 9100,
+      "iteration": 2275,
+      "window_episodes": 100,
+      "loss": -0.1111525096744299,
+      "policy_loss": -0.10423975671641529,
+      "entropy": 0.6912753176689148,
+      "grad_norm": 1.4175012624263763,
+      "mean_policy_relocations": 10.37,
+      "mean_baseline_relocations": 9.96,
+      "mean_advantage": -6.330627893768385,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 12,
+        "8": 16,
+        "9": 24,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 9200,
+      "iteration": 2300,
+      "window_episodes": 100,
+      "loss": -0.005729546286165715,
+      "policy_loss": 0.00040592020377516747,
+      "entropy": 0.613546633720398,
+      "grad_norm": 1.6374412488937378,
+      "mean_policy_relocations": 10.16,
+      "mean_baseline_relocations": 9.85,
+      "mean_advantage": -6.356933112094716,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 12,
+        "8": 20,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 9300,
+      "iteration": 2325,
+      "window_episodes": 100,
+      "loss": -0.04630164909176528,
+      "policy_loss": -0.03974860315211117,
+      "entropy": 0.655304582118988,
+      "grad_norm": 1.5554283952713013,
+      "mean_policy_relocations": 10.88,
+      "mean_baseline_relocations": 10.61,
+      "mean_advantage": -6.626605797536416,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 8,
+        "7": 20,
+        "8": 16,
+        "9": 20,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 9400,
+      "iteration": 2350,
+      "window_episodes": 100,
+      "loss": -0.1576563173532486,
+      "policy_loss": -0.1488718095421791,
+      "entropy": 0.8784509038925171,
+      "grad_norm": 1.628465930223465,
+      "mean_policy_relocations": 10.12,
+      "mean_baseline_relocations": 9.52,
+      "mean_advantage": -6.6039600112430685,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 32,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 9500,
+      "iteration": 2375,
+      "window_episodes": 100,
+      "loss": -0.1347738379612565,
+      "policy_loss": -0.12167348236544058,
+      "entropy": 1.3100356221199037,
+      "grad_norm": 2.434874095916748,
+      "mean_policy_relocations": 10.2,
+      "mean_baseline_relocations": 9.23,
+      "mean_advantage": -6.691520843636363,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 4,
+        "7": 20,
+        "8": 4,
+        "9": 16,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 9600,
+      "iteration": 2400,
+      "window_episodes": 100,
+      "loss": -0.1303247108310461,
+      "policy_loss": -0.11735780321061612,
+      "entropy": 1.2966906547546386,
+      "grad_norm": 2.1179247999191286,
+      "mean_policy_relocations": 10.5,
+      "mean_baseline_relocations": 9.79,
+      "mean_advantage": -6.246101162188521,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 24,
+        "8": 12,
+        "9": 32,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 9700,
+      "iteration": 2425,
+      "window_episodes": 100,
+      "loss": -0.14697434186935424,
+      "policy_loss": -0.13553661730140448,
+      "entropy": 1.1437725663185119,
+      "grad_norm": 1.5553389263153077,
+      "mean_policy_relocations": 11.06,
+      "mean_baseline_relocations": 10.24,
+      "mean_advantage": -6.6048929228175925,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 0,
+        "6": 36,
+        "7": 20,
+        "8": 20,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 9800,
+      "iteration": 2450,
+      "window_episodes": 100,
+      "loss": -0.1814706379175186,
+      "policy_loss": -0.1699877830967307,
+      "entropy": 1.1482855129241942,
+      "grad_norm": 1.5734675049781799,
+      "mean_policy_relocations": 9.93,
+      "mean_baseline_relocations": 9.34,
+      "mean_advantage": -6.048802335363508,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 8,
+        "7": 24,
+        "8": 16,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 9900,
+      "iteration": 2475,
+      "window_episodes": 100,
+      "loss": -0.1879033125191927,
+      "policy_loss": -0.17489446837455033,
+      "entropy": 1.3008844614028932,
+      "grad_norm": 1.7700603461265565,
+      "mean_policy_relocations": 10.36,
+      "mean_baseline_relocations": 9.46,
+      "mean_advantage": -6.389509143583324,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 16,
+        "8": 8,
+        "9": 28,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 58,
+        "DS2": 42
+      }
+    },
+    {
+      "episode": 10000,
+      "iteration": 2500,
+      "window_episodes": 100,
+      "loss": -0.1704027795791626,
+      "policy_loss": -0.15776018040720374,
+      "entropy": 1.264259991645813,
+      "grad_norm": 1.9734832668304443,
+      "mean_policy_relocations": 10.84,
+      "mean_baseline_relocations": 9.78,
+      "mean_advantage": -7.157629413504147,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 12,
+        "8": 12,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 63,
+        "DS2": 37
+      }
+    },
+    {
+      "episode": 10100,
+      "iteration": 2525,
+      "window_episodes": 100,
+      "loss": -0.045951969400048254,
+      "policy_loss": -0.03247555012349039,
+      "entropy": 1.3476419401168824,
+      "grad_norm": 2.2716813564300535,
+      "mean_policy_relocations": 12.84,
+      "mean_baseline_relocations": 11.45,
+      "mean_advantage": -8.509798816008983,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 8,
+        "8": 32,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 10200,
+      "iteration": 2550,
+      "window_episodes": 100,
+      "loss": -0.04151257585734129,
+      "policy_loss": -0.027358347177505495,
+      "entropy": 1.4154228925704957,
+      "grad_norm": 1.8697099494934082,
+      "mean_policy_relocations": 13.72,
+      "mean_baseline_relocations": 11.69,
+      "mean_advantage": -8.51311212952052,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 20,
+        "8": 28,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 10300,
+      "iteration": 2575,
+      "window_episodes": 100,
+      "loss": -0.12021108992397785,
+      "policy_loss": -0.10900540642440319,
+      "entropy": 1.1205683469772338,
+      "grad_norm": 2.2819414281845094,
+      "mean_policy_relocations": 11.01,
+      "mean_baseline_relocations": 9.93,
+      "mean_advantage": -7.105807127052791,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 24,
+        "7": 16,
+        "8": 4,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 10400,
+      "iteration": 2600,
+      "window_episodes": 100,
+      "loss": -0.12552490651607515,
+      "policy_loss": -0.11506384447216987,
+      "entropy": 1.0461063122749328,
+      "grad_norm": 2.261062808036804,
+      "mean_policy_relocations": 9.73,
+      "mean_baseline_relocations": 9.17,
+      "mean_advantage": -6.098830504933794,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 24,
+        "8": 20,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 10500,
+      "iteration": 2625,
+      "window_episodes": 100,
+      "loss": -0.07889350034296512,
+      "policy_loss": -0.06738591346889734,
+      "entropy": 1.150758764743805,
+      "grad_norm": 2.623080449104309,
+      "mean_policy_relocations": 11.12,
+      "mean_baseline_relocations": 10.21,
+      "mean_advantage": -6.806152412191544,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 28,
+        "8": 8,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 10600,
+      "iteration": 2650,
+      "window_episodes": 100,
+      "loss": -0.10371935654431581,
+      "policy_loss": -0.09367189012467861,
+      "entropy": 1.0047467184066772,
+      "grad_norm": 1.8376245212554931,
+      "mean_policy_relocations": 10.44,
+      "mean_baseline_relocations": 9.97,
+      "mean_advantage": -6.720624000957669,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 24,
+        "8": 12,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 10700,
+      "iteration": 2675,
+      "window_episodes": 100,
+      "loss": -0.21028135374188422,
+      "policy_loss": -0.19933706238865853,
+      "entropy": 1.0944291067123413,
+      "grad_norm": 1.9349264574050904,
+      "mean_policy_relocations": 12.23,
+      "mean_baseline_relocations": 11.36,
+      "mean_advantage": -8.031034410953215,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 12,
+        "8": 12,
+        "9": 8,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 10800,
+      "iteration": 2700,
+      "window_episodes": 100,
+      "loss": -0.10972634233534335,
+      "policy_loss": -0.09952944802120328,
+      "entropy": 1.0196894383430481,
+      "grad_norm": 1.4588959121704101,
+      "mean_policy_relocations": 11.43,
+      "mean_baseline_relocations": 10.88,
+      "mean_advantage": -7.580420465772579,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 8,
+        "8": 20,
+        "9": 12,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 10900,
+      "iteration": 2725,
+      "window_episodes": 100,
+      "loss": -0.16761918663978576,
+      "policy_loss": -0.1566128058731556,
+      "entropy": 1.1006379675865174,
+      "grad_norm": 1.5377428460121154,
+      "mean_policy_relocations": 12.57,
+      "mean_baseline_relocations": 11.71,
+      "mean_advantage": -7.765061923013547,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 36,
+        "7": 8,
+        "8": 4,
+        "9": 20,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 11000,
+      "iteration": 2750,
+      "window_episodes": 100,
+      "loss": -0.10417292505502701,
+      "policy_loss": -0.09103296412155032,
+      "entropy": 1.313996000289917,
+      "grad_norm": 1.8090152144432068,
+      "mean_policy_relocations": 11.02,
+      "mean_baseline_relocations": 9.5,
+      "mean_advantage": -6.9940870154419645,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 16,
+        "7": 12,
+        "8": 8,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 11100,
+      "iteration": 2775,
+      "window_episodes": 100,
+      "loss": -0.09507150828838348,
+      "policy_loss": -0.08048600801732392,
+      "entropy": 1.4585501146316528,
+      "grad_norm": 1.6547157180309295,
+      "mean_policy_relocations": 12.83,
+      "mean_baseline_relocations": 10.68,
+      "mean_advantage": -8.342199165592406,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 4,
+        "8": 48,
+        "9": 12,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 11200,
+      "iteration": 2800,
+      "window_episodes": 100,
+      "loss": -0.17142765503376722,
+      "policy_loss": -0.15913740426301956,
+      "entropy": 1.2290252590179442,
+      "grad_norm": 2.2361407399177553,
+      "mean_policy_relocations": 11.09,
+      "mean_baseline_relocations": 9.55,
+      "mean_advantage": -7.190045488141136,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 4,
+        "8": 20,
+        "9": 24,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 11300,
+      "iteration": 2825,
+      "window_episodes": 100,
+      "loss": -0.1643802255950868,
+      "policy_loss": -0.15257012414280324,
+      "entropy": 1.181010251045227,
+      "grad_norm": 1.5575298047065735,
+      "mean_policy_relocations": 10.82,
+      "mean_baseline_relocations": 9.88,
+      "mean_advantage": -6.680300574053495,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 28,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 11400,
+      "iteration": 2850,
+      "window_episodes": 100,
+      "loss": -0.19843127645552158,
+      "policy_loss": -0.18714369527995586,
+      "entropy": 1.1287580919265747,
+      "grad_norm": 1.4260072016716003,
+      "mean_policy_relocations": 12.12,
+      "mean_baseline_relocations": 10.81,
+      "mean_advantage": -7.285450014399873,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 8,
+        "7": 24,
+        "8": 36,
+        "9": 20,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 11500,
+      "iteration": 2875,
+      "window_episodes": 100,
+      "loss": -0.19155796740204095,
+      "policy_loss": -0.18112173123285175,
+      "entropy": 1.0436237287521362,
+      "grad_norm": 1.919675588607788,
+      "mean_policy_relocations": 10.29,
+      "mean_baseline_relocations": 9.39,
+      "mean_advantage": -6.27783390536664,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 12,
+        "7": 28,
+        "8": 8,
+        "9": 24,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 11600,
+      "iteration": 2900,
+      "window_episodes": 100,
+      "loss": -0.13836153581738472,
+      "policy_loss": -0.1276503043808043,
+      "entropy": 1.0711232924461365,
+      "grad_norm": 2.1265045022964477,
+      "mean_policy_relocations": 9.71,
+      "mean_baseline_relocations": 8.97,
+      "mean_advantage": -6.506503134914221,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 24,
+        "7": 8,
+        "8": 12,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 11700,
+      "iteration": 2925,
+      "window_episodes": 100,
+      "loss": -0.1368912158533931,
+      "policy_loss": -0.12691957637667656,
+      "entropy": 0.9971640229225158,
+      "grad_norm": 1.9208488702774047,
+      "mean_policy_relocations": 11.94,
+      "mean_baseline_relocations": 11.17,
+      "mean_advantage": -7.7938830223354305,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 24,
+        "8": 16,
+        "9": 8,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 11800,
+      "iteration": 2950,
+      "window_episodes": 100,
+      "loss": -0.14095506832003593,
+      "policy_loss": -0.132144921310246,
+      "entropy": 0.8810144853591919,
+      "grad_norm": 1.6872243857383729,
+      "mean_policy_relocations": 11.36,
+      "mean_baseline_relocations": 10.99,
+      "mean_advantage": -7.2685002435236585,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 20,
+        "8": 28,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 11900,
+      "iteration": 2975,
+      "window_episodes": 100,
+      "loss": -0.14533580888062717,
+      "policy_loss": -0.13696251215413213,
+      "entropy": 0.8373297214508056,
+      "grad_norm": 1.3324790334701537,
+      "mean_policy_relocations": 10.56,
+      "mean_baseline_relocations": 10.17,
+      "mean_advantage": -6.650557721135441,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 8,
+        "8": 20,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 12000,
+      "iteration": 3000,
+      "window_episodes": 100,
+      "loss": -0.1457156621105969,
+      "policy_loss": -0.13740231078118087,
+      "entropy": 0.8313350701332092,
+      "grad_norm": 1.4295803475379945,
+      "mean_policy_relocations": 10.2,
+      "mean_baseline_relocations": 9.92,
+      "mean_advantage": -6.0693621809803915,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 16,
+        "8": 24,
+        "9": 4,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 12100,
+      "iteration": 3025,
+      "window_episodes": 100,
+      "loss": -0.07604820534586906,
+      "policy_loss": -0.0694176559150219,
+      "entropy": 0.6630549240112305,
+      "grad_norm": 1.477179127931595,
+      "mean_policy_relocations": 11.2,
+      "mean_baseline_relocations": 11.29,
+      "mean_advantage": -7.034579545149416,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 28,
+        "7": 4,
+        "8": 24,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 12200,
+      "iteration": 3050,
+      "window_episodes": 100,
+      "loss": -0.009430988989770413,
+      "policy_loss": -0.003036398377153091,
+      "entropy": 0.6394589412212371,
+      "grad_norm": 1.6420415556430816,
+      "mean_policy_relocations": 8.96,
+      "mean_baseline_relocations": 8.77,
+      "mean_advantage": -5.444615643116197,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 20,
+        "7": 16,
+        "8": 24,
+        "9": 12,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 12300,
+      "iteration": 3075,
+      "window_episodes": 100,
+      "loss": -0.21281366661190987,
+      "policy_loss": -0.20437115877866746,
+      "entropy": 0.8442505884170532,
+      "grad_norm": 1.440324701666832,
+      "mean_policy_relocations": 11.29,
+      "mean_baseline_relocations": 10.76,
+      "mean_advantage": -7.301352587225853,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 4,
+        "8": 36,
+        "9": 8,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 12400,
+      "iteration": 3100,
+      "window_episodes": 100,
+      "loss": -0.16173658087849618,
+      "policy_loss": -0.15387827947735785,
+      "entropy": 0.7858300471305847,
+      "grad_norm": 1.2310241603851317,
+      "mean_policy_relocations": 11.39,
+      "mean_baseline_relocations": 11.03,
+      "mean_advantage": -7.2333538701817375,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 16,
+        "8": 16,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 12500,
+      "iteration": 3125,
+      "window_episodes": 100,
+      "loss": -0.11516115760430694,
+      "policy_loss": -0.10922634825576097,
+      "entropy": 0.5934810936450958,
+      "grad_norm": 1.6211249446868896,
+      "mean_policy_relocations": 9.68,
+      "mean_baseline_relocations": 9.36,
+      "mean_advantage": -5.611792190967321,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 24,
+        "7": 24,
+        "8": 8,
+        "9": 4,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 12600,
+      "iteration": 3150,
+      "window_episodes": 100,
+      "loss": 0.0037079514004290104,
+      "policy_loss": 0.009438906051218509,
+      "entropy": 0.5730953645706177,
+      "grad_norm": 1.6340160131454469,
+      "mean_policy_relocations": 10.39,
+      "mean_baseline_relocations": 10.26,
+      "mean_advantage": -6.831596502975934,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 32,
+        "7": 4,
+        "8": 24,
+        "9": 20,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 12700,
+      "iteration": 3175,
+      "window_episodes": 100,
+      "loss": 0.03360787585377693,
+      "policy_loss": 0.03933273248374462,
+      "entropy": 0.5724856805801392,
+      "grad_norm": 1.65665375828743,
+      "mean_policy_relocations": 9.89,
+      "mean_baseline_relocations": 9.75,
+      "mean_advantage": -6.339550942505562,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 24,
+        "8": 12,
+        "9": 12,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 12800,
+      "iteration": 3200,
+      "window_episodes": 100,
+      "loss": -0.05754688140004873,
+      "policy_loss": -0.052475189180113374,
+      "entropy": 0.5071690762043,
+      "grad_norm": 1.9841519498825073,
+      "mean_policy_relocations": 9.41,
+      "mean_baseline_relocations": 8.92,
+      "mean_advantage": -6.029606658959036,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 24,
+        "7": 20,
+        "8": 8,
+        "9": 24,
+        "10": 0
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 12900,
+      "iteration": 3225,
+      "window_episodes": 100,
+      "loss": -0.047097696401178835,
+      "policy_loss": -0.041806787308305504,
+      "entropy": 0.5290909993648529,
+      "grad_norm": 1.5991491842269898,
+      "mean_policy_relocations": 7.94,
+      "mean_baseline_relocations": 7.8,
+      "mean_advantage": -5.334177511512482,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 32,
+        "6": 12,
+        "7": 16,
+        "8": 16,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 13000,
+      "iteration": 3250,
+      "window_episodes": 100,
+      "loss": -0.21147260829806327,
+      "policy_loss": -0.20295208763331174,
+      "entropy": 0.8520519757270812,
+      "grad_norm": 1.2835314059257508,
+      "mean_policy_relocations": 10.56,
+      "mean_baseline_relocations": 10.02,
+      "mean_advantage": -6.942215524968372,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 32,
+        "6": 12,
+        "7": 12,
+        "8": 4,
+        "9": 12,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 13100,
+      "iteration": 3275,
+      "window_episodes": 100,
+      "loss": -0.16400240514427422,
+      "policy_loss": -0.1518019390758127,
+      "entropy": 1.2200464963912965,
+      "grad_norm": 2.142537257671356,
+      "mean_policy_relocations": 9.92,
+      "mean_baseline_relocations": 8.68,
+      "mean_advantage": -6.926048934088458,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 24,
+        "7": 16,
+        "8": 12,
+        "9": 16,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 13200,
+      "iteration": 3300,
+      "window_episodes": 100,
+      "loss": -0.029201642386615278,
+      "policy_loss": -0.012446517189964652,
+      "entropy": 1.675512537956238,
+      "grad_norm": 1.4705169081687928,
+      "mean_policy_relocations": 12.4,
+      "mean_baseline_relocations": 9.7,
+      "mean_advantage": -8.210256432330333,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 28,
+        "7": 8,
+        "8": 8,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 60,
+        "DS2": 40
+      }
+    },
+    {
+      "episode": 13300,
+      "iteration": 3325,
+      "window_episodes": 100,
+      "loss": 0.012358854711055755,
+      "policy_loss": 0.030830126851797104,
+      "entropy": 1.8471272563934327,
+      "grad_norm": 0.7078254908323288,
+      "mean_policy_relocations": 14.48,
+      "mean_baseline_relocations": 10.97,
+      "mean_advantage": -8.931080908268912,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 4,
+        "7": 16,
+        "8": 24,
+        "9": 32,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 13400,
+      "iteration": 3350,
+      "window_episodes": 100,
+      "loss": -0.10163979317992926,
+      "policy_loss": -0.0856310050189495,
+      "entropy": 1.6008789539337158,
+      "grad_norm": 1.3615772783756257,
+      "mean_policy_relocations": 11.57,
+      "mean_baseline_relocations": 9.14,
+      "mean_advantage": -7.397721137003631,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 28,
+        "7": 16,
+        "8": 16,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 13500,
+      "iteration": 3375,
+      "window_episodes": 100,
+      "loss": -0.2387177503108978,
+      "policy_loss": -0.22627584904432296,
+      "entropy": 1.24419025182724,
+      "grad_norm": 1.4760602867603303,
+      "mean_policy_relocations": 10.15,
+      "mean_baseline_relocations": 8.9,
+      "mean_advantage": -6.202830722746073,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 4,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 13600,
+      "iteration": 3400,
+      "window_episodes": 100,
+      "loss": -0.2418525505065918,
+      "policy_loss": -0.23260680541396142,
+      "entropy": 0.9245746278762818,
+      "grad_norm": 1.4816287064552307,
+      "mean_policy_relocations": 10.17,
+      "mean_baseline_relocations": 9.34,
+      "mean_advantage": -5.6871406128540505,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 12,
+        "8": 28,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 13700,
+      "iteration": 3425,
+      "window_episodes": 100,
+      "loss": -0.27224764093756676,
+      "policy_loss": -0.26272366955876353,
+      "entropy": 0.9523972725868225,
+      "grad_norm": 1.503075771331787,
+      "mean_policy_relocations": 11.5,
+      "mean_baseline_relocations": 10.43,
+      "mean_advantage": -7.631952612700465,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 28,
+        "7": 4,
+        "8": 12,
+        "9": 32,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 13800,
+      "iteration": 3450,
+      "window_episodes": 100,
+      "loss": -0.2429361541941762,
+      "policy_loss": -0.22992087267339228,
+      "entropy": 1.301528136730194,
+      "grad_norm": 1.810750253200531,
+      "mean_policy_relocations": 13.34,
+      "mean_baseline_relocations": 11.95,
+      "mean_advantage": -8.667643486589984,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 4,
+        "7": 24,
+        "8": 12,
+        "9": 24,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 13900,
+      "iteration": 3475,
+      "window_episodes": 100,
+      "loss": -0.1938821318745613,
+      "policy_loss": -0.18140478271991015,
+      "entropy": 1.2477348446846008,
+      "grad_norm": 1.971064224243164,
+      "mean_policy_relocations": 11.45,
+      "mean_baseline_relocations": 9.76,
+      "mean_advantage": -7.096684822786171,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 24,
+        "7": 12,
+        "8": 4,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 14000,
+      "iteration": 3500,
+      "window_episodes": 100,
+      "loss": -0.2384667295217514,
+      "policy_loss": -0.22816003739833832,
+      "entropy": 1.0306690692901612,
+      "grad_norm": 1.9115596795082093,
+      "mean_policy_relocations": 9.66,
+      "mean_baseline_relocations": 8.96,
+      "mean_advantage": -6.053315753665373,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 16,
+        "8": 16,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 14100,
+      "iteration": 3525,
+      "window_episodes": 100,
+      "loss": -0.26282309465110304,
+      "policy_loss": -0.2543482504133135,
+      "entropy": 0.8474845361709594,
+      "grad_norm": 1.6047580647468567,
+      "mean_policy_relocations": 10.7,
+      "mean_baseline_relocations": 9.92,
+      "mean_advantage": -6.574847744711332,
+      "baseline_updates": 18,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 28,
+        "8": 20,
+        "9": 4,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 14200,
+      "iteration": 3550,
+      "window_episodes": 100,
+      "loss": -0.2543919068574905,
+      "policy_loss": -0.24463046222925186,
+      "entropy": 0.976144517660141,
+      "grad_norm": 1.2906350111961364,
+      "mean_policy_relocations": 10.82,
+      "mean_baseline_relocations": 9.9,
+      "mean_advantage": -7.283408768598427,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 12,
+        "7": 24,
+        "8": 8,
+        "9": 4,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 14300,
+      "iteration": 3575,
+      "window_episodes": 100,
+      "loss": -0.21269257187843324,
+      "policy_loss": -0.20348677560687065,
+      "entropy": 0.9205795288085937,
+      "grad_norm": 1.5242786514759064,
+      "mean_policy_relocations": 11.49,
+      "mean_baseline_relocations": 11.05,
+      "mean_advantage": -7.746343803682951,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 12,
+        "8": 20,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 14400,
+      "iteration": 3600,
+      "window_episodes": 100,
+      "loss": -0.24394637301564218,
+      "policy_loss": -0.23444235667586327,
+      "entropy": 0.9504016137123108,
+      "grad_norm": 1.351536660194397,
+      "mean_policy_relocations": 10.73,
+      "mean_baseline_relocations": 10.19,
+      "mean_advantage": -6.667247789148322,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 24,
+        "8": 28,
+        "9": 16,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 14500,
+      "iteration": 3625,
+      "window_episodes": 100,
+      "loss": -0.24231531605124473,
+      "policy_loss": -0.23127312636002897,
+      "entropy": 1.104218943119049,
+      "grad_norm": 1.5812705433368683,
+      "mean_policy_relocations": 9.8,
+      "mean_baseline_relocations": 9.24,
+      "mean_advantage": -6.682026452812868,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 28,
+        "7": 20,
+        "8": 8,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 14600,
+      "iteration": 3650,
+      "window_episodes": 100,
+      "loss": -0.2598174002766609,
+      "policy_loss": -0.24829483270645142,
+      "entropy": 1.1522568249702454,
+      "grad_norm": 1.4321155071258544,
+      "mean_policy_relocations": 11.29,
+      "mean_baseline_relocations": 10.15,
+      "mean_advantage": -7.086616446834909,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 24,
+        "7": 12,
+        "8": 8,
+        "9": 28,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 14700,
+      "iteration": 3675,
+      "window_episodes": 100,
+      "loss": -0.28790748994797466,
+      "policy_loss": -0.27723382097668947,
+      "entropy": 1.0673667693138122,
+      "grad_norm": 1.739974410533905,
+      "mean_policy_relocations": 11.88,
+      "mean_baseline_relocations": 11.0,
+      "mean_advantage": -7.156014748230609,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 12,
+        "7": 28,
+        "8": 24,
+        "9": 8,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 14800,
+      "iteration": 3700,
+      "window_episodes": 100,
+      "loss": -0.18070330917835237,
+      "policy_loss": -0.17125317473895849,
+      "entropy": 0.9450133991241455,
+      "grad_norm": 1.6060451149940491,
+      "mean_policy_relocations": 10.85,
+      "mean_baseline_relocations": 10.24,
+      "mean_advantage": -6.517660926590688,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 24,
+        "8": 16,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 14900,
+      "iteration": 3725,
+      "window_episodes": 100,
+      "loss": -0.27114869495853783,
+      "policy_loss": -0.26058326637372375,
+      "entropy": 1.05654292345047,
+      "grad_norm": 1.517027461528778,
+      "mean_policy_relocations": 11.85,
+      "mean_baseline_relocations": 11.06,
+      "mean_advantage": -6.9191764644690625,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 16,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 41,
+        "DS2": 59
+      }
+    },
+    {
+      "episode": 15000,
+      "iteration": 3750,
+      "window_episodes": 100,
+      "loss": -0.2826028823852539,
+      "policy_loss": -0.27294439196586606,
+      "entropy": 0.9658491015434265,
+      "grad_norm": 1.675556492805481,
+      "mean_policy_relocations": 9.72,
+      "mean_baseline_relocations": 9.32,
+      "mean_advantage": -5.885724993802548,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 16,
+        "7": 20,
+        "8": 4,
+        "9": 32,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 15100,
+      "iteration": 3775,
+      "window_episodes": 100,
+      "loss": -0.20368549048900605,
+      "policy_loss": -0.19504034176468849,
+      "entropy": 0.864514615535736,
+      "grad_norm": 1.4125189208984374,
+      "mean_policy_relocations": 10.59,
+      "mean_baseline_relocations": 10.19,
+      "mean_advantage": -6.173450968206753,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 16,
+        "8": 16,
+        "9": 16,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 15200,
+      "iteration": 3800,
+      "window_episodes": 100,
+      "loss": -0.338135584294796,
+      "policy_loss": -0.32762480452656745,
+      "entropy": 1.0510781049728393,
+      "grad_norm": 2.0440952455997468,
+      "mean_policy_relocations": 10.08,
+      "mean_baseline_relocations": 9.14,
+      "mean_advantage": -6.521246329409458,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 20,
+        "8": 16,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 40,
+        "DS2": 60
+      }
+    },
+    {
+      "episode": 15300,
+      "iteration": 3825,
+      "window_episodes": 100,
+      "loss": -0.2768814535439014,
+      "policy_loss": -0.26568165376782416,
+      "entropy": 1.1199799728393556,
+      "grad_norm": 1.6204986834526063,
+      "mean_policy_relocations": 11.51,
+      "mean_baseline_relocations": 10.09,
+      "mean_advantage": -7.428659537885028,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 32,
+        "7": 16,
+        "8": 16,
+        "9": 4,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 15400,
+      "iteration": 3850,
+      "window_episodes": 100,
+      "loss": -0.3116482908278704,
+      "policy_loss": -0.2995263158529997,
+      "entropy": 1.2121975302696228,
+      "grad_norm": 2.3923229455947874,
+      "mean_policy_relocations": 10.42,
+      "mean_baseline_relocations": 8.82,
+      "mean_advantage": -6.700110185663321,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 16,
+        "8": 16,
+        "9": 20,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 15500,
+      "iteration": 3875,
+      "window_episodes": 100,
+      "loss": -0.24253344792872666,
+      "policy_loss": -0.22919871333986522,
+      "entropy": 1.3334734559059143,
+      "grad_norm": 2.2407332015037538,
+      "mean_policy_relocations": 10.61,
+      "mean_baseline_relocations": 9.02,
+      "mean_advantage": -6.4133144345233015,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 20,
+        "7": 20,
+        "8": 12,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 15600,
+      "iteration": 3900,
+      "window_episodes": 100,
+      "loss": -0.3149713522195816,
+      "policy_loss": -0.30305463729426263,
+      "entropy": 1.1916713833808898,
+      "grad_norm": 2.2262321519851684,
+      "mean_policy_relocations": 11.86,
+      "mean_baseline_relocations": 10.72,
+      "mean_advantage": -7.491763165962288,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 12,
+        "8": 20,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 15700,
+      "iteration": 3925,
+      "window_episodes": 100,
+      "loss": -0.33100160479545593,
+      "policy_loss": -0.319861860871315,
+      "entropy": 1.1139743995666505,
+      "grad_norm": 1.703070502281189,
+      "mean_policy_relocations": 10.56,
+      "mean_baseline_relocations": 9.63,
+      "mean_advantage": -6.758488981491451,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 16,
+        "8": 12,
+        "9": 24,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 15800,
+      "iteration": 3950,
+      "window_episodes": 100,
+      "loss": -0.2769375981390476,
+      "policy_loss": -0.26692535780370236,
+      "entropy": 1.001224021911621,
+      "grad_norm": 1.8392953658103943,
+      "mean_policy_relocations": 10.84,
+      "mean_baseline_relocations": 10.14,
+      "mean_advantage": -6.955555086439616,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 4,
+        "7": 16,
+        "8": 28,
+        "9": 24,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 15900,
+      "iteration": 3975,
+      "window_episodes": 100,
+      "loss": -0.311063839495182,
+      "policy_loss": -0.3013099181652069,
+      "entropy": 0.9753919625282288,
+      "grad_norm": 2.005923068523407,
+      "mean_policy_relocations": 11.59,
+      "mean_baseline_relocations": 10.47,
+      "mean_advantage": -7.21460095835071,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 12,
+        "8": 20,
+        "9": 36,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 41,
+        "DS2": 59
+      }
+    },
+    {
+      "episode": 16000,
+      "iteration": 4000,
+      "window_episodes": 100,
+      "loss": -0.30669518172740934,
+      "policy_loss": -0.29602885961532593,
+      "entropy": 1.0666321158409118,
+      "grad_norm": 1.596491973400116,
+      "mean_policy_relocations": 10.61,
+      "mean_baseline_relocations": 9.75,
+      "mean_advantage": -7.0535193765970465,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 24,
+        "8": 4,
+        "9": 28,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 16100,
+      "iteration": 4025,
+      "window_episodes": 100,
+      "loss": -0.34121999084949495,
+      "policy_loss": -0.33055526316165923,
+      "entropy": 1.0664728999137878,
+      "grad_norm": 1.6564687967300415,
+      "mean_policy_relocations": 10.81,
+      "mean_baseline_relocations": 9.85,
+      "mean_advantage": -7.083218140742431,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 12,
+        "8": 28,
+        "9": 12,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 16200,
+      "iteration": 4050,
+      "window_episodes": 100,
+      "loss": -0.27586464762687685,
+      "policy_loss": -0.2677051466703415,
+      "entropy": 0.815950323343277,
+      "grad_norm": 1.899604208469391,
+      "mean_policy_relocations": 11.6,
+      "mean_baseline_relocations": 10.96,
+      "mean_advantage": -6.786698199142393,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 24,
+        "8": 16,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 16300,
+      "iteration": 4075,
+      "window_episodes": 100,
+      "loss": -0.3112621558457613,
+      "policy_loss": -0.30299790635704993,
+      "entropy": 0.8264248251914978,
+      "grad_norm": 1.631698112487793,
+      "mean_policy_relocations": 9.73,
+      "mean_baseline_relocations": 9.29,
+      "mean_advantage": -6.246273726194244,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 16,
+        "8": 36,
+        "9": 8,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 16400,
+      "iteration": 4100,
+      "window_episodes": 100,
+      "loss": -0.24521878659725188,
+      "policy_loss": -0.23690095022320748,
+      "entropy": 0.831783607006073,
+      "grad_norm": 1.3816198050975799,
+      "mean_policy_relocations": 9.13,
+      "mean_baseline_relocations": 8.8,
+      "mean_advantage": -5.779782564954092,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 24,
+        "8": 16,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 16500,
+      "iteration": 4125,
+      "window_episodes": 100,
+      "loss": -0.30028335250914096,
+      "policy_loss": -0.29099008604884147,
+      "entropy": 0.929326457977295,
+      "grad_norm": 1.5754240489006042,
+      "mean_policy_relocations": 11.56,
+      "mean_baseline_relocations": 10.71,
+      "mean_advantage": -7.317064115120266,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 28,
+        "8": 8,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 16600,
+      "iteration": 4150,
+      "window_episodes": 100,
+      "loss": -0.3465056374669075,
+      "policy_loss": -0.33540156334638593,
+      "entropy": 1.1104076313972473,
+      "grad_norm": 1.2631490886211396,
+      "mean_policy_relocations": 12.19,
+      "mean_baseline_relocations": 10.86,
+      "mean_advantage": -8.150148451005082,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 24,
+        "7": 16,
+        "8": 16,
+        "9": 8,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 16700,
+      "iteration": 4175,
+      "window_episodes": 100,
+      "loss": -0.33224371939897535,
+      "policy_loss": -0.32230268605053425,
+      "entropy": 0.994103398323059,
+      "grad_norm": 1.8594805383682251,
+      "mean_policy_relocations": 10.87,
+      "mean_baseline_relocations": 9.95,
+      "mean_advantage": -7.190471037768046,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 20,
+        "7": 4,
+        "8": 20,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 16800,
+      "iteration": 4200,
+      "window_episodes": 100,
+      "loss": -0.27688112646341323,
+      "policy_loss": -0.2673981258273125,
+      "entropy": 0.9483000802993774,
+      "grad_norm": 1.4022909677028657,
+      "mean_policy_relocations": 11.61,
+      "mean_baseline_relocations": 10.67,
+      "mean_advantage": -7.577202516835406,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 8,
+        "8": 8,
+        "9": 28,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 16900,
+      "iteration": 4225,
+      "window_episodes": 100,
+      "loss": -0.23174731381237507,
+      "policy_loss": -0.2227572976052761,
+      "entropy": 0.8990016722679138,
+      "grad_norm": 1.8235849714279175,
+      "mean_policy_relocations": 11.12,
+      "mean_baseline_relocations": 10.95,
+      "mean_advantage": -7.078116473946012,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 20,
+        "8": 8,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 17000,
+      "iteration": 4250,
+      "window_episodes": 100,
+      "loss": -0.1493463395163417,
+      "policy_loss": -0.1393676848243922,
+      "entropy": 0.9978655314445496,
+      "grad_norm": 2.3838017272949217,
+      "mean_policy_relocations": 9.61,
+      "mean_baseline_relocations": 9.14,
+      "mean_advantage": -6.093760221466089,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 20,
+        "7": 20,
+        "8": 16,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 17100,
+      "iteration": 4275,
+      "window_episodes": 100,
+      "loss": -0.2141889876872301,
+      "policy_loss": -0.2042540068551898,
+      "entropy": 0.9934978175163269,
+      "grad_norm": 1.6730395150184632,
+      "mean_policy_relocations": 10.73,
+      "mean_baseline_relocations": 10.13,
+      "mean_advantage": -6.561887979014305,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 28,
+        "8": 16,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 58,
+        "DS2": 42
+      }
+    },
+    {
+      "episode": 17200,
+      "iteration": 4300,
+      "window_episodes": 100,
+      "loss": -0.09647213652729988,
+      "policy_loss": -0.08860700653865933,
+      "entropy": 0.7865131056308746,
+      "grad_norm": 2.0707049560546875,
+      "mean_policy_relocations": 9.86,
+      "mean_baseline_relocations": 9.6,
+      "mean_advantage": -5.685655017317835,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 36,
+        "8": 8,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 17300,
+      "iteration": 4325,
+      "window_episodes": 100,
+      "loss": -0.10559109464287758,
+      "policy_loss": -0.09556107757613062,
+      "entropy": 1.0030016326904296,
+      "grad_norm": 2.4139816403388976,
+      "mean_policy_relocations": 11.2,
+      "mean_baseline_relocations": 10.66,
+      "mean_advantage": -7.289209548002816,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 8,
+        "8": 16,
+        "9": 20,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 39,
+        "DS2": 61
+      }
+    },
+    {
+      "episode": 17400,
+      "iteration": 4350,
+      "window_episodes": 100,
+      "loss": -0.04647608516737819,
+      "policy_loss": -0.033624180005863306,
+      "entropy": 1.2851904892921449,
+      "grad_norm": 2.6472243213653566,
+      "mean_policy_relocations": 9.98,
+      "mean_baseline_relocations": 8.44,
+      "mean_advantage": -6.3507971656681415,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 28,
+        "7": 20,
+        "8": 16,
+        "9": 12,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 58,
+        "DS2": 42
+      }
+    },
+    {
+      "episode": 17500,
+      "iteration": 4375,
+      "window_episodes": 100,
+      "loss": -0.1010215074568987,
+      "policy_loss": -0.08822176905348897,
+      "entropy": 1.2799738574028015,
+      "grad_norm": 2.758928837776184,
+      "mean_policy_relocations": 10.49,
+      "mean_baseline_relocations": 9.14,
+      "mean_advantage": -6.467201488937427,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 8,
+        "7": 28,
+        "8": 28,
+        "9": 12,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 58,
+        "DS2": 42
+      }
+    },
+    {
+      "episode": 17600,
+      "iteration": 4400,
+      "window_episodes": 100,
+      "loss": -0.23577871154993774,
+      "policy_loss": -0.22377062700688838,
+      "entropy": 1.2008086585998534,
+      "grad_norm": 2.551305065155029,
+      "mean_policy_relocations": 10.96,
+      "mean_baseline_relocations": 9.99,
+      "mean_advantage": -7.064431714582827,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 16,
+        "8": 16,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 17700,
+      "iteration": 4425,
+      "window_episodes": 100,
+      "loss": -0.16580022163689137,
+      "policy_loss": -0.15594534939154983,
+      "entropy": 0.9854870975017548,
+      "grad_norm": 2.507664325237274,
+      "mean_policy_relocations": 11.22,
+      "mean_baseline_relocations": 10.65,
+      "mean_advantage": -7.583668374013829,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 40,
+        "6": 8,
+        "7": 16,
+        "8": 12,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 17800,
+      "iteration": 4450,
+      "window_episodes": 100,
+      "loss": -0.24813572496175765,
+      "policy_loss": -0.2359383797645569,
+      "entropy": 1.2197345757484437,
+      "grad_norm": 1.7649958229064941,
+      "mean_policy_relocations": 11.03,
+      "mean_baseline_relocations": 9.98,
+      "mean_advantage": -7.682281295238571,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 16,
+        "8": 28,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 41,
+        "DS2": 59
+      }
+    },
+    {
+      "episode": 17900,
+      "iteration": 4475,
+      "window_episodes": 100,
+      "loss": -0.250724305100739,
+      "policy_loss": -0.24004182092845439,
+      "entropy": 1.0682484185695649,
+      "grad_norm": 2.486460406780243,
+      "mean_policy_relocations": 9.27,
+      "mean_baseline_relocations": 8.28,
+      "mean_advantage": -6.084799023873188,
+      "baseline_updates": 19,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 8,
+        "8": 24,
+        "9": 28,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 18000,
+      "iteration": 4500,
+      "window_episodes": 100,
+      "loss": -0.2532351589202881,
+      "policy_loss": -0.24556941851973535,
+      "entropy": 0.7665739822387695,
+      "grad_norm": 2.328971884250641,
+      "mean_policy_relocations": 10.02,
+      "mean_baseline_relocations": 9.75,
+      "mean_advantage": -6.534530544541145,
+      "baseline_updates": 20,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 3,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 24,
+        "7": 32,
+        "8": 16,
+        "9": 12,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 18100,
+      "iteration": 4525,
+      "window_episodes": 100,
+      "loss": -0.17254488851875066,
+      "policy_loss": -0.1642006278783083,
+      "entropy": 0.8344262742996216,
+      "grad_norm": 1.7720445418357849,
+      "mean_policy_relocations": 12.93,
+      "mean_baseline_relocations": 12.74,
+      "mean_advantage": -8.376388000531017,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 4,
+        "8": 4,
+        "9": 24,
+        "10": 40
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 18200,
+      "iteration": 4550,
+      "window_episodes": 100,
+      "loss": -0.2135765089094639,
+      "policy_loss": -0.205679347589612,
+      "entropy": 0.7897162008285522,
+      "grad_norm": 1.7382985043525696,
+      "mean_policy_relocations": 9.87,
+      "mean_baseline_relocations": 9.75,
+      "mean_advantage": -6.338835447303073,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 12,
+        "8": 12,
+        "9": 28,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 18300,
+      "iteration": 4575,
+      "window_episodes": 100,
+      "loss": -0.1680640809237957,
+      "policy_loss": -0.16129328552633523,
+      "entropy": 0.6770795452594757,
+      "grad_norm": 2.1684400033950806,
+      "mean_policy_relocations": 9.35,
+      "mean_baseline_relocations": 8.95,
+      "mean_advantage": -5.682366641201615,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 16,
+        "7": 16,
+        "8": 16,
+        "9": 16,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 18400,
+      "iteration": 4600,
+      "window_episodes": 100,
+      "loss": -0.13819523401558398,
+      "policy_loss": -0.13118294723331927,
+      "entropy": 0.7012287980318069,
+      "grad_norm": 1.89395063996315,
+      "mean_policy_relocations": 9.97,
+      "mean_baseline_relocations": 9.69,
+      "mean_advantage": -6.400435967059808,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 24,
+        "8": 8,
+        "9": 8,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 18500,
+      "iteration": 4625,
+      "window_episodes": 100,
+      "loss": -0.1464324290305376,
+      "policy_loss": -0.1394823596999049,
+      "entropy": 0.6950068271160126,
+      "grad_norm": 1.7334721636772157,
+      "mean_policy_relocations": 11.62,
+      "mean_baseline_relocations": 11.51,
+      "mean_advantage": -7.375333161414111,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 8,
+        "8": 12,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 18600,
+      "iteration": 4650,
+      "window_episodes": 100,
+      "loss": -0.23096049472689628,
+      "policy_loss": -0.22226972863078118,
+      "entropy": 0.8690765881538391,
+      "grad_norm": 1.9838834059238435,
+      "mean_policy_relocations": 9.26,
+      "mean_baseline_relocations": 8.79,
+      "mean_advantage": -5.8209419800096995,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 36,
+        "7": 12,
+        "8": 4,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 18700,
+      "iteration": 4675,
+      "window_episodes": 100,
+      "loss": -0.2769645617902279,
+      "policy_loss": -0.26668492205440997,
+      "entropy": 1.0279642057418823,
+      "grad_norm": 1.8070150446891784,
+      "mean_policy_relocations": 12.22,
+      "mean_baseline_relocations": 11.25,
+      "mean_advantage": -7.505575462527518,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 32,
+        "6": 4,
+        "7": 16,
+        "8": 20,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 63,
+        "DS2": 37
+      }
+    },
+    {
+      "episode": 18800,
+      "iteration": 4700,
+      "window_episodes": 100,
+      "loss": -0.2897089782357216,
+      "policy_loss": -0.2789683181792498,
+      "entropy": 1.0740658569335937,
+      "grad_norm": 1.576696994304657,
+      "mean_policy_relocations": 11.96,
+      "mean_baseline_relocations": 10.99,
+      "mean_advantage": -7.957652110124229,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 4,
+        "8": 24,
+        "9": 12,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 18900,
+      "iteration": 4725,
+      "window_episodes": 100,
+      "loss": -0.19166446279734373,
+      "policy_loss": -0.18398304361850024,
+      "entropy": 0.7681419801712036,
+      "grad_norm": 1.9311857414245606,
+      "mean_policy_relocations": 10.2,
+      "mean_baseline_relocations": 9.59,
+      "mean_advantage": -6.689152873332806,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 28,
+        "7": 12,
+        "8": 24,
+        "9": 12,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 19000,
+      "iteration": 4750,
+      "window_episodes": 100,
+      "loss": -0.17786269426345824,
+      "policy_loss": -0.1698689753562212,
+      "entropy": 0.799371885061264,
+      "grad_norm": 2.4555764484405516,
+      "mean_policy_relocations": 12.02,
+      "mean_baseline_relocations": 11.38,
+      "mean_advantage": -7.906044010132091,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 28,
+        "7": 8,
+        "8": 20,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 19100,
+      "iteration": 4775,
+      "window_episodes": 100,
+      "loss": -0.07458211859688163,
+      "policy_loss": -0.06866068596020342,
+      "entropy": 0.5921433687210083,
+      "grad_norm": 2.3518347215652464,
+      "mean_policy_relocations": 10.34,
+      "mean_baseline_relocations": 10.16,
+      "mean_advantage": -6.227068109648656,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 32,
+        "6": 20,
+        "7": 12,
+        "8": 8,
+        "9": 4,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 61,
+        "DS2": 39
+      }
+    },
+    {
+      "episode": 19200,
+      "iteration": 4800,
+      "window_episodes": 100,
+      "loss": -0.08705601798370481,
+      "policy_loss": -0.0802648201584816,
+      "entropy": 0.6791197693347931,
+      "grad_norm": 2.6636960983276365,
+      "mean_policy_relocations": 11.1,
+      "mean_baseline_relocations": 10.4,
+      "mean_advantage": -6.973927951082984,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 0,
+        "8": 24,
+        "9": 36,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 19300,
+      "iteration": 4825,
+      "window_episodes": 100,
+      "loss": -0.2415697855502367,
+      "policy_loss": -0.23229831717908384,
+      "entropy": 0.9271467661857605,
+      "grad_norm": 2.0205441093444825,
+      "mean_policy_relocations": 11.18,
+      "mean_baseline_relocations": 10.05,
+      "mean_advantage": -6.830378792087588,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 24,
+        "8": 16,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 19400,
+      "iteration": 4850,
+      "window_episodes": 100,
+      "loss": -0.15680983178317548,
+      "policy_loss": -0.14398494511842727,
+      "entropy": 1.2824887347221374,
+      "grad_norm": 1.6164877462387084,
+      "mean_policy_relocations": 11.95,
+      "mean_baseline_relocations": 9.77,
+      "mean_advantage": -8.03165339123592,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 20,
+        "8": 24,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 46,
+        "DS2": 54
+      }
+    },
+    {
+      "episode": 19500,
+      "iteration": 4875,
+      "window_episodes": 100,
+      "loss": -0.07675462804734706,
+      "policy_loss": -0.06029911426827311,
+      "entropy": 1.6455515098571778,
+      "grad_norm": 1.3827459979057313,
+      "mean_policy_relocations": 11.5,
+      "mean_baseline_relocations": 8.97,
+      "mean_advantage": -7.271747746949743,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 20,
+        "8": 20,
+        "9": 8,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 19600,
+      "iteration": 4900,
+      "window_episodes": 100,
+      "loss": -0.2056724774837494,
+      "policy_loss": -0.19200176507234573,
+      "entropy": 1.3670712304115296,
+      "grad_norm": 1.6983548939228057,
+      "mean_policy_relocations": 11.54,
+      "mean_baseline_relocations": 9.82,
+      "mean_advantage": -7.158803086748538,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 24,
+        "8": 16,
+        "9": 16,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 41,
+        "DS2": 59
+      }
+    },
+    {
+      "episode": 19700,
+      "iteration": 4925,
+      "window_episodes": 100,
+      "loss": -0.27363756045699117,
+      "policy_loss": -0.2658611010760069,
+      "entropy": 0.7776460272073745,
+      "grad_norm": 1.8096370100975037,
+      "mean_policy_relocations": 9.43,
+      "mean_baseline_relocations": 8.91,
+      "mean_advantage": -6.107554784290444,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 32,
+        "7": 8,
+        "8": 8,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 44,
+        "DS2": 56
+      }
+    },
+    {
+      "episode": 19800,
+      "iteration": 4950,
+      "window_episodes": 100,
+      "loss": -0.08234997879713774,
+      "policy_loss": -0.07628074148669839,
+      "entropy": 0.6069236254692078,
+      "grad_norm": 2.069055664539337,
+      "mean_policy_relocations": 9.01,
+      "mean_baseline_relocations": 8.86,
+      "mean_advantage": -5.341905925390181,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 20,
+        "8": 12,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 19900,
+      "iteration": 4975,
+      "window_episodes": 100,
+      "loss": -0.14610322523862124,
+      "policy_loss": -0.13930624451488258,
+      "entropy": 0.6796978747844696,
+      "grad_norm": 1.6481987714767456,
+      "mean_policy_relocations": 10.19,
+      "mean_baseline_relocations": 10.04,
+      "mean_advantage": -6.621294777559112,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 8,
+        "7": 16,
+        "8": 8,
+        "9": 8,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 20000,
+      "iteration": 5000,
+      "window_episodes": 100,
+      "loss": -0.2947458402812481,
+      "policy_loss": -0.2864072261750698,
+      "entropy": 0.83386146068573,
+      "grad_norm": 1.8295104384422303,
+      "mean_policy_relocations": 11.9,
+      "mean_baseline_relocations": 11.15,
+      "mean_advantage": -7.877206291082346,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 20,
+        "8": 24,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 20100,
+      "iteration": 5025,
+      "window_episodes": 100,
+      "loss": -0.22403601929545403,
+      "policy_loss": -0.21723377838730812,
+      "entropy": 0.6802239847183228,
+      "grad_norm": 1.3249532496929168,
+      "mean_policy_relocations": 10.81,
+      "mean_baseline_relocations": 10.49,
+      "mean_advantage": -6.299048639336884,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 12,
+        "7": 12,
+        "8": 28,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 39,
+        "DS2": 61
+      }
+    },
+    {
+      "episode": 20200,
+      "iteration": 5050,
+      "window_episodes": 100,
+      "loss": -0.2734103496931493,
+      "policy_loss": -0.26583141427487134,
+      "entropy": 0.7578936052322388,
+      "grad_norm": 1.3676752638816834,
+      "mean_policy_relocations": 10.86,
+      "mean_baseline_relocations": 10.06,
+      "mean_advantage": -7.216639711168793,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 24,
+        "8": 8,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 20300,
+      "iteration": 5075,
+      "window_episodes": 100,
+      "loss": -0.2536504103243351,
+      "policy_loss": -0.24551792338490486,
+      "entropy": 0.8132486248016357,
+      "grad_norm": 1.670656887292862,
+      "mean_policy_relocations": 9.47,
+      "mean_baseline_relocations": 8.7,
+      "mean_advantage": -5.618749353292002,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 16,
+        "7": 20,
+        "8": 4,
+        "9": 12,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 20400,
+      "iteration": 5100,
+      "window_episodes": 100,
+      "loss": -0.34403778091073034,
+      "policy_loss": -0.33363923177123067,
+      "entropy": 1.039854428768158,
+      "grad_norm": 1.385277773141861,
+      "mean_policy_relocations": 12.12,
+      "mean_baseline_relocations": 11.06,
+      "mean_advantage": -8.621083350951208,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 4,
+        "7": 16,
+        "8": 32,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 43,
+        "DS2": 57
+      }
+    },
+    {
+      "episode": 20500,
+      "iteration": 5125,
+      "window_episodes": 100,
+      "loss": -0.3210486263036728,
+      "policy_loss": -0.3122860658168793,
+      "entropy": 0.8762558007240295,
+      "grad_norm": 1.3713279247283936,
+      "mean_policy_relocations": 10.74,
+      "mean_baseline_relocations": 10.14,
+      "mean_advantage": -6.682454125614111,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 24,
+        "8": 12,
+        "9": 8,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 20600,
+      "iteration": 5150,
+      "window_episodes": 100,
+      "loss": -0.17780379623174666,
+      "policy_loss": -0.17071538809919728,
+      "entropy": 0.7088407373428345,
+      "grad_norm": 1.415274395942688,
+      "mean_policy_relocations": 10.44,
+      "mean_baseline_relocations": 9.99,
+      "mean_advantage": -6.399452248543339,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 3,
+      "S_bucket_counts": {
+        "5": 4,
+        "6": 24,
+        "7": 28,
+        "8": 20,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 20700,
+      "iteration": 5175,
+      "window_episodes": 100,
+      "loss": -0.21287064298987388,
+      "policy_loss": -0.20614573523402213,
+      "entropy": 0.6724905693531036,
+      "grad_norm": 1.6686028909683228,
+      "mean_policy_relocations": 10.05,
+      "mean_baseline_relocations": 9.6,
+      "mean_advantage": -6.56822955227072,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 28,
+        "7": 12,
+        "8": 12,
+        "9": 20,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 20800,
+      "iteration": 5200,
+      "window_episodes": 100,
+      "loss": -0.28092287920415404,
+      "policy_loss": -0.2730435959249735,
+      "entropy": 0.7879285204410553,
+      "grad_norm": 1.3868472063541413,
+      "mean_policy_relocations": 11.65,
+      "mean_baseline_relocations": 11.05,
+      "mean_advantage": -7.2701432481972015,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 16,
+        "8": 12,
+        "9": 24,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 53,
+        "DS2": 47
+      }
+    },
+    {
+      "episode": 20900,
+      "iteration": 5225,
+      "window_episodes": 100,
+      "loss": -0.330090145021677,
+      "policy_loss": -0.3216806823760271,
+      "entropy": 0.8409461724758148,
+      "grad_norm": 1.2411592149734496,
+      "mean_policy_relocations": 11.72,
+      "mean_baseline_relocations": 10.92,
+      "mean_advantage": -7.623837560036073,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 4,
+        "7": 8,
+        "8": 28,
+        "9": 20,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 21000,
+      "iteration": 5250,
+      "window_episodes": 100,
+      "loss": -0.30399316787719727,
+      "policy_loss": -0.2961283800005913,
+      "entropy": 0.7864787530899048,
+      "grad_norm": 1.723047444820404,
+      "mean_policy_relocations": 11.76,
+      "mean_baseline_relocations": 11.24,
+      "mean_advantage": -7.857643546171285,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 8,
+        "7": 16,
+        "8": 20,
+        "9": 24,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 21100,
+      "iteration": 5275,
+      "window_episodes": 100,
+      "loss": -0.2922957190871239,
+      "policy_loss": -0.2843759799748659,
+      "entropy": 0.791974105834961,
+      "grad_norm": 1.4177259731292724,
+      "mean_policy_relocations": 10.09,
+      "mean_baseline_relocations": 9.45,
+      "mean_advantage": -6.806234695895988,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 8,
+        "8": 20,
+        "9": 20,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 21200,
+      "iteration": 5300,
+      "window_episodes": 100,
+      "loss": -0.29079296439886093,
+      "policy_loss": -0.28238276213407515,
+      "entropy": 0.8410202074050903,
+      "grad_norm": 1.3243613922595978,
+      "mean_policy_relocations": 10.87,
+      "mean_baseline_relocations": 10.31,
+      "mean_advantage": -6.844081105864385,
+      "baseline_updates": 21,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 12,
+        "7": 32,
+        "8": 16,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 21300,
+      "iteration": 5325,
+      "window_episodes": 100,
+      "loss": -0.24735493935644626,
+      "policy_loss": -0.24030522488057612,
+      "entropy": 0.7049715626239776,
+      "grad_norm": 1.3847352075576782,
+      "mean_policy_relocations": 10.24,
+      "mean_baseline_relocations": 9.65,
+      "mean_advantage": -6.3758108458510705,
+      "baseline_updates": 22,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 24,
+        "8": 16,
+        "9": 16,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 21400,
+      "iteration": 5350,
+      "window_episodes": 100,
+      "loss": -0.2433989092707634,
+      "policy_loss": -0.2360069938749075,
+      "entropy": 0.7391915309429169,
+      "grad_norm": 1.763382295370102,
+      "mean_policy_relocations": 10.39,
+      "mean_baseline_relocations": 10.02,
+      "mean_advantage": -6.750330931714143,
+      "baseline_updates": 22,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 16,
+        "8": 24,
+        "9": 32,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 59,
+        "DS2": 41
+      }
+    },
+    {
+      "episode": 21500,
+      "iteration": 5375,
+      "window_episodes": 100,
+      "loss": -0.2904804695956409,
+      "policy_loss": -0.28279714880511164,
+      "entropy": 0.7683321642875671,
+      "grad_norm": 1.8573663640022278,
+      "mean_policy_relocations": 10.48,
+      "mean_baseline_relocations": 10.15,
+      "mean_advantage": -6.458236395448906,
+      "baseline_updates": 22,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 24,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 21600,
+      "iteration": 5400,
+      "window_episodes": 100,
+      "loss": -0.28473731502890587,
+      "policy_loss": -0.27667153127491473,
+      "entropy": 0.8065782010555267,
+      "grad_norm": 1.7630859351158141,
+      "mean_policy_relocations": 10.87,
+      "mean_baseline_relocations": 10.55,
+      "mean_advantage": -6.923549249041408,
+      "baseline_updates": 22,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 16,
+        "8": 20,
+        "9": 12,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 21700,
+      "iteration": 5425,
+      "window_episodes": 100,
+      "loss": -0.25453543834388254,
+      "policy_loss": -0.24599692691117525,
+      "entropy": 0.8538513112068177,
+      "grad_norm": 1.3752718591690063,
+      "mean_policy_relocations": 11.46,
+      "mean_baseline_relocations": 11.32,
+      "mean_advantage": -7.110092323918725,
+      "baseline_updates": 23,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 4,
+        "7": 20,
+        "8": 20,
+        "9": 28,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 21800,
+      "iteration": 5450,
+      "window_episodes": 100,
+      "loss": -0.2252087265625596,
+      "policy_loss": -0.2165929202642292,
+      "entropy": 0.8615805864334106,
+      "grad_norm": 1.4350350046157836,
+      "mean_policy_relocations": 10.92,
+      "mean_baseline_relocations": 10.75,
+      "mean_advantage": -6.681704657105562,
+      "baseline_updates": 23,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 16,
+        "7": 20,
+        "8": 36,
+        "9": 12,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 21900,
+      "iteration": 5475,
+      "window_episodes": 100,
+      "loss": -0.19827038817107678,
+      "policy_loss": -0.19066284492611885,
+      "entropy": 0.7607542037963867,
+      "grad_norm": 1.6787190008163453,
+      "mean_policy_relocations": 9.81,
+      "mean_baseline_relocations": 9.43,
+      "mean_advantage": -6.385673921141623,
+      "baseline_updates": 24,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 12,
+        "7": 16,
+        "8": 8,
+        "9": 36,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 22000,
+      "iteration": 5500,
+      "window_episodes": 100,
+      "loss": -0.06655941016972065,
+      "policy_loss": -0.06031796727329493,
+      "entropy": 0.624144207239151,
+      "grad_norm": 1.166766186952591,
+      "mean_policy_relocations": 9.52,
+      "mean_baseline_relocations": 9.03,
+      "mean_advantage": -6.259673449198115,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 20,
+        "7": 28,
+        "8": 16,
+        "9": 4,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 22100,
+      "iteration": 5525,
+      "window_episodes": 100,
+      "loss": -0.17220426108688117,
+      "policy_loss": -0.16567652229219676,
+      "entropy": 0.6527738702297211,
+      "grad_norm": 2.203838369846344,
+      "mean_policy_relocations": 9.05,
+      "mean_baseline_relocations": 8.91,
+      "mean_advantage": -5.676302198798828,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 16,
+        "7": 16,
+        "8": 4,
+        "9": 24,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 65,
+        "DS2": 35
+      }
+    },
+    {
+      "episode": 22200,
+      "iteration": 5550,
+      "window_episodes": 100,
+      "loss": -0.22340035755187274,
+      "policy_loss": -0.21594001902500168,
+      "entropy": 0.7460339200496674,
+      "grad_norm": 1.725320464372635,
+      "mean_policy_relocations": 9.83,
+      "mean_baseline_relocations": 9.41,
+      "mean_advantage": -6.350977538035327,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 24,
+        "7": 12,
+        "8": 16,
+        "9": 24,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 54,
+        "DS2": 46
+      }
+    },
+    {
+      "episode": 22300,
+      "iteration": 5575,
+      "window_episodes": 100,
+      "loss": -0.2638133519887924,
+      "policy_loss": -0.2558393958210945,
+      "entropy": 0.797395806312561,
+      "grad_norm": 2.5132421493530273,
+      "mean_policy_relocations": 9.47,
+      "mean_baseline_relocations": 9.12,
+      "mean_advantage": -5.931206613947479,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 24,
+        "7": 8,
+        "8": 20,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 22400,
+      "iteration": 5600,
+      "window_episodes": 100,
+      "loss": -0.1817506381869316,
+      "policy_loss": -0.17427644442766904,
+      "entropy": 0.7474195671081543,
+      "grad_norm": 1.606895499229431,
+      "mean_policy_relocations": 11.01,
+      "mean_baseline_relocations": 10.85,
+      "mean_advantage": -7.037604026723235,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 8,
+        "7": 16,
+        "8": 28,
+        "9": 8,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 55,
+        "DS2": 45
+      }
+    },
+    {
+      "episode": 22500,
+      "iteration": 5625,
+      "window_episodes": 100,
+      "loss": -0.23403791196644305,
+      "policy_loss": -0.22558762695640325,
+      "entropy": 0.8450281977653503,
+      "grad_norm": 2.168902962207794,
+      "mean_policy_relocations": 11.17,
+      "mean_baseline_relocations": 10.6,
+      "mean_advantage": -7.107648502423541,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 16,
+        "7": 16,
+        "8": 16,
+        "9": 12,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 35,
+        "DS2": 65
+      }
+    },
+    {
+      "episode": 22600,
+      "iteration": 5650,
+      "window_episodes": 100,
+      "loss": -0.22288987025618553,
+      "policy_loss": -0.21302733987569808,
+      "entropy": 0.986253023147583,
+      "grad_norm": 1.9705086088180541,
+      "mean_policy_relocations": 10.28,
+      "mean_baseline_relocations": 9.74,
+      "mean_advantage": -6.667162569149262,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 16,
+        "7": 20,
+        "8": 16,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 22700,
+      "iteration": 5675,
+      "window_episodes": 100,
+      "loss": -0.1876564334705472,
+      "policy_loss": -0.1738321279361844,
+      "entropy": 1.3824307000637055,
+      "grad_norm": 2.060288457870483,
+      "mean_policy_relocations": 14.16,
+      "mean_baseline_relocations": 11.77,
+      "mean_advantage": -8.517620362785266,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 12,
+        "8": 24,
+        "9": 4,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 22800,
+      "iteration": 5700,
+      "window_episodes": 100,
+      "loss": -0.2537724136561155,
+      "policy_loss": -0.24043001841753722,
+      "entropy": 1.3342395949363708,
+      "grad_norm": 1.9762043863534928,
+      "mean_policy_relocations": 12.12,
+      "mean_baseline_relocations": 10.64,
+      "mean_advantage": -7.729653751818448,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 20,
+        "7": 20,
+        "8": 24,
+        "9": 16,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 22900,
+      "iteration": 5725,
+      "window_episodes": 100,
+      "loss": -0.19107963439077139,
+      "policy_loss": -0.1827274464443326,
+      "entropy": 0.8352187108993531,
+      "grad_norm": 2.145404541492462,
+      "mean_policy_relocations": 9.82,
+      "mean_baseline_relocations": 9.28,
+      "mean_advantage": -6.155603590808696,
+      "baseline_updates": 25,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 28,
+        "8": 24,
+        "9": 4,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 23000,
+      "iteration": 5750,
+      "window_episodes": 100,
+      "loss": -0.208432491235435,
+      "policy_loss": -0.2005714777112007,
+      "entropy": 0.7861012887954711,
+      "grad_norm": 2.512383530139923,
+      "mean_policy_relocations": 11.06,
+      "mean_baseline_relocations": 10.82,
+      "mean_advantage": -7.715084131747538,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 16,
+        "8": 20,
+        "9": 16,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 58,
+        "DS2": 42
+      }
+    },
+    {
+      "episode": 23100,
+      "iteration": 5775,
+      "window_episodes": 100,
+      "loss": -0.08445565670728683,
+      "policy_loss": -0.07832959104329347,
+      "entropy": 0.6126065170764923,
+      "grad_norm": 1.6296709525585173,
+      "mean_policy_relocations": 9.71,
+      "mean_baseline_relocations": 9.58,
+      "mean_advantage": -5.71250444509043,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 28,
+        "7": 20,
+        "8": 8,
+        "9": 8,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 45,
+        "DS2": 55
+      }
+    },
+    {
+      "episode": 23200,
+      "iteration": 5800,
+      "window_episodes": 100,
+      "loss": -0.10720767337828875,
+      "policy_loss": -0.10014000045135617,
+      "entropy": 0.706767315864563,
+      "grad_norm": 1.603391318321228,
+      "mean_policy_relocations": 10.19,
+      "mean_baseline_relocations": 9.94,
+      "mean_advantage": -6.645449206434073,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 24,
+        "7": 20,
+        "8": 28,
+        "9": 8,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 23300,
+      "iteration": 5825,
+      "window_episodes": 100,
+      "loss": -0.14173658730462194,
+      "policy_loss": -0.13408319504931568,
+      "entropy": 0.7653393232822419,
+      "grad_norm": 1.5440755319595336,
+      "mean_policy_relocations": 10.53,
+      "mean_baseline_relocations": 10.09,
+      "mean_advantage": -6.293811147503707,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 20,
+        "7": 28,
+        "8": 20,
+        "9": 16,
+        "10": 0
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 23400,
+      "iteration": 5850,
+      "window_episodes": 100,
+      "loss": -0.14348432151600718,
+      "policy_loss": -0.13430876491591334,
+      "entropy": 0.9175557762384414,
+      "grad_norm": 1.4372473752498627,
+      "mean_policy_relocations": 11.27,
+      "mean_baseline_relocations": 10.77,
+      "mean_advantage": -7.265394804638805,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 16,
+        "7": 4,
+        "8": 20,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 23500,
+      "iteration": 5875,
+      "window_episodes": 100,
+      "loss": -0.30174525529146196,
+      "policy_loss": -0.29127838313579557,
+      "entropy": 1.0466873526573182,
+      "grad_norm": 2.3735794019699097,
+      "mean_policy_relocations": 11.31,
+      "mean_baseline_relocations": 10.35,
+      "mean_advantage": -7.284380706722293,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 4,
+        "7": 28,
+        "8": 16,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 47,
+        "DS2": 53
+      }
+    },
+    {
+      "episode": 23600,
+      "iteration": 5900,
+      "window_episodes": 100,
+      "loss": -0.32837433613836764,
+      "policy_loss": -0.3184334645420313,
+      "entropy": 0.9940873122215271,
+      "grad_norm": 1.4988937449455262,
+      "mean_policy_relocations": 11.24,
+      "mean_baseline_relocations": 10.14,
+      "mean_advantage": -7.025495853071707,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 20,
+        "7": 12,
+        "8": 12,
+        "9": 20,
+        "10": 24
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 23700,
+      "iteration": 5925,
+      "window_episodes": 100,
+      "loss": -0.28276092037558553,
+      "policy_loss": -0.2719839772582054,
+      "entropy": 1.0776942729949952,
+      "grad_norm": 2.0754317724704743,
+      "mean_policy_relocations": 9.15,
+      "mean_baseline_relocations": 8.42,
+      "mean_advantage": -5.434525984025218,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 36,
+        "6": 16,
+        "7": 8,
+        "8": 0,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 23800,
+      "iteration": 5950,
+      "window_episodes": 100,
+      "loss": -0.31407688111066817,
+      "policy_loss": -0.3034715101122856,
+      "entropy": 1.0605371022224426,
+      "grad_norm": 1.9186444807052612,
+      "mean_policy_relocations": 9.21,
+      "mean_baseline_relocations": 8.44,
+      "mean_advantage": -5.843253730366996,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 28,
+        "6": 16,
+        "7": 12,
+        "8": 20,
+        "9": 4,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 23900,
+      "iteration": 5975,
+      "window_episodes": 100,
+      "loss": -0.2800669842585921,
+      "policy_loss": -0.27015027683228254,
+      "entropy": 0.9916707277297974,
+      "grad_norm": 1.912402093410492,
+      "mean_policy_relocations": 10.91,
+      "mean_baseline_relocations": 10.26,
+      "mean_advantage": -6.482695823270535,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 12,
+        "8": 36,
+        "9": 12,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 51,
+        "DS2": 49
+      }
+    },
+    {
+      "episode": 24000,
+      "iteration": 6000,
+      "window_episodes": 100,
+      "loss": -0.17713511191308498,
+      "policy_loss": -0.16839561625849456,
+      "entropy": 0.8739497017860413,
+      "grad_norm": 1.8569767189025879,
+      "mean_policy_relocations": 9.91,
+      "mean_baseline_relocations": 9.63,
+      "mean_advantage": -6.245645181026521,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 8,
+        "7": 16,
+        "8": 12,
+        "9": 20,
+        "10": 28
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 24100,
+      "iteration": 6025,
+      "window_episodes": 100,
+      "loss": -0.1284126892313361,
+      "policy_loss": -0.11887855879962445,
+      "entropy": 0.9534131026268006,
+      "grad_norm": 2.1166601634025572,
+      "mean_policy_relocations": 10.51,
+      "mean_baseline_relocations": 10.11,
+      "mean_advantage": -6.439019837218425,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 20,
+        "7": 8,
+        "8": 20,
+        "9": 12,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 24200,
+      "iteration": 6050,
+      "window_episodes": 100,
+      "loss": -0.1579794312827289,
+      "policy_loss": -0.14898015312850477,
+      "entropy": 0.8999278473854065,
+      "grad_norm": 2.003479256629944,
+      "mean_policy_relocations": 10.87,
+      "mean_baseline_relocations": 10.57,
+      "mean_advantage": -6.791611829172675,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 8,
+        "6": 20,
+        "7": 16,
+        "8": 12,
+        "9": 12,
+        "10": 32
+      },
+      "variant_counts": {
+        "DS1": 50,
+        "DS2": 50
+      }
+    },
+    {
+      "episode": 24300,
+      "iteration": 6075,
+      "window_episodes": 100,
+      "loss": -0.20239656537771225,
+      "policy_loss": -0.19210472524166108,
+      "entropy": 1.0291838788986205,
+      "grad_norm": 1.8335451316833495,
+      "mean_policy_relocations": 11.38,
+      "mean_baseline_relocations": 10.87,
+      "mean_advantage": -6.993506633375528,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 12,
+        "7": 24,
+        "8": 12,
+        "9": 20,
+        "10": 16
+      },
+      "variant_counts": {
+        "DS1": 57,
+        "DS2": 43
+      }
+    },
+    {
+      "episode": 24400,
+      "iteration": 6100,
+      "window_episodes": 100,
+      "loss": -0.13526742544025183,
+      "policy_loss": -0.12206893671303988,
+      "entropy": 1.3198489952087402,
+      "grad_norm": 2.7696663212776182,
+      "mean_policy_relocations": 11.65,
+      "mean_baseline_relocations": 10.66,
+      "mean_advantage": -7.457603893788198,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 12,
+        "7": 16,
+        "8": 28,
+        "9": 24,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 24500,
+      "iteration": 6125,
+      "window_episodes": 100,
+      "loss": -0.18284096904098987,
+      "policy_loss": -0.17182992294430732,
+      "entropy": 1.1011047124862672,
+      "grad_norm": 2.4386362481117247,
+      "mean_policy_relocations": 12.01,
+      "mean_baseline_relocations": 11.02,
+      "mean_advantage": -7.105811193902578,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 1,
+      "S_bucket_counts": {
+        "5": 24,
+        "6": 12,
+        "7": 20,
+        "8": 20,
+        "9": 16,
+        "10": 8
+      },
+      "variant_counts": {
+        "DS1": 52,
+        "DS2": 48
+      }
+    },
+    {
+      "episode": 24600,
+      "iteration": 6150,
+      "window_episodes": 100,
+      "loss": -0.16992737218737602,
+      "policy_loss": -0.16028105027973652,
+      "entropy": 0.9646323895454407,
+      "grad_norm": 2.0702927017211916,
+      "mean_policy_relocations": 10.52,
+      "mean_baseline_relocations": 10.01,
+      "mean_advantage": -6.89657847136218,
+      "baseline_updates": 26,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 16,
+        "7": 12,
+        "8": 20,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 24700,
+      "iteration": 6175,
+      "window_episodes": 100,
+      "loss": -0.03676771223545074,
+      "policy_loss": -0.030398992896080015,
+      "entropy": 0.6368719220161438,
+      "grad_norm": 1.7048541951179503,
+      "mean_policy_relocations": 10.82,
+      "mean_baseline_relocations": 10.65,
+      "mean_advantage": -6.48006985794377,
+      "baseline_updates": 27,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 2,
+      "S_bucket_counts": {
+        "5": 20,
+        "6": 12,
+        "7": 12,
+        "8": 16,
+        "9": 20,
+        "10": 20
+      },
+      "variant_counts": {
+        "DS1": 49,
+        "DS2": 51
+      }
+    },
+    {
+      "episode": 24800,
+      "iteration": 6200,
+      "window_episodes": 100,
+      "loss": 0.03782373278401792,
+      "policy_loss": 0.042831607572734354,
+      "entropy": 0.5007874476909637,
+      "grad_norm": 1.4362051153182984,
+      "mean_policy_relocations": 9.8,
+      "mean_baseline_relocations": 9.78,
+      "mean_advantage": -5.798350799341758,
+      "baseline_updates": 27,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 32,
+        "6": 20,
+        "7": 20,
+        "8": 4,
+        "9": 12,
+        "10": 12
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    },
+    {
+      "episode": 24900,
+      "iteration": 6225,
+      "window_episodes": 100,
+      "loss": 0.06996781215071678,
+      "policy_loss": 0.07526510063558817,
+      "entropy": 0.5297287714481353,
+      "grad_norm": 1.1893516504764556,
+      "mean_policy_relocations": 9.46,
+      "mean_baseline_relocations": 9.22,
+      "mean_advantage": -6.238079724403584,
+      "baseline_updates": 27,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 12,
+        "6": 32,
+        "7": 32,
+        "8": 20,
+        "9": 4,
+        "10": 0
+      },
+      "variant_counts": {
+        "DS1": 56,
+        "DS2": 44
+      }
+    },
+    {
+      "episode": 25000,
+      "iteration": 6250,
+      "window_episodes": 100,
+      "loss": -0.13729428000748156,
+      "policy_loss": -0.12992100916802884,
+      "entropy": 0.7373270130157471,
+      "grad_norm": 1.4296016609668731,
+      "mean_policy_relocations": 10.0,
+      "mean_baseline_relocations": 9.53,
+      "mean_advantage": -6.623455468977374,
+      "baseline_updates": 27,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "scenario_mismatches": 0,
+      "empty_decision_episodes": 0,
+      "S_bucket_counts": {
+        "5": 16,
+        "6": 28,
+        "7": 8,
+        "8": 12,
+        "9": 32,
+        "10": 4
+      },
+      "variant_counts": {
+        "DS1": 48,
+        "DS2": 52
+      }
+    }
+  ],
+  "formal_test_episode_usage": 0
+}
