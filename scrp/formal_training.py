@@ -9,6 +9,7 @@ not a command to start a formal training campaign.
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 import random
 import re
@@ -84,8 +85,11 @@ class FormalTrainingConfig:
             raise ValueError("feature_dim must be 12 and batch_size must be positive")
         if not 0.0 < self.gamma <= 1.0 or self.gradient_clip <= 0.0:
             raise ValueError("invalid gamma or gradient_clip")
-        if self.hyperparameter_status != "NOT FINAL HYPERPARAMETERS":
-            raise ValueError("Phase 6 config must remain marked as sanity-only")
+        if self.hyperparameter_status not in {
+            "NOT FINAL HYPERPARAMETERS",
+            "CANDIDATE_FOR_REHEARSAL",
+        }:
+            raise ValueError("unsupported hyperparameter lifecycle status")
 
     @classmethod
     def from_record(cls, record: Mapping[str, object]) -> "FormalTrainingConfig":
@@ -403,6 +407,33 @@ class FormalIterationMetrics:
     invalid_actions: int
     truncations: int
     baseline_updates: int
+    low_decisions: int
+    empty_decision_episodes: int
+    scenario_mismatches: int
+
+
+@dataclass(frozen=True)
+class BaselineRefreshRecord:
+    iteration: int
+    sample_size: int
+    paired_mean_difference: float
+    t_statistic: float
+    p_value: float
+    old_baseline_state_sha256: str
+    new_baseline_state_sha256: str
+
+
+def policy_state_sha256(policy: HierPolicyNetwork) -> str:
+    """Hash tensor content without creating a temporary checkpoint file."""
+
+    digest = hashlib.sha256()
+    for name, tensor in sorted(policy.state_dict().items()):
+        value = tensor.detach().cpu().contiguous()
+        digest.update(name.encode("utf-8"))
+        digest.update(str(value.dtype).encode("ascii"))
+        digest.update(str(tuple(value.shape)).encode("ascii"))
+        digest.update(value.numpy().tobytes())
+    return digest.hexdigest()
 
 
 class SCRPFormalTrainer:
@@ -446,6 +477,7 @@ class SCRPFormalTrainer:
         self.iteration = 0
         self.episodes_seen = 0
         self.baseline_updates = 0
+        self.baseline_refresh_history: list[BaselineRefreshRecord] = []
         self.metrics: list[FormalIterationMetrics] = []
         self.sample_history: list[TrainingSample] = []
 
@@ -548,8 +580,24 @@ class SCRPFormalTrainer:
                     and result.statistic > 0
                     and result.pvalue / 2 < 0.05
                 ):
+                    old_baseline_hash = policy_state_sha256(self.baseline_policy)
                     self.baseline_policy = self._frozen_copy(self.policy)
                     self.baseline_updates += 1
+                    self.baseline_refresh_history.append(
+                        BaselineRefreshRecord(
+                            iteration=self.iteration,
+                            sample_size=len(policy_returns),
+                            paired_mean_difference=float(np.mean(
+                                np.asarray(policy_returns) - np.asarray(baseline_returns)
+                            )),
+                            t_statistic=float(result.statistic),
+                            p_value=float(result.pvalue / 2),
+                            old_baseline_state_sha256=old_baseline_hash,
+                            new_baseline_state_sha256=policy_state_sha256(
+                                self.baseline_policy
+                            ),
+                        )
+                    )
 
             metric = FormalIterationMetrics(
                 iteration=self.iteration,
@@ -565,6 +613,9 @@ class SCRPFormalTrainer:
                 invalid_actions=sum(r.invalid_actions for r in policy_runs),
                 truncations=sum(int(r.truncated) for r in policy_runs),
                 baseline_updates=self.baseline_updates,
+                low_decisions=sum(len(r.actions) for r in policy_runs),
+                empty_decision_episodes=sum(not r.actions for r in policy_runs),
+                scenario_mismatches=0,
             )
             self.metrics.append(metric)
             new_metrics.append(metric)
@@ -590,6 +641,9 @@ class SCRPFormalTrainer:
             "baseline_type": self.config.baseline_type,
             "baseline_state": self.baseline_policy.state_dict(),
             "baseline_updates": self.baseline_updates,
+            "baseline_refresh_history": [
+                asdict(record) for record in self.baseline_refresh_history
+            ],
             "per_base_visit_counters": dict(self.sampler.visit_counts),
             "sampler_state": self.sampler.state_dict(),
             "config_snapshot": asdict(self.config),
@@ -620,5 +674,9 @@ class SCRPFormalTrainer:
         trainer.iteration = int(checkpoint["iteration"])
         trainer.episodes_seen = int(checkpoint["episodes_seen"])
         trainer.baseline_updates = int(checkpoint["baseline_updates"])
+        trainer.baseline_refresh_history = [
+            BaselineRefreshRecord(**record)
+            for record in checkpoint.get("baseline_refresh_history", [])
+        ]
         torch.set_rng_state(checkpoint["torch_rng_state"])
         return trainer

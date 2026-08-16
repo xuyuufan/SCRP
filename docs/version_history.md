@@ -2,6 +2,7 @@
 
 | Phase | Git Branch | Git Tag | Main Changes | Tests | Status |
 |---|---|---|---|---|---|
+| Phase 7A | `phase/scrp-phase-7a-training-rehearsal` | — | Frozen candidate config, 1,000-episode train rehearsal, refresh/compute audit, checkpoint and validation smoke | 180 passed (7 Phase 7A cases) | Rehearsal passed; PR pending |
 | Phase 6 | `phase/scrp-phase-6-training-readiness` | — | Audited FGB trainer, O1/O2 factory, O2 padding mask, S-bucket sampler, deterministic checkpoint resume | 173 passed (26 Phase 6 cases) | Training-readiness implementation; PR pending |
 | Phase 5 | `phase/scrp-phase-5-o2` | — | O2 full revealed-order observation, audited Mmax=6, O1/O2 versioning and network smoke integration | 147 passed (20 Phase 5 cases) | Observation implementation; PR pending |
 | Phase 4.5 | `phase/scrp-phase-4.5-eri` | — | Clean-room published ERI reproduction, golden fidelity cases, four-algorithm CRN development check | 127 passed (16 Phase 4.5 cases) | Fidelity-audited; PR pending |
