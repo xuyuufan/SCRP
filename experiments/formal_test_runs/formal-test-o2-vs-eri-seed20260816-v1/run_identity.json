@@ -1,0 +1,41 @@
+{
+  "run_id": "formal-test-o2-vs-eri-seed20260816-v1",
+  "code_sha": "0a04690763865f5f28fc12bdf6127fbec7efbed3",
+  "branch": "phase/scrp-phase-8-formal-test",
+  "git_worktree_clean": false,
+  "git_tracked_clean": true,
+  "git_status_short": [
+    "?? \"docs/2016_135_EJOR_9\\351\\241\\265_Dusan Ku.pdf\"",
+    "?? \"docs/2017_74_TS_Stochastic_CRP_V. Galle.pdf\"",
+    "?? \"docs/2022_18_soft_computing_Tiziano Bacci.pdf\""
+  ],
+  "frozen_at_utc": "2026-08-17T07:44:25.525443Z",
+  "runtime_versions": {
+    "python": "3.12.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.13.0+cpu"
+  },
+  "training_run_id": "formal-o2-mixed-seed20260816-run1",
+  "checkpoint_episode": 15000,
+  "checkpoint_path": "checkpoints/formal-o2-mixed-seed20260816-run1/best-validation.pt",
+  "checkpoint_sha256": "1dbcb20686840df3d392a89a66cb28b79a3a7531d4669300bf09818a714ed255",
+  "config_sha256": "b284e0d1c9a8d750e4314b4bd7323af45f79d7cf2be3401ca22ec8b742793be3",
+  "split_manifest_version": "scrp-static-split-v1",
+  "dataset_version": "ku-galle-bacci-ds1-ds2-ec672df",
+  "observation_version": "O2",
+  "Mmax": 6,
+  "formal_test_protocol_version": "scrp-formal-protocol-v1",
+  "root_seed": 20260816,
+  "scenarios_per_static_variant": 50,
+  "bootstrap_seed": 20260816,
+  "bootstrap_repetitions": 10000,
+  "primary_algorithms": [
+    "rl_o2_episode15000",
+    "eri_reproduction_v1"
+  ],
+  "expected_static_variants_per_dataset": 240,
+  "expected_rollouts_per_algorithm": 24000,
+  "expected_total_rows": 48000
+}
