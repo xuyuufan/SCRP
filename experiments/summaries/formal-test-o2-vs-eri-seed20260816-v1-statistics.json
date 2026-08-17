@@ -1,0 +1,80 @@
+{
+  "run_id": "formal-test-o2-vs-eri-seed20260816-v1",
+  "paired_delta_sign_convention": "RL_minus_ERI; negative_favors_RL",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20260816,
+  "inference_unit": "static_instance_with_nested_paired_scenarios",
+  "naive_scenario_independent_t_test_performed": false,
+  "DS1": {
+    "hierarchical_bootstrap": {
+      "method": "stratified_hierarchical_paired_bootstrap",
+      "strata": 48,
+      "base_instances_per_stratum": 5,
+      "paired_scenarios_per_instance": 50,
+      "repetitions": 10000,
+      "seed": 20260816,
+      "mean_delta_RL_minus_ERI": 1.1731666666666667,
+      "ci95_low": 1.0391604166666666,
+      "ci95_high": 1.3119166666666666
+    },
+    "robustness": {
+      "input_unit": "static_instance_mean_over_50_paired_scenarios",
+      "n": 240,
+      "mean_delta_RL_minus_ERI": 1.1731666666666665,
+      "median_delta_RL_minus_ERI": 0.5200000000000009,
+      "wilcoxon_signed_rank": {
+        "statistic": 420.5,
+        "p_value_two_sided": 5.864562470600575e-26
+      },
+      "paired_t_test": {
+        "statistic": 10.160293390427002,
+        "p_value_two_sided": 2.166533937201281e-20
+      },
+      "cohen_dz": 0.6558441182284178
+    },
+    "instance_win_tie_loss": {
+      "RL_wins": 9,
+      "ties": 73,
+      "ERI_wins": 158
+    }
+  },
+  "DS2": {
+    "hierarchical_bootstrap": {
+      "method": "stratified_hierarchical_paired_bootstrap",
+      "strata": 48,
+      "base_instances_per_stratum": 5,
+      "paired_scenarios_per_instance": 50,
+      "repetitions": 10000,
+      "seed": 20260816,
+      "mean_delta_RL_minus_ERI": 0.8430833333333333,
+      "ci95_low": 0.75733125,
+      "ci95_high": 0.9303333333333333
+    },
+    "robustness": {
+      "input_unit": "static_instance_mean_over_50_paired_scenarios",
+      "n": 240,
+      "mean_delta_RL_minus_ERI": 0.8430833333333332,
+      "median_delta_RL_minus_ERI": 0.4299999999999997,
+      "wilcoxon_signed_rank": {
+        "statistic": 705.5,
+        "p_value_two_sided": 5.280670178362381e-29
+      },
+      "paired_t_test": {
+        "statistic": 10.410129816664702,
+        "p_value_two_sided": 3.589944358819028e-21
+      },
+      "cohen_dz": 0.6719709901966611
+    },
+    "instance_win_tie_loss": {
+      "RL_wins": 22,
+      "ties": 46,
+      "ERI_wins": 172
+    }
+  },
+  "raw_artifact": {
+    "gitignored_path": "experiments/raw_results/formal-test-o2-vs-eri-seed20260816-v1/primary-results.jsonl",
+    "sha256": "9bf1b694c4c4568224dc3a4f8d92559829a9f08635e55828b1ea9319a6bc7366",
+    "bytes": 17635139,
+    "rows": 48000
+  }
+}
