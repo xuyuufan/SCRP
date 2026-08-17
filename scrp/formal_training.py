@@ -45,6 +45,43 @@ ERI_AUXILIARY_VERSION = "eri-set-public-v1"
 _STACKS_PATTERN = re.compile(r"^S(?P<stacks>\d+)_")
 
 
+def resolve_training_device(requested_device: str) -> torch.device:
+    """Resolve an explicit training device without silently falling back."""
+
+    try:
+        device = torch.device(requested_device)
+    except (RuntimeError, ValueError) as error:
+        raise ValueError(f"invalid training device {requested_device!r}") from error
+    if device.type == "cuda":
+        if not torch.cuda.is_available():
+            raise RuntimeError(
+                f"configuration requires {requested_device}, but this PyTorch build "
+                "cannot access CUDA"
+            )
+        index = torch.cuda.current_device() if device.index is None else device.index
+        if index < 0 or index >= torch.cuda.device_count():
+            raise RuntimeError(
+                f"configuration requires {requested_device}, but only "
+                f"{torch.cuda.device_count()} CUDA device(s) are visible"
+            )
+        device = torch.device("cuda", index)
+    return device
+
+
+def seed_reproducibly(seed: int, *, deterministic: bool = True) -> None:
+    """Seed every RNG used by training and request deterministic CUDA kernels."""
+
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+    if deterministic:
+        torch.use_deterministic_algorithms(True)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
+
 @dataclass(frozen=True)
 class FormalTrainingConfig:
     training_protocol_version: str = TRAINING_PROTOCOL_VERSION
@@ -536,7 +573,7 @@ class SCRPFormalTrainer:
         self.manifest = manifest
         self.instance_provider = instance_provider
         self.allowed_base_ids = None if allowed_base_ids is None else tuple(allowed_base_ids)
-        self.device = torch.device(config.device)
+        self.device = resolve_training_device(config.device)
         torch.manual_seed(config.seed)
         self.sampler = BaseBalancedTrainingSampler(
             manifest, config.seed, allowed_base_ids=allowed_base_ids
@@ -553,6 +590,7 @@ class SCRPFormalTrainer:
             clip_constant=config.clip_constant,
             device=self.device,
         )
+        self.policy = self.policy.to(self.device)
         self.policy.train()
         self.baseline_policy = self._frozen_copy(self.policy)
         self.optimizer = torch.optim.Adam(
@@ -751,6 +789,9 @@ class SCRPFormalTrainer:
             "episodes_seen": self.episodes_seen,
             "root_seed": self.config.seed,
             "torch_rng_state": torch.get_rng_state(),
+            "torch_cuda_rng_state_all": (
+                torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None
+            ),
             "observation_version": self.config.observation_version,
             "feature_dim": self.config.feature_dim,
             "Mmax": self.config.Mmax,
@@ -799,4 +840,7 @@ class SCRPFormalTrainer:
             for record in checkpoint.get("baseline_refresh_history", [])
         ]
         torch.set_rng_state(checkpoint["torch_rng_state"])
+        cuda_states = checkpoint.get("torch_cuda_rng_state_all")
+        if cuda_states is not None and torch.cuda.is_available():
+            torch.cuda.set_rng_state_all(cuda_states)
         return trainer
