@@ -29,6 +29,7 @@ from experiments.protocol import (
     ScenarioSeedSchedule,
     SplitManifest,
 )
+from experiments.baselines.eri import ERIBaseline
 from hier_pg.network import HierPolicyNetwork
 
 from .datasets import merge_adjacent_batches, parse_ku_crptw
@@ -40,6 +41,7 @@ from .training import SCRP_O1_FEATURE_SCALE
 
 
 TRAINING_PROTOCOL_VERSION = "scrp-training-protocol-v1"
+ERI_AUXILIARY_VERSION = "eri-set-public-v1"
 _STACKS_PATTERN = re.compile(r"^S(?P<stacks>\d+)_")
 
 
@@ -71,6 +73,8 @@ class FormalTrainingConfig:
     clip_constant: float = 10.0
     max_steps: int = 10000
     hyperparameter_status: str = "NOT FINAL HYPERPARAMETERS"
+    eri_aux_coefficient: float = 0.0
+    eri_auxiliary_version: str | None = None
 
     def __post_init__(self) -> None:
         if self.training_protocol_version != TRAINING_PROTOCOL_VERSION:
@@ -90,13 +94,24 @@ class FormalTrainingConfig:
             "CANDIDATE_FOR_REHEARSAL",
         }:
             raise ValueError("unsupported hyperparameter lifecycle status")
+        if self.eri_aux_coefficient < 0.0:
+            raise ValueError("eri_aux_coefficient must be non-negative")
+        if self.eri_aux_coefficient > 0.0 and (
+            self.eri_auxiliary_version != ERI_AUXILIARY_VERSION
+        ):
+            raise ValueError("positive ERI coefficient requires the audited objective")
+        if self.eri_auxiliary_version not in {None, ERI_AUXILIARY_VERSION}:
+            raise ValueError("unsupported ERI auxiliary objective version")
 
     @classmethod
     def from_record(cls, record: Mapping[str, object]) -> "FormalTrainingConfig":
+        values = dict(record)
+        values.setdefault("eri_aux_coefficient", 0.0)
+        values.setdefault("eri_auxiliary_version", None)
         expected = set(asdict(cls()))
-        if set(record) != expected:
+        if set(values) != expected:
             raise ValueError("formal training config keys mismatch")
-        return cls(**record)
+        return cls(**values)
 
 
 def load_formal_training_config(path: str | Path) -> FormalTrainingConfig:
@@ -297,6 +312,7 @@ class FormalTrajectory:
     actions: list[int] = field(default_factory=list)
     legal_masks: list[np.ndarray] = field(default_factory=list)
     node_padding_masks: list[np.ndarray] = field(default_factory=list)
+    eri_optimal_masks: list[np.ndarray] = field(default_factory=list)
     rewards: list[float] = field(default_factory=list)
     scenario_id: str = ""
     relocations: int = 0
@@ -307,6 +323,56 @@ class FormalTrajectory:
     @property
     def episode_return(self) -> float:
         return float(sum(self.rewards))
+
+
+def eri_optimal_action_mask(
+    instance: SCRPInstance,
+    state,
+    legal_destinations: Sequence[int],
+) -> np.ndarray:
+    """Return all legal destinations tied for the exact minimum public ERI score."""
+
+    legal = tuple(int(action) for action in legal_destinations)
+    if not legal:
+        raise ValueError("ERI positive set requires at least one legal destination")
+    if state.terminated or state.current_target_id is None:
+        raise ValueError("ERI positive set requires a live public decision state")
+    target_location = state.locations[state.current_target_id]
+    if target_location is None:
+        raise ValueError("current target has no live location")
+    blocker_id = state.stacks[target_location.stack_id].top_id
+    scores = {
+        action: ERIBaseline.destination_score(instance, state, blocker_id, action)
+        for action in legal
+    }
+    minimum = min(scores.values())
+    result = np.zeros(instance.num_stacks, dtype=bool)
+    result[[action for action, score in scores.items() if score == minimum]] = True
+    if not result.any():
+        raise AssertionError("ERI positive set is empty")
+    return result
+
+
+def eri_set_probability_loss(
+    log_probabilities: torch.Tensor,
+    positive_mask: torch.Tensor,
+    legal_mask: torch.Tensor,
+) -> torch.Tensor:
+    """Compute -log sum probability over all and only ERI-minimum legal actions."""
+
+    if log_probabilities.shape != positive_mask.shape or positive_mask.shape != legal_mask.shape:
+        raise ValueError("ERI loss tensors must have identical shapes")
+    positive = positive_mask.bool()
+    legal = legal_mask.bool()
+    if torch.any(positive & ~legal):
+        raise ValueError("ERI positive set contains an illegal action")
+    if torch.any(~positive.any(dim=-1)):
+        raise ValueError("ERI positive set must be non-empty for every state")
+    selected = log_probabilities.masked_fill(~positive, float("-inf"))
+    loss = -torch.logsumexp(selected, dim=-1).mean()
+    if not torch.isfinite(loss):
+        raise FloatingPointError("ERI set-probability loss is non-finite")
+    return loss
 
 
 def run_formal_episode(
@@ -360,6 +426,10 @@ def run_formal_episode(
         trajectory.observations.append(observation.copy())
         trajectory.actions.append(action)
         trajectory.legal_masks.append(legal.copy())
+        if config.eri_auxiliary_version is not None:
+            trajectory.eri_optimal_masks.append(
+                eri_optimal_action_mask(instance, core.state, np.flatnonzero(legal))
+            )
         if node_mask is not None:
             trajectory.node_padding_masks.append(node_mask[0].cpu().numpy().copy())
         observation, reward, terminated, truncated, info = env.step(action)
@@ -402,8 +472,12 @@ class FormalIterationMetrics:
     mean_advantage: float
     loss: float
     policy_loss: float
+    eri_aux_loss: float
     entropy: float
     grad_norm: float
+    gradient_clipped: bool
+    rl_gradient_norm: float
+    weighted_eri_gradient_norm: float
     invalid_actions: int
     truncations: int
     baseline_updates: int
@@ -434,6 +508,16 @@ def policy_state_sha256(policy: HierPolicyNetwork) -> str:
         digest.update(str(tuple(value.shape)).encode("ascii"))
         digest.update(value.numpy().tobytes())
     return digest.hexdigest()
+
+
+def _autograd_norm(loss: torch.Tensor, parameters, *, retain_graph: bool) -> float:
+    gradients = torch.autograd.grad(
+        loss, tuple(parameters), retain_graph=retain_graph, allow_unused=True
+    )
+    squares = [gradient.detach().square().sum() for gradient in gradients if gradient is not None]
+    if not squares:
+        return 0.0
+    return float(torch.stack(squares).sum().sqrt().item())
 
 
 class SCRPFormalTrainer:
@@ -499,7 +583,7 @@ class SCRPFormalTrainer:
                 raise AssertionError("variable-S batch was not bucketed")
             self.sample_history.extend(samples)
             policy_runs, baseline_runs = [], []
-            observations, actions, masks, node_masks, advantages = [], [], [], [], []
+            observations, actions, masks, node_masks, eri_masks, advantages = [], [], [], [], [], []
             policy_returns, baseline_returns = [], []
             for sample in samples:
                 instance = self.instance_provider(sample)
@@ -520,6 +604,7 @@ class SCRPFormalTrainer:
                 actions.extend(policy_run.actions)
                 masks.extend(policy_run.legal_masks)
                 node_masks.extend(policy_run.node_padding_masks)
+                eri_masks.extend(policy_run.eri_optimal_masks)
                 advantages.extend(episode_adv)
                 policy_runs.append(policy_run)
                 baseline_runs.append(baseline_run)
@@ -527,7 +612,9 @@ class SCRPFormalTrainer:
                 baseline_returns.append(baseline_run.episode_return)
             self.episodes_seen += len(samples)
 
-            loss_value = policy_loss_value = entropy_value = grad_norm_value = 0.0
+            loss_value = policy_loss_value = eri_loss_value = entropy_value = 0.0
+            grad_norm_value = rl_grad_norm_value = eri_grad_norm_value = 0.0
+            gradient_clipped = False
             if observations:
                 advantage_t = torch.tensor(advantages, dtype=torch.float32, device=self.device)
                 if advantage_t.numel() > 1 and advantage_t.std().item() > 1e-8:
@@ -547,14 +634,41 @@ class SCRPFormalTrainer:
                     node_mask_t = torch.tensor(
                         np.asarray(node_masks), dtype=torch.bool, device=self.device
                     )
-                log_prob, entropy = self.policy.evaluate_actions(
-                    observation_t, forbidden_t, action_t, mode="low",
+                all_log_prob = self.policy.action_log_probabilities(
+                    observation_t, forbidden_t, mode="low",
                     node_padding_mask=node_mask_t,
                 )
+                log_prob = all_log_prob.gather(1, action_t.unsqueeze(1)).squeeze(1)
+                probabilities = all_log_prob.exp()
+                entropy = -(probabilities * all_log_prob.clamp(
+                    min=torch.finfo(all_log_prob.dtype).min
+                )).sum(-1)
                 policy_loss = -(log_prob * advantage_t.detach()).mean()
-                loss = policy_loss - self.config.entropy_coeff * entropy.mean()
+                rl_objective = policy_loss - self.config.entropy_coeff * entropy.mean()
+                eri_loss = torch.zeros((), dtype=rl_objective.dtype, device=self.device)
+                if self.config.eri_auxiliary_version is not None:
+                    if len(eri_masks) != len(observations):
+                        raise AssertionError("ERI targets missing from training decisions")
+                    eri_mask_t = torch.tensor(
+                        np.asarray(eri_masks), dtype=torch.bool, device=self.device
+                    )
+                    eri_loss = eri_set_probability_loss(
+                        all_log_prob, eri_mask_t, ~forbidden_t
+                    )
+                loss = rl_objective + self.config.eri_aux_coefficient * eri_loss
                 if not torch.isfinite(loss) or not torch.isfinite(entropy).all():
                     raise FloatingPointError("formal sanity loss/entropy is non-finite")
+                if self.config.eri_auxiliary_version is not None:
+                    parameters = tuple(self.policy.parameters())
+                    rl_grad_norm_value = _autograd_norm(
+                        rl_objective, parameters, retain_graph=True
+                    )
+                    if self.config.eri_aux_coefficient > 0.0:
+                        eri_grad_norm_value = _autograd_norm(
+                            self.config.eri_aux_coefficient * eri_loss,
+                            parameters,
+                            retain_graph=True,
+                        )
                 self.optimizer.zero_grad()
                 loss.backward()
                 if not all(
@@ -568,8 +682,10 @@ class SCRPFormalTrainer:
                 self.optimizer.step()
                 loss_value = float(loss.item())
                 policy_loss_value = float(policy_loss.item())
+                eri_loss_value = float(eri_loss.item())
                 entropy_value = float(entropy.mean().item())
                 grad_norm_value = float(grad_norm.item())
+                gradient_clipped = grad_norm_value > self.config.gradient_clip
 
             if len(policy_returns) > 1:
                 with warnings.catch_warnings():
@@ -608,8 +724,12 @@ class SCRPFormalTrainer:
                 mean_advantage=float(np.mean(advantages)) if advantages else 0.0,
                 loss=loss_value,
                 policy_loss=policy_loss_value,
+                eri_aux_loss=eri_loss_value,
                 entropy=entropy_value,
                 grad_norm=grad_norm_value,
+                gradient_clipped=gradient_clipped,
+                rl_gradient_norm=rl_grad_norm_value,
+                weighted_eri_gradient_norm=eri_grad_norm_value,
                 invalid_actions=sum(r.invalid_actions for r in policy_runs),
                 truncations=sum(int(r.truncated) for r in policy_runs),
                 baseline_updates=self.baseline_updates,
