@@ -1,0 +1,977 @@
+{
+  "run_id": "phase9-development-diagnostics-seed20260816-v1",
+  "status": "development_only_posttest_diagnostics",
+  "splits_used": [
+    "train",
+    "validation"
+  ],
+  "formal_test_raw_rows_accessed": false,
+  "formal_test_evaluation_performed": false,
+  "formal_model_training_performed": false,
+  "development_ablation_models_saved": false,
+  "checkpoint_episode": 15000,
+  "checkpoint_sha256": "1dbcb20686840df3d392a89a66cb28b79a3a7531d4669300bf09818a714ed255",
+  "training_curve_audit": {
+    "source": "committed_phase7b_compact_train_validation_artifacts",
+    "formal_test_used": false,
+    "validation_checkpoints": [
+      {
+        "episode": 2500,
+        "DS1_mean": 10.707291666666666,
+        "DS2_mean": 10.526041666666666,
+        "selection_score": 10.616666666666667,
+        "baseline_state_version": 9
+      },
+      {
+        "episode": 5000,
+        "DS1_mean": 10.648333333333333,
+        "DS2_mean": 10.454583333333334,
+        "selection_score": 10.551458333333333,
+        "baseline_state_version": 12
+      },
+      {
+        "episode": 7500,
+        "DS1_mean": 10.696875,
+        "DS2_mean": 10.477916666666665,
+        "selection_score": 10.587395833333332,
+        "baseline_state_version": 17
+      },
+      {
+        "episode": 10000,
+        "DS1_mean": 10.611458333333333,
+        "DS2_mean": 10.314375000000002,
+        "selection_score": 10.462916666666668,
+        "baseline_state_version": 18
+      },
+      {
+        "episode": 12500,
+        "DS1_mean": 10.518958333333334,
+        "DS2_mean": 10.360416666666667,
+        "selection_score": 10.439687500000002,
+        "baseline_state_version": 18
+      },
+      {
+        "episode": 15000,
+        "DS1_mean": 10.390625,
+        "DS2_mean": 10.193541666666667,
+        "selection_score": 10.292083333333334,
+        "baseline_state_version": 19
+      },
+      {
+        "episode": 17500,
+        "DS1_mean": 10.433750000000002,
+        "DS2_mean": 10.4075,
+        "selection_score": 10.420625000000001,
+        "baseline_state_version": 19
+      },
+      {
+        "episode": 20000,
+        "DS1_mean": 10.573125000000001,
+        "DS2_mean": 10.425833333333333,
+        "selection_score": 10.499479166666667,
+        "baseline_state_version": 21
+      },
+      {
+        "episode": 22500,
+        "DS1_mean": 10.394166666666667,
+        "DS2_mean": 10.291041666666667,
+        "selection_score": 10.342604166666668,
+        "baseline_state_version": 25
+      },
+      {
+        "episode": 25000,
+        "DS1_mean": 10.454791666666665,
+        "DS2_mean": 10.240625,
+        "selection_score": 10.347708333333333,
+        "baseline_state_version": 27
+      }
+    ],
+    "best_episode": 15000,
+    "best_score": 10.292083333333334,
+    "post_best_degradation": [
+      {
+        "episode": 17500,
+        "score": 10.420625000000001,
+        "degradation_from_best": 0.128541666666667
+      },
+      {
+        "episode": 20000,
+        "score": 10.499479166666667,
+        "degradation_from_best": 0.207395833333333
+      },
+      {
+        "episode": 22500,
+        "score": 10.342604166666668,
+        "degradation_from_best": 0.05052083333333357
+      },
+      {
+        "episode": 25000,
+        "score": 10.347708333333333,
+        "degradation_from_best": 0.05562499999999915
+      }
+    ],
+    "periods": [
+      {
+        "end_episode": 2500,
+        "validation_score": 10.616666666666667,
+        "DS1_validation_mean": 10.707291666666666,
+        "DS2_validation_mean": 10.526041666666666,
+        "training_policy_relocations": 11.798,
+        "training_baseline_relocations": 11.265999999999998,
+        "mean_advantage": -7.416055013701115,
+        "entropy": 1.1283680950164794,
+        "grad_norm_before_clip": 1.2664395738363265,
+        "baseline_refreshes": 9
+      },
+      {
+        "end_episode": 5000,
+        "validation_score": 10.551458333333333,
+        "DS1_validation_mean": 10.648333333333333,
+        "DS2_validation_mean": 10.454583333333334,
+        "training_policy_relocations": 10.9056,
+        "training_baseline_relocations": 10.016,
+        "mean_advantage": -6.946048824289762,
+        "entropy": 1.0583579241752625,
+        "grad_norm_before_clip": 1.44407395465374,
+        "baseline_refreshes": 3
+      },
+      {
+        "end_episode": 7500,
+        "validation_score": 10.587395833333332,
+        "DS1_validation_mean": 10.696875,
+        "DS2_validation_mean": 10.477916666666665,
+        "training_policy_relocations": 10.4168,
+        "training_baseline_relocations": 9.9824,
+        "mean_advantage": -6.4735863739618855,
+        "entropy": 0.6818001123428344,
+        "grad_norm_before_clip": 1.3929692277908325,
+        "baseline_refreshes": 5
+      },
+      {
+        "end_episode": 10000,
+        "validation_score": 10.462916666666668,
+        "DS1_validation_mean": 10.611458333333333,
+        "DS2_validation_mean": 10.314375000000002,
+        "training_policy_relocations": 10.696800000000001,
+        "training_baseline_relocations": 9.9816,
+        "mean_advantage": -6.637553286369231,
+        "entropy": 0.8994131935596467,
+        "grad_norm_before_clip": 1.7978712054729462,
+        "baseline_refreshes": 1
+      },
+      {
+        "end_episode": 12500,
+        "validation_score": 10.439687500000002,
+        "DS1_validation_mean": 10.518958333333334,
+        "DS2_validation_mean": 10.360416666666667,
+        "training_policy_relocations": 11.182,
+        "training_baseline_relocations": 10.3444,
+        "mean_advantage": -7.072610323717194,
+        "entropy": 1.031960284805298,
+        "grad_norm_before_clip": 1.7835232650041581,
+        "baseline_refreshes": 0
+      },
+      {
+        "end_episode": 15000,
+        "validation_score": 10.292083333333334,
+        "DS1_validation_mean": 10.390625,
+        "DS2_validation_mean": 10.193541666666667,
+        "training_policy_relocations": 10.8784,
+        "training_baseline_relocations": 9.866,
+        "mean_advantage": -6.912035628113461,
+        "entropy": 1.042576428079605,
+        "grad_norm_before_clip": 1.5726918434381485,
+        "baseline_refreshes": 1
+      },
+      {
+        "end_episode": 17500,
+        "validation_score": 10.420625000000001,
+        "DS1_validation_mean": 10.433750000000002,
+        "DS2_validation_mean": 10.4075,
+        "training_policy_relocations": 10.766399999999999,
+        "training_baseline_relocations": 9.8848,
+        "mean_advantage": -6.8147278268257425,
+        "entropy": 1.027918035697937,
+        "grad_norm_before_clip": 1.900887343788147,
+        "baseline_refreshes": 0
+      },
+      {
+        "end_episode": 20000,
+        "validation_score": 10.499479166666667,
+        "DS1_validation_mean": 10.573125000000001,
+        "DS2_validation_mean": 10.425833333333333,
+        "training_policy_relocations": 10.8016,
+        "training_baseline_relocations": 10.056799999999999,
+        "mean_advantage": -6.937759098478442,
+        "entropy": 0.9147432504653931,
+        "grad_norm_before_clip": 1.991601057767868,
+        "baseline_refreshes": 2
+      },
+      {
+        "end_episode": 22500,
+        "validation_score": 10.342604166666668,
+        "DS1_validation_mean": 10.394166666666667,
+        "DS2_validation_mean": 10.291041666666667,
+        "training_policy_relocations": 10.592,
+        "training_baseline_relocations": 10.112,
+        "mean_advantage": -6.754256311627598,
+        "entropy": 0.7802084255695343,
+        "grad_norm_before_clip": 1.597578836631775,
+        "baseline_refreshes": 4
+      },
+      {
+        "end_episode": 25000,
+        "validation_score": 10.347708333333333,
+        "DS1_validation_mean": 10.454791666666665,
+        "DS2_validation_mean": 10.240625,
+        "training_policy_relocations": 10.7156,
+        "training_baseline_relocations": 10.0916,
+        "mean_advantage": -6.713694759917822,
+        "entropy": 0.9217585920095444,
+        "grad_norm_before_clip": 1.9002958143949507,
+        "baseline_refreshes": 2
+      }
+    ],
+    "baseline_refresh": {
+      "count": 27,
+      "episodes": [
+        112,
+        148,
+        344,
+        768,
+        940,
+        1024,
+        1336,
+        1848,
+        2296,
+        2972,
+        3324,
+        4240,
+        5608,
+        5788,
+        5864,
+        6540,
+        6876,
+        8160,
+        14124,
+        17968,
+        18060,
+        21220,
+        21648,
+        21880,
+        21948,
+        22924,
+        24672
+      ],
+      "before_or_at_8160": 18,
+      "between_8161_and_14123": 0,
+      "after_or_at_17968": 8,
+      "median_gap_episodes": 424.0,
+      "max_gap_episodes": 5964,
+      "paired_sample_sizes": [
+        4
+      ],
+      "assessment": "n=4 checkpoint-local tests create discrete, noisy refresh evidence; refreshes cluster early, disappear for a long middle interval, then cluster late"
+    },
+    "optimization": {
+      "entropy_mean": 0.9487104341721534,
+      "entropy_min": 0.48609476804733276,
+      "entropy_max": 1.8471272563934327,
+      "entropy_windows_below_0_5": 1,
+      "entropy_first_2500_mean": 1.1283680950164794,
+      "entropy_last_2500_mean": 0.9217585920095444,
+      "entropy_collapse_detected": false,
+      "grad_norm_mean_before_clip": 1.6647932122778892,
+      "grad_norm_max_before_clip": 2.8582571959495544,
+      "grad_windows_above_clip_0_5": 250,
+      "grad_windows_above_5": 0,
+      "configured_clip": 0.5,
+      "mean_advantage_range": [
+        -8.931080908268912,
+        -5.334177511512482
+      ],
+      "advantage_variance_available_in_compact_trace": false
+    },
+    "sampling_balance": {
+      "S_bucket_counts": {
+        "5": 4236,
+        "6": 4312,
+        "7": 4196,
+        "8": 4152,
+        "9": 4156,
+        "10": 3948
+      },
+      "S_bucket_max_min_ratio": 1.0921985815602837,
+      "S_bucket_coefficient_of_variation": 0.026820887382784334,
+      "variant_counts": {
+        "DS1": 12616,
+        "DS2": 12384
+      },
+      "variant_absolute_imbalance": 232
+    },
+    "interpretation": "15k is the minimum of the frozen validation trajectory. Later checkpoints degrade at 17.5k/20k and only partially recover, while noisy baseline refresh timing and frequently clipped gradients provide plausible optimization causes."
+  },
+  "checkpoint_vs_frozen_baseline": {
+    "split": "validation",
+    "episodes": 96,
+    "policy_minus_frozen_baseline_relocations_mean": -0.09375,
+    "policy_minus_frozen_baseline_relocations_variance": 0.9279605263157895,
+    "decision_advantage_count": 994,
+    "decision_advantage_mean": -7.32092555331992,
+    "decision_advantage_variance": 44.68446156082369,
+    "by_dataset": [
+      {
+        "dataset": "DS1",
+        "episodes": 48,
+        "mean_policy_minus_baseline_relocations": -0.1875,
+        "policy_not_worse_rate": 0.9166666666666666
+      },
+      {
+        "dataset": "DS2",
+        "episodes": 48,
+        "mean_policy_minus_baseline_relocations": 0.0,
+        "policy_not_worse_rate": 0.8958333333333334
+      }
+    ],
+    "by_S": [
+      {
+        "S": 10,
+        "episodes": 16,
+        "mean_policy_minus_baseline_relocations": -0.25,
+        "policy_not_worse_rate": 0.9375
+      },
+      {
+        "S": 5,
+        "episodes": 16,
+        "mean_policy_minus_baseline_relocations": 0.125,
+        "policy_not_worse_rate": 0.875
+      },
+      {
+        "S": 6,
+        "episodes": 16,
+        "mean_policy_minus_baseline_relocations": -0.125,
+        "policy_not_worse_rate": 0.9375
+      },
+      {
+        "S": 7,
+        "episodes": 16,
+        "mean_policy_minus_baseline_relocations": -0.125,
+        "policy_not_worse_rate": 0.9375
+      },
+      {
+        "S": 8,
+        "episodes": 16,
+        "mean_policy_minus_baseline_relocations": 0.4375,
+        "policy_not_worse_rate": 0.75
+      },
+      {
+        "S": 9,
+        "episodes": 16,
+        "mean_policy_minus_baseline_relocations": -0.625,
+        "policy_not_worse_rate": 1.0
+      }
+    ],
+    "by_T": [
+      {
+        "T": 3,
+        "episodes": 24,
+        "mean_policy_minus_baseline_relocations": -0.041666666666666664,
+        "policy_not_worse_rate": 1.0
+      },
+      {
+        "T": 4,
+        "episodes": 24,
+        "mean_policy_minus_baseline_relocations": -0.041666666666666664,
+        "policy_not_worse_rate": 0.9583333333333334
+      },
+      {
+        "T": 5,
+        "episodes": 24,
+        "mean_policy_minus_baseline_relocations": -0.16666666666666666,
+        "policy_not_worse_rate": 0.8333333333333334
+      },
+      {
+        "T": 6,
+        "episodes": 24,
+        "mean_policy_minus_baseline_relocations": -0.125,
+        "policy_not_worse_rate": 0.8333333333333334
+      }
+    ],
+    "by_fill": [
+      {
+        "fill": 0.5,
+        "episodes": 48,
+        "mean_policy_minus_baseline_relocations": -0.125,
+        "policy_not_worse_rate": 0.9583333333333334
+      },
+      {
+        "fill": 0.67,
+        "episodes": 48,
+        "mean_policy_minus_baseline_relocations": -0.0625,
+        "policy_not_worse_rate": 0.8541666666666666
+      }
+    ]
+  },
+  "O1_vs_O2_development_ablation": {
+    "status": "development_only_small_budget_ablation",
+    "seed": 20260816,
+    "same_training_schedule": true,
+    "train_base_layouts": 48,
+    "validation_base_layouts": 48,
+    "training_episodes_per_observation": 400,
+    "validation_scenarios_per_static_variant": 1,
+    "formal_test_used": false,
+    "model_artifacts_saved": false,
+    "O1": {
+      "training_episodes": 400,
+      "training_iterations": 100,
+      "baseline_refreshes": 10,
+      "last_100_episode_proxy": {
+        "policy_relocations": 16.09,
+        "entropy": 1.3343161630630493,
+        "grad_norm_before_clip": 1.1696397161483765
+      },
+      "validation": {
+        "episodes": 96,
+        "mean_relocations": 14.6875,
+        "DS1_mean": 14.354166666666666,
+        "DS2_mean": 15.020833333333334,
+        "by_S": [
+          {
+            "S": 5,
+            "episodes": 16,
+            "mean_relocations": 9.625
+          },
+          {
+            "S": 6,
+            "episodes": 16,
+            "mean_relocations": 11.1875
+          },
+          {
+            "S": 7,
+            "episodes": 16,
+            "mean_relocations": 15.375
+          },
+          {
+            "S": 8,
+            "episodes": 16,
+            "mean_relocations": 15.125
+          },
+          {
+            "S": 9,
+            "episodes": 16,
+            "mean_relocations": 16.875
+          },
+          {
+            "S": 10,
+            "episodes": 16,
+            "mean_relocations": 19.9375
+          }
+        ]
+      }
+    },
+    "O2": {
+      "training_episodes": 400,
+      "training_iterations": 100,
+      "baseline_refreshes": 3,
+      "last_100_episode_proxy": {
+        "policy_relocations": 11.98,
+        "entropy": 1.2370843815803527,
+        "grad_norm_before_clip": 1.7815558886528016
+      },
+      "validation": {
+        "episodes": 96,
+        "mean_relocations": 11.395833333333334,
+        "DS1_mean": 11.208333333333334,
+        "DS2_mean": 11.583333333333334,
+        "by_S": [
+          {
+            "S": 5,
+            "episodes": 16,
+            "mean_relocations": 7.0625
+          },
+          {
+            "S": 6,
+            "episodes": 16,
+            "mean_relocations": 8.8125
+          },
+          {
+            "S": 7,
+            "episodes": 16,
+            "mean_relocations": 10.9375
+          },
+          {
+            "S": 8,
+            "episodes": 16,
+            "mean_relocations": 11.5
+          },
+          {
+            "S": 9,
+            "episodes": 16,
+            "mean_relocations": 14.0
+          },
+          {
+            "S": 10,
+            "episodes": 16,
+            "mean_relocations": 16.0625
+          }
+        ]
+      }
+    },
+    "O2_minus_O1_validation_relocations": -3.291666666666666,
+    "O2_representation_outperforms_O1_at_this_budget": true,
+    "specific_revealed_order_causality_established": false,
+    "interpretation_scope": "answers whether the complete O2 representation improves over O1 under this fixed small development budget. Because the adapters differ beyond only the order nodes, this does not by itself establish that the model uses the specific revealed-order sequence."
+  },
+  "ERI_action_imitation_and_error_states": {
+    "splits": [
+      "train",
+      "validation"
+    ],
+    "episodes": 192,
+    "public_decision_states": 1746,
+    "overall_action_agreement": 0.29667812142038946,
+    "overall_mean_ERI_score_gap_of_RL_action": 0.05756013745704467,
+    "grouped": {
+      "split_dataset": [
+        {
+          "split": "train",
+          "dataset": "DS1",
+          "states": 430,
+          "agreement_rate": 0.27906976744186046,
+          "mean_ERI_score_gap_of_RL_action": 0.06162790697674419,
+          "ERI_score_equivalent_rate": 0.9279069767441861,
+          "positive_ERI_score_gap_rate": 0.07209302325581396
+        },
+        {
+          "split": "train",
+          "dataset": "DS2",
+          "states": 430,
+          "agreement_rate": 0.3302325581395349,
+          "mean_ERI_score_gap_of_RL_action": 0.03953488372093023,
+          "ERI_score_equivalent_rate": 0.9372093023255814,
+          "positive_ERI_score_gap_rate": 0.06279069767441861
+        },
+        {
+          "split": "validation",
+          "dataset": "DS1",
+          "states": 446,
+          "agreement_rate": 0.2937219730941704,
+          "mean_ERI_score_gap_of_RL_action": 0.05493273542600897,
+          "ERI_score_equivalent_rate": 0.9327354260089686,
+          "positive_ERI_score_gap_rate": 0.06726457399103139
+        },
+        {
+          "split": "validation",
+          "dataset": "DS2",
+          "states": 440,
+          "agreement_rate": 0.2840909090909091,
+          "mean_ERI_score_gap_of_RL_action": 0.07386363636363637,
+          "ERI_score_equivalent_rate": 0.9090909090909091,
+          "positive_ERI_score_gap_rate": 0.09090909090909091
+        }
+      ],
+      "S": [
+        {
+          "S": 10,
+          "states": 366,
+          "agreement_rate": 0.22404371584699453,
+          "mean_ERI_score_gap_of_RL_action": 0.0546448087431694,
+          "ERI_score_equivalent_rate": 0.9289617486338798,
+          "positive_ERI_score_gap_rate": 0.07103825136612021
+        },
+        {
+          "S": 5,
+          "states": 212,
+          "agreement_rate": 0.44339622641509435,
+          "mean_ERI_score_gap_of_RL_action": 0.06132075471698113,
+          "ERI_score_equivalent_rate": 0.910377358490566,
+          "positive_ERI_score_gap_rate": 0.08962264150943396
+        },
+        {
+          "S": 6,
+          "states": 245,
+          "agreement_rate": 0.363265306122449,
+          "mean_ERI_score_gap_of_RL_action": 0.0673469387755102,
+          "ERI_score_equivalent_rate": 0.9142857142857143,
+          "positive_ERI_score_gap_rate": 0.08571428571428572
+        },
+        {
+          "S": 7,
+          "states": 293,
+          "agreement_rate": 0.3651877133105802,
+          "mean_ERI_score_gap_of_RL_action": 0.08532423208191127,
+          "ERI_score_equivalent_rate": 0.8976109215017065,
+          "positive_ERI_score_gap_rate": 0.10238907849829351
+        },
+        {
+          "S": 8,
+          "states": 295,
+          "agreement_rate": 0.22033898305084745,
+          "mean_ERI_score_gap_of_RL_action": 0.05254237288135593,
+          "ERI_score_equivalent_rate": 0.9389830508474576,
+          "positive_ERI_score_gap_rate": 0.061016949152542375
+        },
+        {
+          "S": 9,
+          "states": 335,
+          "agreement_rate": 0.2417910447761194,
+          "mean_ERI_score_gap_of_RL_action": 0.03134328358208955,
+          "ERI_score_equivalent_rate": 0.9582089552238806,
+          "positive_ERI_score_gap_rate": 0.041791044776119404
+        }
+      ],
+      "T": [
+        {
+          "T": 3,
+          "states": 163,
+          "agreement_rate": 0.12883435582822086,
+          "mean_ERI_score_gap_of_RL_action": 0.015337423312883436,
+          "ERI_score_equivalent_rate": 0.9754601226993865,
+          "positive_ERI_score_gap_rate": 0.024539877300613498
+        },
+        {
+          "T": 4,
+          "states": 307,
+          "agreement_rate": 0.254071661237785,
+          "mean_ERI_score_gap_of_RL_action": 0.024429967426710098,
+          "ERI_score_equivalent_rate": 0.9674267100977199,
+          "positive_ERI_score_gap_rate": 0.03257328990228013
+        },
+        {
+          "T": 5,
+          "states": 542,
+          "agreement_rate": 0.2785977859778598,
+          "mean_ERI_score_gap_of_RL_action": 0.06365313653136531,
+          "ERI_score_equivalent_rate": 0.9206642066420664,
+          "positive_ERI_score_gap_rate": 0.07933579335793357
+        },
+        {
+          "T": 6,
+          "states": 734,
+          "agreement_rate": 0.3651226158038147,
+          "mean_ERI_score_gap_of_RL_action": 0.07629427792915532,
+          "ERI_score_equivalent_rate": 0.9032697547683923,
+          "positive_ERI_score_gap_rate": 0.09673024523160763
+        }
+      ],
+      "fill": [
+        {
+          "fill": 0.5,
+          "states": 636,
+          "agreement_rate": 0.2358490566037736,
+          "mean_ERI_score_gap_of_RL_action": 0.03380503144654088,
+          "ERI_score_equivalent_rate": 0.9512578616352201,
+          "positive_ERI_score_gap_rate": 0.04874213836477988
+        },
+        {
+          "fill": 0.67,
+          "states": 1110,
+          "agreement_rate": 0.33153153153153153,
+          "mean_ERI_score_gap_of_RL_action": 0.07117117117117117,
+          "ERI_score_equivalent_rate": 0.9126126126126126,
+          "positive_ERI_score_gap_rate": 0.08738738738738738
+        }
+      ],
+      "dataset_batch_size": [
+        {
+          "dataset": "DS1",
+          "current_batch_size": 1,
+          "states": 186,
+          "agreement_rate": 0.26881720430107525,
+          "mean_ERI_score_gap_of_RL_action": 0.07258064516129033,
+          "ERI_score_equivalent_rate": 0.9193548387096774,
+          "positive_ERI_score_gap_rate": 0.08064516129032258
+        },
+        {
+          "dataset": "DS1",
+          "current_batch_size": 2,
+          "states": 287,
+          "agreement_rate": 0.2857142857142857,
+          "mean_ERI_score_gap_of_RL_action": 0.05574912891986063,
+          "ERI_score_equivalent_rate": 0.9303135888501742,
+          "positive_ERI_score_gap_rate": 0.06968641114982578
+        },
+        {
+          "dataset": "DS1",
+          "current_batch_size": 3,
+          "states": 403,
+          "agreement_rate": 0.29528535980148884,
+          "mean_ERI_score_gap_of_RL_action": 0.05334987593052109,
+          "ERI_score_equivalent_rate": 0.9354838709677419,
+          "positive_ERI_score_gap_rate": 0.06451612903225806
+        },
+        {
+          "dataset": "DS2",
+          "current_batch_size": 2,
+          "states": 69,
+          "agreement_rate": 0.34782608695652173,
+          "mean_ERI_score_gap_of_RL_action": 0.07971014492753623,
+          "ERI_score_equivalent_rate": 0.8695652173913043,
+          "positive_ERI_score_gap_rate": 0.13043478260869565
+        },
+        {
+          "dataset": "DS2",
+          "current_batch_size": 3,
+          "states": 157,
+          "agreement_rate": 0.33121019108280253,
+          "mean_ERI_score_gap_of_RL_action": 0.04777070063694268,
+          "ERI_score_equivalent_rate": 0.9299363057324841,
+          "positive_ERI_score_gap_rate": 0.07006369426751592
+        },
+        {
+          "dataset": "DS2",
+          "current_batch_size": 4,
+          "states": 325,
+          "agreement_rate": 0.2923076923076923,
+          "mean_ERI_score_gap_of_RL_action": 0.04,
+          "ERI_score_equivalent_rate": 0.9415384615384615,
+          "positive_ERI_score_gap_rate": 0.05846153846153846
+        },
+        {
+          "dataset": "DS2",
+          "current_batch_size": 5,
+          "states": 220,
+          "agreement_rate": 0.3,
+          "mean_ERI_score_gap_of_RL_action": 0.09545454545454546,
+          "ERI_score_equivalent_rate": 0.8954545454545455,
+          "positive_ERI_score_gap_rate": 0.10454545454545454
+        },
+        {
+          "dataset": "DS2",
+          "current_batch_size": 6,
+          "states": 99,
+          "agreement_rate": 0.30303030303030304,
+          "mean_ERI_score_gap_of_RL_action": 0.025252525252525252,
+          "ERI_score_equivalent_rate": 0.9494949494949495,
+          "positive_ERI_score_gap_rate": 0.050505050505050504
+        }
+      ],
+      "target_tier_blockers": [
+        {
+          "target_tier": 0,
+          "blockers_above": 1,
+          "states": 704,
+          "agreement_rate": 0.22443181818181818,
+          "mean_ERI_score_gap_of_RL_action": 0.04403409090909091,
+          "ERI_score_equivalent_rate": 0.9403409090909091,
+          "positive_ERI_score_gap_rate": 0.05965909090909091
+        },
+        {
+          "target_tier": 0,
+          "blockers_above": 2,
+          "states": 282,
+          "agreement_rate": 0.3475177304964539,
+          "mean_ERI_score_gap_of_RL_action": 0.047872340425531915,
+          "ERI_score_equivalent_rate": 0.9432624113475178,
+          "positive_ERI_score_gap_rate": 0.05673758865248227
+        },
+        {
+          "target_tier": 0,
+          "blockers_above": 3,
+          "states": 99,
+          "agreement_rate": 0.31313131313131315,
+          "mean_ERI_score_gap_of_RL_action": 0.07575757575757576,
+          "ERI_score_equivalent_rate": 0.8787878787878788,
+          "positive_ERI_score_gap_rate": 0.12121212121212122
+        },
+        {
+          "target_tier": 0,
+          "blockers_above": 4,
+          "states": 33,
+          "agreement_rate": 0.3939393939393939,
+          "mean_ERI_score_gap_of_RL_action": 0.09090909090909091,
+          "ERI_score_equivalent_rate": 0.8787878787878788,
+          "positive_ERI_score_gap_rate": 0.12121212121212122
+        },
+        {
+          "target_tier": 0,
+          "blockers_above": 5,
+          "states": 4,
+          "agreement_rate": 0.0,
+          "mean_ERI_score_gap_of_RL_action": 0.0,
+          "ERI_score_equivalent_rate": 1.0,
+          "positive_ERI_score_gap_rate": 0.0
+        },
+        {
+          "target_tier": 1,
+          "blockers_above": 1,
+          "states": 313,
+          "agreement_rate": 0.3226837060702875,
+          "mean_ERI_score_gap_of_RL_action": 0.07507987220447285,
+          "ERI_score_equivalent_rate": 0.9201277955271565,
+          "positive_ERI_score_gap_rate": 0.07987220447284345
+        },
+        {
+          "target_tier": 1,
+          "blockers_above": 2,
+          "states": 112,
+          "agreement_rate": 0.3392857142857143,
+          "mean_ERI_score_gap_of_RL_action": 0.09375,
+          "ERI_score_equivalent_rate": 0.8839285714285714,
+          "positive_ERI_score_gap_rate": 0.11607142857142858
+        },
+        {
+          "target_tier": 1,
+          "blockers_above": 3,
+          "states": 28,
+          "agreement_rate": 0.4642857142857143,
+          "mean_ERI_score_gap_of_RL_action": 0.125,
+          "ERI_score_equivalent_rate": 0.8571428571428571,
+          "positive_ERI_score_gap_rate": 0.14285714285714285
+        },
+        {
+          "target_tier": 1,
+          "blockers_above": 4,
+          "states": 5,
+          "agreement_rate": 0.4,
+          "mean_ERI_score_gap_of_RL_action": 0.1,
+          "ERI_score_equivalent_rate": 0.8,
+          "positive_ERI_score_gap_rate": 0.2
+        },
+        {
+          "target_tier": 2,
+          "blockers_above": 1,
+          "states": 96,
+          "agreement_rate": 0.3958333333333333,
+          "mean_ERI_score_gap_of_RL_action": 0.046875,
+          "ERI_score_equivalent_rate": 0.9270833333333334,
+          "positive_ERI_score_gap_rate": 0.07291666666666667
+        },
+        {
+          "target_tier": 2,
+          "blockers_above": 2,
+          "states": 26,
+          "agreement_rate": 0.38461538461538464,
+          "mean_ERI_score_gap_of_RL_action": 0.0,
+          "ERI_score_equivalent_rate": 1.0,
+          "positive_ERI_score_gap_rate": 0.0
+        },
+        {
+          "target_tier": 3,
+          "blockers_above": 1,
+          "states": 35,
+          "agreement_rate": 0.34285714285714286,
+          "mean_ERI_score_gap_of_RL_action": 0.04285714285714286,
+          "ERI_score_equivalent_rate": 0.9428571428571428,
+          "positive_ERI_score_gap_rate": 0.05714285714285714
+        },
+        {
+          "target_tier": 3,
+          "blockers_above": 2,
+          "states": 4,
+          "agreement_rate": 0.0,
+          "mean_ERI_score_gap_of_RL_action": 0.25,
+          "ERI_score_equivalent_rate": 0.75,
+          "positive_ERI_score_gap_rate": 0.25
+        },
+        {
+          "target_tier": 4,
+          "blockers_above": 1,
+          "states": 5,
+          "agreement_rate": 0.8,
+          "mean_ERI_score_gap_of_RL_action": 0.1,
+          "ERI_score_equivalent_rate": 0.8,
+          "positive_ERI_score_gap_rate": 0.2
+        }
+      ]
+    },
+    "lowest_agreement_state_groups_min_20_states": [
+      {
+        "T": 3,
+        "states": 163,
+        "agreement_rate": 0.12883435582822086,
+        "mean_ERI_score_gap_of_RL_action": 0.015337423312883436,
+        "ERI_score_equivalent_rate": 0.9754601226993865,
+        "positive_ERI_score_gap_rate": 0.024539877300613498
+      },
+      {
+        "S": 8,
+        "states": 295,
+        "agreement_rate": 0.22033898305084745,
+        "mean_ERI_score_gap_of_RL_action": 0.05254237288135593,
+        "ERI_score_equivalent_rate": 0.9389830508474576,
+        "positive_ERI_score_gap_rate": 0.061016949152542375
+      },
+      {
+        "S": 10,
+        "states": 366,
+        "agreement_rate": 0.22404371584699453,
+        "mean_ERI_score_gap_of_RL_action": 0.0546448087431694,
+        "ERI_score_equivalent_rate": 0.9289617486338798,
+        "positive_ERI_score_gap_rate": 0.07103825136612021
+      },
+      {
+        "target_tier": 0,
+        "blockers_above": 1,
+        "states": 704,
+        "agreement_rate": 0.22443181818181818,
+        "mean_ERI_score_gap_of_RL_action": 0.04403409090909091,
+        "ERI_score_equivalent_rate": 0.9403409090909091,
+        "positive_ERI_score_gap_rate": 0.05965909090909091
+      },
+      {
+        "fill": 0.5,
+        "states": 636,
+        "agreement_rate": 0.2358490566037736,
+        "mean_ERI_score_gap_of_RL_action": 0.03380503144654088,
+        "ERI_score_equivalent_rate": 0.9512578616352201,
+        "positive_ERI_score_gap_rate": 0.04874213836477988
+      },
+      {
+        "S": 9,
+        "states": 335,
+        "agreement_rate": 0.2417910447761194,
+        "mean_ERI_score_gap_of_RL_action": 0.03134328358208955,
+        "ERI_score_equivalent_rate": 0.9582089552238806,
+        "positive_ERI_score_gap_rate": 0.041791044776119404
+      },
+      {
+        "T": 4,
+        "states": 307,
+        "agreement_rate": 0.254071661237785,
+        "mean_ERI_score_gap_of_RL_action": 0.024429967426710098,
+        "ERI_score_equivalent_rate": 0.9674267100977199,
+        "positive_ERI_score_gap_rate": 0.03257328990228013
+      },
+      {
+        "dataset": "DS1",
+        "current_batch_size": 1,
+        "states": 186,
+        "agreement_rate": 0.26881720430107525,
+        "mean_ERI_score_gap_of_RL_action": 0.07258064516129033,
+        "ERI_score_equivalent_rate": 0.9193548387096774,
+        "positive_ERI_score_gap_rate": 0.08064516129032258
+      },
+      {
+        "T": 5,
+        "states": 542,
+        "agreement_rate": 0.2785977859778598,
+        "mean_ERI_score_gap_of_RL_action": 0.06365313653136531,
+        "ERI_score_equivalent_rate": 0.9206642066420664,
+        "positive_ERI_score_gap_rate": 0.07933579335793357
+      },
+      {
+        "dataset": "DS1",
+        "current_batch_size": 2,
+        "states": 287,
+        "agreement_rate": 0.2857142857142857,
+        "mean_ERI_score_gap_of_RL_action": 0.05574912891986063,
+        "ERI_score_equivalent_rate": 0.9303135888501742,
+        "positive_ERI_score_gap_rate": 0.06968641114982578
+      }
+    ],
+    "representation_usage": {
+      "eligible_future_permutation_states": 627,
+      "mean_controlled_permutation_TV": 0.003995030077269192,
+      "controlled_permutation_action_change_rate": 0.003189792663476874,
+      "mean_stack_embedding_change_L2": 0.004467445761021513,
+      "mean_order_ablation_TV": 0.023616710404111976,
+      "order_ablation_action_change_rate": 0.009569377990430622,
+      "max_padding_perturbation_effect": 0.0,
+      "probe_interpretation": "controlled future-order permutation and order-node ablation measure whether revealed-order nodes affect logits/actions; padding perturbation must remain numerically inert under the mask"
+    },
+    "trajectory_policy": "ERI-guided public states; RL action is compared but not executed",
+    "raw_state_records_retained": false
+  }
+}
