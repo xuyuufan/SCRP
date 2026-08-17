@@ -29,7 +29,12 @@ from experiments.protocol import (
     ScenarioSeedSchedule,
     SplitManifest,
 )
-from hier_pg.network import HierPolicyNetwork
+from hier_pg.network import (
+    O2_ORDER_XATTN_V1,
+    O2_SHARED_ENCODER_V1,
+    HierPolicyNetwork,
+    OrderAwareHierPolicyNetwork,
+)
 
 from .datasets import merge_adjacent_batches, parse_ku_crptw
 from .environment import SCRPEnvironment
@@ -127,6 +132,7 @@ def make_scrp_policy(
     num_heads: int = 4,
     ffn_dim: int = 64,
     clip_constant: float = 10.0,
+    architecture_version: str = O2_SHARED_ENCODER_V1,
     device: torch.device | str = "cpu",
 ) -> HierPolicyNetwork:
     """Build an O1/O2 policy without requiring callers to calculate shapes."""
@@ -134,6 +140,8 @@ def make_scrp_policy(
     if num_stacks <= 0 or max_tiers <= 0:
         raise ValueError("num_stacks and max_tiers must be positive")
     if observation_version == "O1":
+        if architecture_version != O2_SHARED_ENCODER_V1:
+            raise ValueError("order-aware architecture is available only for O2")
         num_nodes = num_stacks + 1
         feature_scale = SCRP_O1_FEATURE_SCALE
         policy_mmax = None
@@ -145,14 +153,26 @@ def make_scrp_policy(
         policy_mmax = Mmax
     else:
         raise ValueError("observation_version must be O1 or O2")
-    policy = HierPolicyNetwork(
-        embed_dim=embed_dim,
-        num_enc_layers=num_encoder_layers,
-        num_heads=num_heads,
-        ffn_dim=ffn_dim,
-        clip_constant=clip_constant,
-        feature_scale=torch.tensor(feature_scale, dtype=torch.float32, device=device),
-    ).to(device)
+    network_kwargs = {
+        "embed_dim": embed_dim,
+        "num_enc_layers": num_encoder_layers,
+        "num_heads": num_heads,
+        "ffn_dim": ffn_dim,
+        "clip_constant": clip_constant,
+        "feature_scale": torch.tensor(
+            feature_scale, dtype=torch.float32, device=device
+        ),
+    }
+    if architecture_version == O2_SHARED_ENCODER_V1:
+        policy = HierPolicyNetwork(**network_kwargs).to(device)
+    elif architecture_version == O2_ORDER_XATTN_V1:
+        if observation_version != "O2":
+            raise ValueError("order-aware architecture is available only for O2")
+        policy = OrderAwareHierPolicyNetwork(
+            num_stacks=num_stacks, mmax=Mmax, **network_kwargs
+        ).to(device)
+    else:
+        raise ValueError(f"unsupported architecture_version {architecture_version!r}")
     policy.scrp_observation_version = observation_version
     policy.scrp_num_nodes = num_nodes
     policy.scrp_feature_dim = 12
@@ -160,6 +180,7 @@ def make_scrp_policy(
     policy.scrp_num_stacks = num_stacks
     policy.scrp_max_tiers = max_tiers
     policy.scrp_mmax = policy_mmax
+    policy.scrp_architecture_version = architecture_version
     return policy
 
 
