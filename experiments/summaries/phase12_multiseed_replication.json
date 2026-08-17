@@ -1,0 +1,988 @@
+{
+  "phase12_version": "phase12-multiseed-replication-v1",
+  "scope": "DEVELOPMENT_ONLY_TRAIN_VALIDATION",
+  "research_question": "Does lambda_eri=0.10 replicate across five paired random seeds?",
+  "base_sha": "adcffa7375cb37cdb5b8d652e003a894cd5af126",
+  "training_code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+  "frozen_seeds": [
+    20260816,
+    20260817,
+    20260818,
+    20260819,
+    20260820
+  ],
+  "episodes_per_arm": 5000,
+  "total_training_episodes": 50000,
+  "control_definition": "lambda_eri=0",
+  "treatment_definition": "lambda_eri=0.10",
+  "cuda_identity": {
+    "device": "cuda:0",
+    "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "pytorch_version": "2.13.0+cu132",
+    "pytorch_cuda_runtime": "13.2",
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "driver_version": "595.97"
+  },
+  "deterministic_settings": {
+    "python_random_seeded": true,
+    "numpy_seeded": true,
+    "torch_cpu_seeded": true,
+    "torch_cuda_seeded": true,
+    "torch_deterministic_algorithms": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false
+  },
+  "smoke_gate": {
+    "phase": "Phase 12 CUDA smoke",
+    "episodes_per_arm": 16,
+    "model_device": "cuda:0",
+    "elapsed_seconds": 3.9079534000484273,
+    "scenario_fingerprint": "b3fb08aba77ea27f1a76d0e4914af9d5572a0edf74736e3ea52b36a18aef2302",
+    "control": {
+      "iterations": 4,
+      "episodes": 16,
+      "total_loss_mean": 0.09382645040750504,
+      "policy_loss_mean": 0.10953270830214024,
+      "ERI_auxiliary_loss_mean": 0.6485425159335136,
+      "entropy_mean": 1.5706258416175842,
+      "pre_clip_gradient_norm_mean": 1.7263993620872498,
+      "gradient_clipping_frequency": 1.0,
+      "RL_gradient_norm_mean": 1.7263993620872498,
+      "weighted_ERI_gradient_norm_mean": 0.0,
+      "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "numerical_failures": 0,
+      "scenario_mismatches": 0,
+      "FGB_refreshes": 0,
+      "finite": true
+    },
+    "treatment": {
+      "iterations": 4,
+      "episodes": 16,
+      "total_loss_mean": 0.15844358131289482,
+      "policy_loss_mean": 0.1078773532062769,
+      "ERI_auxiliary_loss_mean": 0.6613751500844955,
+      "entropy_mean": 1.5571289658546448,
+      "pre_clip_gradient_norm_mean": 2.520670861005783,
+      "gradient_clipping_frequency": 1.0,
+      "RL_gradient_norm_mean": 2.258186846971512,
+      "weighted_ERI_gradient_norm_mean": 0.6190434545278549,
+      "weighted_ERI_to_RL_gradient_ratio_mean": 0.31112735582320333,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "numerical_failures": 0,
+      "scenario_mismatches": 0,
+      "FGB_refreshes": 0,
+      "finite": true
+    },
+    "checkpoint_round_trip": true,
+    "temporary_artifacts_removed": true,
+    "cuda_memory_allocated": 18099200,
+    "cuda_memory_reserved": 27262976,
+    "cuda_max_memory_allocated": 22248448,
+    "nvidia_smi_python_process_seen": true,
+    "passed": true
+  },
+  "timing_probe": {
+    "phase": "Phase 12 CUDA timing probe",
+    "episodes_per_arm": 100,
+    "elapsed_seconds": 18.931657000037376,
+    "episodes_per_second": 10.564315632784027,
+    "process_cpu_seconds": 20.03125,
+    "approximate_process_cpu_utilization_percent": 105.80822375960251,
+    "gpu_utilization_percent_snapshot": "37",
+    "cuda_max_memory_allocated": 24060416,
+    "cuda_memory_reserved": 29360128,
+    "scenario_fingerprint": "aba20561f062144c95410e056bfaa78bf84c9ab439a0e8f8671a5f90c1d31858",
+    "control": {
+      "iterations": 25,
+      "episodes": 100,
+      "total_loss_mean": 0.01996531467884779,
+      "policy_loss_mean": 0.03605182399973273,
+      "ERI_auxiliary_loss_mean": 1.0096157443523408,
+      "entropy_mean": 1.6086509704589844,
+      "pre_clip_gradient_norm_mean": 1.5531557512283325,
+      "gradient_clipping_frequency": 1.0,
+      "RL_gradient_norm_mean": 1.5531557202339172,
+      "weighted_ERI_gradient_norm_mean": 0.0,
+      "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "numerical_failures": 0,
+      "scenario_mismatches": 0,
+      "FGB_refreshes": 1,
+      "finite": true
+    },
+    "treatment": {
+      "iterations": 25,
+      "episodes": 100,
+      "total_loss_mean": 0.050140942484140395,
+      "policy_loss_mean": 0.0056426371261477475,
+      "ERI_auxiliary_loss_mean": 0.5928392803668976,
+      "entropy_mean": 1.4785623788833617,
+      "pre_clip_gradient_norm_mean": 1.939812262058258,
+      "gradient_clipping_frequency": 1.0,
+      "RL_gradient_norm_mean": 1.786480920314789,
+      "weighted_ERI_gradient_norm_mean": 0.4353175887465477,
+      "weighted_ERI_to_RL_gradient_ratio_mean": 0.2898267962735838,
+      "invalid_actions": 0,
+      "truncations": 0,
+      "numerical_failures": 0,
+      "scenario_mismatches": 0,
+      "FGB_refreshes": 1,
+      "finite": true
+    }
+  },
+  "seed_results": [
+    {
+      "seed": 20260816,
+      "control_validation": {
+        "episodes": 96,
+        "mean_relocations": 11.104166666666666,
+        "DS1_mean": 10.979166666666666,
+        "DS2_mean": 11.229166666666666
+      },
+      "treatment_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.395833333333334,
+        "DS1_mean": 10.520833333333334,
+        "DS2_mean": 10.270833333333334
+      },
+      "overall_delta": -0.7083333333333321,
+      "DS1_delta": -0.45833333333333215,
+      "DS2_delta": -0.9583333333333321,
+      "control_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.23363431151241534,
+        "ERI_score_equivalent_action_rate": 0.8487584650112867,
+        "strictly_worse_ERI_score_action_rate": 0.15124153498871332,
+        "mean_ERI_score_penalty": 0.12584650112866816,
+        "mean_probability_mass_on_ERI_optimal_set": 0.8056784917245163,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.15124153498871332,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "treatment_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.3227990970654628,
+        "ERI_score_equivalent_action_rate": 0.9401805869074492,
+        "strictly_worse_ERI_score_action_rate": 0.05981941309255079,
+        "mean_ERI_score_penalty": 0.050790067720090294,
+        "mean_probability_mass_on_ERI_optimal_set": 0.845543615503182,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.05981941309255079,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "control_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.10398610151447356,
+        "policy_loss_mean": -0.09177830126103945,
+        "ERI_auxiliary_loss_mean": 0.5677480208972469,
+        "entropy_mean": 1.2207800386667251,
+        "pre_clip_gradient_norm_mean": 1.2852056887626648,
+        "gradient_clipping_frequency": 0.94,
+        "RL_gradient_norm_mean": 1.2852056889414787,
+        "weighted_ERI_gradient_norm_mean": 0.0,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 15,
+        "finite": true
+      },
+      "treatment_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": 0.006393931470671669,
+        "policy_loss_mean": -0.018582393822522136,
+        "ERI_auxiliary_loss_mean": 0.33009475825975676,
+        "entropy_mean": 0.8033151301205158,
+        "pre_clip_gradient_norm_mean": 1.8408202103853226,
+        "gradient_clipping_frequency": 0.9904,
+        "RL_gradient_norm_mean": 1.8220330656856298,
+        "weighted_ERI_gradient_norm_mean": 0.2053622161804582,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.1501014357643385,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 11,
+        "finite": true
+      },
+      "scenario_fingerprint_equal": true,
+      "scenario_fingerprint": "e564c71b7eda60dc25cd78f45f02b43e43fc2b22b96d2d6bb994aedcfe402543",
+      "elapsed_seconds": 727.5398999999743,
+      "run_identity": {
+        "control": {
+          "run_id": "phase12-seed20260816-control-cuda-v1",
+          "phase": 12,
+          "seed": 20260816,
+          "arm": "control",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "03fc247b1a9728987bd3c4393b8fac502378e535fbba4982949f3ede2a3927b4",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "e564c71b7eda60dc25cd78f45f02b43e43fc2b22b96d2d6bb994aedcfe402543",
+          "start_timestamp": "2026-08-17T11:57:36.278605+00:00",
+          "end_timestamp": "2026-08-17T12:09:58.858847+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        },
+        "treatment": {
+          "run_id": "phase12-seed20260816-treatment-cuda-v1",
+          "phase": 12,
+          "seed": 20260816,
+          "arm": "treatment",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "c0dbee0b9b10b7e050e6c4dcc0ad679342f7cc093f52400d04ffecb93a7dbb91",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "e564c71b7eda60dc25cd78f45f02b43e43fc2b22b96d2d6bb994aedcfe402543",
+          "start_timestamp": "2026-08-17T11:57:36.278605+00:00",
+          "end_timestamp": "2026-08-17T12:09:58.858847+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        }
+      }
+    },
+    {
+      "seed": 20260817,
+      "control_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.583333333333334,
+        "DS1_mean": 10.604166666666666,
+        "DS2_mean": 10.5625
+      },
+      "treatment_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.427083333333334,
+        "DS1_mean": 10.4375,
+        "DS2_mean": 10.416666666666666
+      },
+      "overall_delta": -0.15625,
+      "DS1_delta": -0.16666666666666607,
+      "DS2_delta": -0.14583333333333393,
+      "control_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.45711060948081267,
+        "ERI_score_equivalent_action_rate": 0.9187358916478555,
+        "strictly_worse_ERI_score_action_rate": 0.08126410835214447,
+        "mean_ERI_score_penalty": 0.06602708803611738,
+        "mean_probability_mass_on_ERI_optimal_set": 0.8093541769676633,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.08126410835214447,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "treatment_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.4582392776523702,
+        "ERI_score_equivalent_action_rate": 0.9356659142212189,
+        "strictly_worse_ERI_score_action_rate": 0.06433408577878104,
+        "mean_ERI_score_penalty": 0.05417607223476298,
+        "mean_probability_mass_on_ERI_optimal_set": 0.8693128776007056,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.06433408577878104,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "control_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.0978100281668827,
+        "policy_loss_mean": -0.08749438975697849,
+        "ERI_auxiliary_loss_mean": 0.4851005891717505,
+        "entropy_mean": 1.0315638955116273,
+        "pre_clip_gradient_norm_mean": 1.5830923624634743,
+        "gradient_clipping_frequency": 0.9768,
+        "RL_gradient_norm_mean": 1.583092364013195,
+        "weighted_ERI_gradient_norm_mean": 0.0,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 9,
+        "finite": true
+      },
+      "treatment_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.09624098973870278,
+        "policy_loss_mean": -0.12136236523324624,
+        "ERI_auxiliary_loss_mean": 0.3285620575239882,
+        "entropy_mean": 0.7734831276416778,
+        "pre_clip_gradient_norm_mean": 1.8532506311953068,
+        "gradient_clipping_frequency": 0.988,
+        "RL_gradient_norm_mean": 1.830933908610046,
+        "weighted_ERI_gradient_norm_mean": 0.20845380318960438,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.14607947138167007,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 11,
+        "finite": true
+      },
+      "scenario_fingerprint_equal": true,
+      "scenario_fingerprint": "7eac61fba97c85cef27ce7eeb639f3f489e91bb1c460ee225b8882ec4318e6ba",
+      "elapsed_seconds": 808.5905748000368,
+      "run_identity": {
+        "control": {
+          "run_id": "phase12-seed20260817-control-cuda-v1",
+          "phase": 12,
+          "seed": 20260817,
+          "arm": "control",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "da79a67d157870e8ec03781f963fba5690055cc6f7bc695d64081e51659f4f0e",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "7eac61fba97c85cef27ce7eeb639f3f489e91bb1c460ee225b8882ec4318e6ba",
+          "start_timestamp": "2026-08-17T12:09:58.869966+00:00",
+          "end_timestamp": "2026-08-17T12:23:42.084178+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        },
+        "treatment": {
+          "run_id": "phase12-seed20260817-treatment-cuda-v1",
+          "phase": 12,
+          "seed": 20260817,
+          "arm": "treatment",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "1b3e389c891904f3d60f4ae27c9c43ef49178221b628724235f9aa0e1417adcc",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "7eac61fba97c85cef27ce7eeb639f3f489e91bb1c460ee225b8882ec4318e6ba",
+          "start_timestamp": "2026-08-17T12:09:58.869966+00:00",
+          "end_timestamp": "2026-08-17T12:23:42.084178+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        }
+      }
+    },
+    {
+      "seed": 20260818,
+      "control_validation": {
+        "episodes": 96,
+        "mean_relocations": 11.09375,
+        "DS1_mean": 11.375,
+        "DS2_mean": 10.8125
+      },
+      "treatment_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.385416666666666,
+        "DS1_mean": 10.416666666666666,
+        "DS2_mean": 10.354166666666666
+      },
+      "overall_delta": -0.7083333333333339,
+      "DS1_delta": -0.9583333333333339,
+      "DS2_delta": -0.4583333333333339,
+      "control_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.2291196388261851,
+        "ERI_score_equivalent_action_rate": 0.835214446952596,
+        "strictly_worse_ERI_score_action_rate": 0.16478555304740405,
+        "mean_ERI_score_penalty": 0.154627539503386,
+        "mean_probability_mass_on_ERI_optimal_set": 0.6629282182027874,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.16478555304740405,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "treatment_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.31376975169300225,
+        "ERI_score_equivalent_action_rate": 0.9322799097065463,
+        "strictly_worse_ERI_score_action_rate": 0.06772009029345373,
+        "mean_ERI_score_penalty": 0.055869074492099324,
+        "mean_probability_mass_on_ERI_optimal_set": 0.8253442191647083,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.06772009029345373,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "control_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.07041726718153804,
+        "policy_loss_mean": -0.058026705914881314,
+        "ERI_auxiliary_loss_mean": 0.5840407834231853,
+        "entropy_mean": 1.2390561603546142,
+        "pre_clip_gradient_norm_mean": 1.6507076177120208,
+        "gradient_clipping_frequency": 0.964,
+        "RL_gradient_norm_mean": 1.6507076205015183,
+        "weighted_ERI_gradient_norm_mean": 0.0,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 5,
+        "finite": true
+      },
+      "treatment_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.0027688112396746876,
+        "policy_loss_mean": -0.028225097595248373,
+        "ERI_auxiliary_loss_mean": 0.3401849642217159,
+        "entropy_mean": 0.8562210828542709,
+        "pre_clip_gradient_norm_mean": 2.2360020482540133,
+        "gradient_clipping_frequency": 0.9936,
+        "RL_gradient_norm_mean": 2.207435443997383,
+        "weighted_ERI_gradient_norm_mean": 0.2736696819797158,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.15236478631053235,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 16,
+        "finite": true
+      },
+      "scenario_fingerprint_equal": true,
+      "scenario_fingerprint": "9c92ee766bf56fce144b0daed64d0844eda45b25d7176eea0b52c39491d8be0c",
+      "elapsed_seconds": 870.2452640999691,
+      "run_identity": {
+        "control": {
+          "run_id": "phase12-seed20260818-control-cuda-v1",
+          "phase": 12,
+          "seed": 20260818,
+          "arm": "control",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "2f8d586c2921a4c40b9266aeead5634db11279146228506d1ffb18ec7551bc53",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "9c92ee766bf56fce144b0daed64d0844eda45b25d7176eea0b52c39491d8be0c",
+          "start_timestamp": "2026-08-17T12:23:42.094193+00:00",
+          "end_timestamp": "2026-08-17T12:38:27.803428+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        },
+        "treatment": {
+          "run_id": "phase12-seed20260818-treatment-cuda-v1",
+          "phase": 12,
+          "seed": 20260818,
+          "arm": "treatment",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "1d1a6f3f8959dca48330e7db9983d8916429c7f71ffeb32719cec539bc67e8c6",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "9c92ee766bf56fce144b0daed64d0844eda45b25d7176eea0b52c39491d8be0c",
+          "start_timestamp": "2026-08-17T12:23:42.094193+00:00",
+          "end_timestamp": "2026-08-17T12:38:27.803428+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        }
+      }
+    },
+    {
+      "seed": 20260819,
+      "control_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.21875,
+        "DS1_mean": 10.375,
+        "DS2_mean": 10.0625
+      },
+      "treatment_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.302083333333334,
+        "DS1_mean": 10.3125,
+        "DS2_mean": 10.291666666666666
+      },
+      "overall_delta": 0.08333333333333393,
+      "DS1_delta": -0.0625,
+      "DS2_delta": 0.22916666666666607,
+      "control_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.39954853273137697,
+        "ERI_score_equivalent_action_rate": 0.9288939051918735,
+        "strictly_worse_ERI_score_action_rate": 0.07110609480812641,
+        "mean_ERI_score_penalty": 0.06038374717832957,
+        "mean_probability_mass_on_ERI_optimal_set": 0.7700185357208278,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.07110609480812641,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "treatment_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.4322799097065463,
+        "ERI_score_equivalent_action_rate": 0.9401805869074492,
+        "strictly_worse_ERI_score_action_rate": 0.05981941309255079,
+        "mean_ERI_score_penalty": 0.04853273137697517,
+        "mean_probability_mass_on_ERI_optimal_set": 0.7628823793987254,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.05981941309255079,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "control_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.019701555585861206,
+        "policy_loss_mean": -0.007791115293698385,
+        "ERI_auxiliary_loss_mean": 0.5774632976308465,
+        "entropy_mean": 1.1910440621376037,
+        "pre_clip_gradient_norm_mean": 1.4585615660429,
+        "gradient_clipping_frequency": 0.9728,
+        "RL_gradient_norm_mean": 1.4585615644454957,
+        "weighted_ERI_gradient_norm_mean": 0.0,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 25,
+        "finite": true
+      },
+      "treatment_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.06520275299921632,
+        "policy_loss_mean": -0.0928584525612805,
+        "ERI_auxiliary_loss_mean": 0.3665173296786845,
+        "entropy_mean": 0.8996034504890442,
+        "pre_clip_gradient_norm_mean": 1.8893021091461182,
+        "gradient_clipping_frequency": 0.9896,
+        "RL_gradient_norm_mean": 1.8625978049099445,
+        "weighted_ERI_gradient_norm_mean": 0.2520221439912915,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.183767337273875,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 20,
+        "finite": true
+      },
+      "scenario_fingerprint_equal": true,
+      "scenario_fingerprint": "9f91fe40f6e5f9d91f74aeb5b298a4602c41702f8d1f76f0b0bafe8c4fc6c4dd",
+      "elapsed_seconds": 929.853865800018,
+      "run_identity": {
+        "control": {
+          "run_id": "phase12-seed20260819-control-cuda-v1",
+          "phase": 12,
+          "seed": 20260819,
+          "arm": "control",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "eb93628232d2c65871c9a77630869851756da5f3730a15d51228404e124fcce4",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "9f91fe40f6e5f9d91f74aeb5b298a4602c41702f8d1f76f0b0bafe8c4fc6c4dd",
+          "start_timestamp": "2026-08-17T12:38:27.817517+00:00",
+          "end_timestamp": "2026-08-17T12:54:12.837820+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        },
+        "treatment": {
+          "run_id": "phase12-seed20260819-treatment-cuda-v1",
+          "phase": 12,
+          "seed": 20260819,
+          "arm": "treatment",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "daea8436a72d72575e9f10cb50f5b0535612ff070c2219dff943e776383d79d7",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "9f91fe40f6e5f9d91f74aeb5b298a4602c41702f8d1f76f0b0bafe8c4fc6c4dd",
+          "start_timestamp": "2026-08-17T12:38:27.817517+00:00",
+          "end_timestamp": "2026-08-17T12:54:12.837820+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        }
+      }
+    },
+    {
+      "seed": 20260820,
+      "control_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.822916666666666,
+        "DS1_mean": 10.8125,
+        "DS2_mean": 10.833333333333334
+      },
+      "treatment_validation": {
+        "episodes": 96,
+        "mean_relocations": 10.520833333333334,
+        "DS1_mean": 10.4375,
+        "DS2_mean": 10.604166666666666
+      },
+      "overall_delta": -0.30208333333333215,
+      "DS1_delta": -0.375,
+      "DS2_delta": -0.22916666666666785,
+      "control_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.43792325056433407,
+        "ERI_score_equivalent_action_rate": 0.8984198645598194,
+        "strictly_worse_ERI_score_action_rate": 0.10158013544018059,
+        "mean_ERI_score_penalty": 0.0806997742663657,
+        "mean_probability_mass_on_ERI_optimal_set": 0.7415399988608657,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.10158013544018059,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "treatment_ERI_diagnostic": {
+        "episodes": 96,
+        "public_decision_states": 886,
+        "exact_action_agreement_rate": 0.45598194130925507,
+        "ERI_score_equivalent_action_rate": 0.8950338600451467,
+        "strictly_worse_ERI_score_action_rate": 0.10496613995485328,
+        "mean_ERI_score_penalty": 0.10214446952595936,
+        "mean_probability_mass_on_ERI_optimal_set": 0.8516459741790486,
+        "greedy_action_outside_ERI_optimal_set_rate": 0.10496613995485328,
+        "ERI_optimal_set_size_distribution": {
+          "1": 288,
+          "2": 186,
+          "3": 149,
+          "4": 91,
+          "5": 78,
+          "6": 43,
+          "7": 30,
+          "8": 12,
+          "9": 9
+        },
+        "multiple_ERI_optimal_destinations_rate": 0.6749435665914221,
+        "outside_set_downstream_benefit": {
+          "measured": false,
+          "reason": "Not estimated: branching from ERI-controlled states would condition on realized hidden future orders and add a high-variance post-hoc endpoint."
+        }
+      },
+      "control_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.14984973161555826,
+        "policy_loss_mean": -0.13893082415377722,
+        "ERI_auxiliary_loss_mean": 0.5090334394350647,
+        "entropy_mean": 1.0918907566785812,
+        "pre_clip_gradient_norm_mean": 1.6577166054964065,
+        "gradient_clipping_frequency": 0.976,
+        "RL_gradient_norm_mean": 1.6577166090965272,
+        "weighted_ERI_gradient_norm_mean": 0.0,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.0,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 13,
+        "finite": true
+      },
+      "treatment_optimization": {
+        "iterations": 1250,
+        "episodes": 5000,
+        "total_loss_mean": -0.03913601879980415,
+        "policy_loss_mean": -0.06239932444725128,
+        "ERI_auxiliary_loss_mean": 0.3159413450349122,
+        "entropy_mean": 0.8330829513549804,
+        "pre_clip_gradient_norm_mean": 2.0154680136203766,
+        "gradient_clipping_frequency": 0.9936,
+        "RL_gradient_norm_mean": 1.9859732657909392,
+        "weighted_ERI_gradient_norm_mean": 0.2166241786301136,
+        "weighted_ERI_to_RL_gradient_ratio_mean": 0.13370618936469905,
+        "invalid_actions": 0,
+        "truncations": 0,
+        "numerical_failures": 0,
+        "scenario_mismatches": 0,
+        "FGB_refreshes": 6,
+        "finite": true
+      },
+      "scenario_fingerprint_equal": true,
+      "scenario_fingerprint": "ec5b297a8b80e7dc94abfe51a5ebf2e5cad638ad92871a0fd08ada2724b58490",
+      "elapsed_seconds": 898.0492088000174,
+      "run_identity": {
+        "control": {
+          "run_id": "phase12-seed20260820-control-cuda-v1",
+          "phase": 12,
+          "seed": 20260820,
+          "arm": "control",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "a52bc839335deaeb89268a81479beaf8a63c385774d915352bc012285ee07117",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "ec5b297a8b80e7dc94abfe51a5ebf2e5cad638ad92871a0fd08ada2724b58490",
+          "start_timestamp": "2026-08-17T12:54:12.849124+00:00",
+          "end_timestamp": "2026-08-17T13:09:25.557289+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        },
+        "treatment": {
+          "run_id": "phase12-seed20260820-treatment-cuda-v1",
+          "phase": 12,
+          "seed": 20260820,
+          "arm": "treatment",
+          "device": "cuda:0",
+          "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "pytorch_version": "2.13.0+cu132",
+          "cuda_version": "13.2",
+          "config_hash": "9af371f67c9e0368c6291ff7852f061957c03846ab1dd486389439ab10dc2208",
+          "code_sha": "314fec5b24d9fe8e3d461206f539e02e5f3c8319",
+          "scenario_fingerprint": "ec5b297a8b80e7dc94abfe51a5ebf2e5cad638ad92871a0fd08ada2724b58490",
+          "start_timestamp": "2026-08-17T12:54:12.849124+00:00",
+          "end_timestamp": "2026-08-17T13:09:25.557289+00:00",
+          "training_episodes": 5000,
+          "validation_budget": 96
+        }
+      }
+    }
+  ],
+  "favorable_seed_counts": {
+    "overall": 4,
+    "DS1": 5,
+    "DS2": 4
+  },
+  "pooled_paired_bootstrap": {
+    "method": "hierarchical paired bootstrap: seed -> base layout, preserving DS1/DS2 blocks",
+    "repetitions": 20000,
+    "bootstrap_seed": 20260817,
+    "overall": {
+      "delta": -0.35833333333333334,
+      "ci95_low": -0.6583333333333333,
+      "ci95_high": -0.07083333333333333
+    },
+    "DS1": {
+      "delta": -0.4041666666666667,
+      "ci95_low": -0.75,
+      "ci95_high": -0.125
+    },
+    "DS2": {
+      "delta": -0.3125,
+      "ci95_low": -0.6958333333333333,
+      "ci95_high": 0.0375
+    }
+  },
+  "pooled_ERI_diagnostics": {
+    "exact_action_agreement_rate": {
+      "control_mean_across_seeds": 0.3514672686230248,
+      "treatment_mean_across_seeds": 0.3966139954853273
+    },
+    "ERI_score_equivalent_action_rate": {
+      "control_mean_across_seeds": 0.8860045146726861,
+      "treatment_mean_across_seeds": 0.928668171557562
+    },
+    "strictly_worse_ERI_score_action_rate": {
+      "control_mean_across_seeds": 0.11399548532731377,
+      "treatment_mean_across_seeds": 0.07133182844243793
+    },
+    "mean_ERI_score_penalty": {
+      "control_mean_across_seeds": 0.09751693002257336,
+      "treatment_mean_across_seeds": 0.06230248306997742
+    },
+    "mean_probability_mass_on_ERI_optimal_set": {
+      "control_mean_across_seeds": 0.7579038842953321,
+      "treatment_mean_across_seeds": 0.8309458131692742
+    },
+    "greedy_action_outside_ERI_optimal_set_rate": {
+      "control_mean_across_seeds": 0.11399548532731377,
+      "treatment_mean_across_seeds": 0.07133182844243793
+    }
+  },
+  "pooled_optimization": {
+    "policy_loss_mean": {
+      "control_mean_across_seeds": -0.07680426727607496,
+      "treatment_mean_across_seeds": -0.0646855267319097
+    },
+    "ERI_auxiliary_loss_mean": {
+      "control_mean_across_seeds": 0.5446772261116187,
+      "treatment_mean_across_seeds": 0.3362600909438115
+    },
+    "entropy_mean": {
+      "control_mean_across_seeds": 1.1548669826698303,
+      "treatment_mean_across_seeds": 0.8331411484920979
+    },
+    "pre_clip_gradient_norm_mean": {
+      "control_mean_across_seeds": 1.5270567680954934,
+      "treatment_mean_across_seeds": 1.9669686025202275
+    },
+    "gradient_clipping_frequency": {
+      "control_mean_across_seeds": 0.9659199999999999,
+      "treatment_mean_across_seeds": 0.9910399999999999
+    },
+    "weighted_ERI_to_RL_gradient_ratio_mean": {
+      "control_mean_across_seeds": 0.0,
+      "treatment_mean_across_seeds": 0.15320384401902298
+    },
+    "FGB_refreshes": {
+      "control_mean_across_seeds": 13.4,
+      "treatment_mean_across_seeds": 12.8
+    }
+  },
+  "formal_test_episode_usage": 0,
+  "phase8_raw_rows_accessed": false,
+  "formal_test_rerun": false,
+  "success_gate": {
+    "frozen_thresholds": {
+      "required_overall_favorable_seeds": 4,
+      "maximum_pooled_CI_upper_for_non_large_degradation": 0.5,
+      "severe_dataset_degradation": 0.25
+    },
+    "counts": {
+      "overall_favorable": 4,
+      "strictly_worse_rate_lower": 4,
+      "mean_ERI_penalty_lower": 4
+    },
+    "checks": {
+      "at_least_4_of_5_overall_favorable": true,
+      "pooled_overall_delta_favorable": true,
+      "pooled_CI_excludes_large_positive_degradation": true,
+      "strictly_worse_rate_lower_at_least_4_of_5": true,
+      "mean_ERI_penalty_lower_in_majority": true,
+      "no_severe_stable_dataset_opposition": true,
+      "no_integrity_regression": true,
+      "cuda_execution_integrity": true,
+      "no_leakage": true
+    },
+    "passed": true
+  },
+  "ERI_AUX_MULTISEED_REPLICATION_SUCCESS": "YES",
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.3"
+  }
+}
