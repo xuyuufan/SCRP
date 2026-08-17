@@ -194,16 +194,23 @@ class _PointerDecoder(nn.Module):
 
     def evaluate(self, encoder_output, action_mask, actions, node_padding_mask=None):
         """Re-evaluate log-prob and entropy for a batch of actions."""
+        log_probs = self.log_probabilities(
+            encoder_output, action_mask, node_padding_mask=node_padding_mask
+        )
+        selected  = log_probs.gather(1, actions.long().unsqueeze(1)).squeeze(1)
+        probs     = log_probs.exp()
+        entropy   = -(probs * log_probs.clamp(min=torch.finfo(log_probs.dtype).min)).sum(-1)
+        return selected, entropy
+
+    def log_probabilities(self, encoder_output, action_mask, node_padding_mask=None):
+        """Return normalized action log-probabilities after applying masks."""
         query     = self._build_query(encoder_output, node_padding_mask)
         context   = self.cross_attn(
             query, encoder_output, encoder_output, node_padding_mask
         )
         context   = self.norm(query + context)
         log_probs = self._pointer_scores(context, encoder_output, action_mask)
-        selected  = log_probs.gather(1, actions.long().unsqueeze(1)).squeeze(1)
-        probs     = log_probs.exp()
-        entropy   = -(probs * log_probs.clamp(min=torch.finfo(log_probs.dtype).min)).sum(-1)
-        return selected, entropy
+        return log_probs
 
 
 # ================================================================ #
@@ -414,3 +421,17 @@ class HierPolicyNetwork(nn.Module):
             return self.low_decoder.evaluate(
                 enc_out, action_mask, actions, node_padding_mask
             )
+
+    def action_log_probabilities(
+        self,
+        flat_obs: "torch.Tensor",
+        action_mask: "torch.Tensor",
+        mode: str = "high",
+        node_padding_mask=None,
+    ):
+        """Return differentiable masked log-probabilities for every action."""
+        enc_out = self.encode(flat_obs, node_padding_mask)
+        decoder = self.high_decoder if mode == "high" else self.low_decoder
+        return decoder.log_probabilities(
+            enc_out, action_mask, node_padding_mask=node_padding_mask
+        )
