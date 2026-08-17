@@ -45,6 +45,10 @@ import torch.nn.functional as F
 from torch.distributions import Categorical
 
 
+O2_SHARED_ENCODER_V1 = "O2_SHARED_ENCODER_V1"
+O2_ORDER_XATTN_V1 = "O2_ORDER_XATTN_V1"
+
+
 # ================================================================ #
 #  Shared attention and encoder blocks (identical to pg_fgb)        #
 # ================================================================ #
@@ -414,3 +418,107 @@ class HierPolicyNetwork(nn.Module):
             return self.low_decoder.evaluate(
                 enc_out, action_mask, actions, node_padding_mask
             )
+
+
+class OrderAwareHierPolicyNetwork(HierPolicyNetwork):
+    """O2 prototype with explicit stack-to-revealed-order cross-attention.
+
+    The original :class:`HierPolicyNetwork` is intentionally unchanged for
+    Phase 7B checkpoint compatibility. This follow-up partitions the O2 nodes
+    as ``S stacks | Mmax order | context``. Stack/context and order nodes use
+    separate encoders, after which every stack query attends only to real
+    revealed-order keys/values. The existing LOW pointer still scores exactly
+    the first ``S`` stack candidates.
+    """
+
+    architecture_version = O2_ORDER_XATTN_V1
+
+    def __init__(
+        self,
+        *,
+        num_stacks: int,
+        mmax: int,
+        embed_dim: int = 128,
+        num_enc_layers: int = 2,
+        num_heads: int = 4,
+        ffn_dim: int = 256,
+        clip_constant: float = 10.0,
+        dropout: float = 0.0,
+        feature_scale: "torch.Tensor | None" = None,
+    ):
+        if num_stacks <= 0 or mmax <= 0:
+            raise ValueError("num_stacks and mmax must be positive")
+        super().__init__(
+            embed_dim=embed_dim,
+            num_enc_layers=num_enc_layers,
+            num_heads=num_heads,
+            ffn_dim=ffn_dim,
+            clip_constant=clip_constant,
+            dropout=dropout,
+            feature_scale=feature_scale,
+        )
+        # Remove the inherited shared encoder so no unused formal-O2 parameters
+        # enter the prototype state dict or optimizer.
+        del self.encoder
+        self.order_aware_reference_num_stacks = num_stacks
+        self.order_aware_mmax = mmax
+        self.stack_context_encoder = _TransformerEncoder(
+            self.INPUT_DIM, embed_dim, num_enc_layers, num_heads, ffn_dim, dropout
+        )
+        self.order_encoder = _TransformerEncoder(
+            self.INPUT_DIM, embed_dim, num_enc_layers, num_heads, ffn_dim, dropout
+        )
+        self.stack_to_order_attention = _MultiHeadAttention(
+            embed_dim, num_heads, dropout
+        )
+        self.stack_order_norm = nn.LayerNorm(embed_dim)
+
+    def encode_partitions(self, flat_obs, node_padding_mask=None):
+        """Return fused stacks, encoded order nodes, and encoded context."""
+
+        nodes = self._reshape(flat_obs)
+        S = nodes.shape[1] - self.order_aware_mmax - 1
+        if S <= 0:
+            raise ValueError("order-aware O2 observation has no stack nodes")
+        if node_padding_mask is None:
+            raise ValueError("order-aware O2 requires an explicit node padding mask")
+        if tuple(node_padding_mask.shape) != tuple(nodes.shape[:2]):
+            raise ValueError("node padding mask shape mismatch")
+        if node_padding_mask[:, :S].any():
+            raise ValueError("stack nodes cannot be padding")
+        if node_padding_mask[:, -1].any():
+            raise ValueError("context node cannot be padding")
+
+        M = self.order_aware_mmax
+        stack_context = torch.cat((nodes[:, :S], nodes[:, -1:]), dim=1)
+        stack_context_embeddings = self.stack_context_encoder(stack_context)
+        stack_embeddings = stack_context_embeddings[:, :S]
+        context_embedding = stack_context_embeddings[:, -1:]
+
+        order_nodes = nodes[:, S : S + M]
+        order_padding = node_padding_mask[:, S : S + M]
+        # Avoid all-masked softmax NaNs for defensive synthetic states. The
+        # resulting cross-attention is explicitly zeroed for those rows.
+        no_real_order = order_padding.all(dim=1)
+        safe_order_padding = order_padding.clone()
+        safe_order_padding[no_real_order, 0] = False
+        order_embeddings = self.order_encoder(order_nodes, safe_order_padding)
+        order_context = self.stack_to_order_attention(
+            stack_embeddings,
+            order_embeddings,
+            order_embeddings,
+            safe_order_padding,
+        )
+        order_context = torch.where(
+            no_real_order[:, None, None],
+            torch.zeros_like(order_context),
+            order_context,
+        )
+        fused_stacks = self.stack_order_norm(stack_embeddings + order_context)
+        return fused_stacks, order_embeddings, context_embedding
+
+    def encode(self, flat_obs, node_padding_mask=None):
+        stacks, orders, context = self.encode_partitions(
+            flat_obs, node_padding_mask
+        )
+        return torch.cat((stacks, orders, context), dim=1)
