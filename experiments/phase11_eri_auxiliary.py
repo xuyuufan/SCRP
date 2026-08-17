@@ -56,14 +56,26 @@ def _fingerprint(samples) -> list[tuple[str, str, int]]:
 
 
 def _train_chunk(trainer: SCRPFormalTrainer, iterations: int, rng_state):
-    torch.set_rng_state(rng_state.clone())
+    cpu_state, cuda_states = rng_state
+    torch.set_rng_state(cpu_state.clone())
+    if cuda_states is not None:
+        torch.cuda.set_rng_state_all([state.clone() for state in cuda_states])
     metrics = trainer.train_iterations(iterations)
-    return metrics, torch.get_rng_state().clone()
+    return metrics, (
+        torch.get_rng_state().clone(),
+        [state.clone() for state in torch.cuda.get_rng_state_all()]
+        if trainer.device.type == "cuda" else None,
+    )
 
 
 def _policy_probabilities(policy, observation, legal, stacks: int):
-    observation_t = torch.tensor(observation, dtype=torch.float32).unsqueeze(0)
-    forbidden_t = torch.tensor(~np.asarray(legal, dtype=bool)).unsqueeze(0)
+    device = next(policy.parameters()).device
+    observation_t = torch.tensor(
+        observation, dtype=torch.float32, device=device
+    ).unsqueeze(0)
+    forbidden_t = torch.tensor(
+        ~np.asarray(legal, dtype=bool), device=device
+    ).unsqueeze(0)
     node_mask = make_node_padding_mask(observation_t, "O2", stacks)
     with torch.no_grad():
         log_probabilities = policy.action_log_probabilities(
@@ -85,7 +97,8 @@ def validation_rows(policy, config, manifest, provider, refs):
                     schedule.seed_for("validation", ref.base_instance_id, 0),
                 )
                 trajectory = run_formal_episode(
-                    provider(sample), sample, policy, config, greedy=True
+                    provider(sample), sample, policy, config, greedy=True,
+                    device=next(policy.parameters()).device,
                 )
                 if not trajectory.terminated or trajectory.truncated or trajectory.invalid_actions:
                     raise RuntimeError("Phase 11 validation rollout failed")
@@ -305,7 +318,7 @@ def run_comparison(manifest: SplitManifest, provider, treatment_config: FormalTr
         "O2", 5, 3, Mmax=6, embed_dim=treatment_config.embed_dim,
         num_encoder_layers=treatment_config.num_encoder_layers,
         num_heads=treatment_config.num_heads, ffn_dim=treatment_config.ffn_dim,
-        clip_constant=treatment_config.clip_constant,
+        clip_constant=treatment_config.clip_constant, device=treatment_config.device,
     )
     control_trainer = SCRPFormalTrainer(
         control_config, manifest, provider, allowed_base_ids=allowed,
@@ -315,9 +328,16 @@ def run_comparison(manifest: SplitManifest, provider, treatment_config: FormalTr
         treatment_config, manifest, provider, allowed_base_ids=allowed,
         policy=copy.deepcopy(initial_policy),
     )
-    common_rng = torch.Generator().manual_seed(treatment_config.seed + 11).get_state()
-    control_rng = common_rng.clone()
-    treatment_rng = common_rng.clone()
+    torch.manual_seed(treatment_config.seed + 11)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(treatment_config.seed + 11)
+    common_rng = (
+        torch.get_rng_state().clone(),
+        [state.clone() for state in torch.cuda.get_rng_state_all()]
+        if treatment_config.device.startswith("cuda") else None,
+    )
+    control_rng = (common_rng[0].clone(), common_rng[1])
+    treatment_rng = (common_rng[0].clone(), common_rng[1])
 
     smoke_iterations = SMOKE_EPISODES // treatment_config.batch_size
     control_smoke, control_rng = _train_chunk(control_trainer, smoke_iterations, control_rng)
