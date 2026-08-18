@@ -1,0 +1,125 @@
+{
+  "phase14_version": "phase14-rl-vs-eri-development-v1",
+  "scope": "DEVELOPMENT_ONLY_DIRECT_RL_VS_ERI",
+  "status": "BLOCKED_MISSING_FROZEN_CHECKPOINTS",
+  "base_sha": "6cc94b667f017044ab9cbf530f043088ec02cac0",
+  "checkpoint_selection": {
+    "rule": "fallback_to_phase13_preregistered_primary_endpoint_when_5k_10k_15k_checkpoints_are_not_recoverable",
+    "selection_inputs": "Phase 13 artifacts only; Phase 14 ERI results are prohibited",
+    "preferred_rule_if_all_candidates_exist": "argmin Phase 13 fixed-validation Treatment mean relocations among 5k, 10k, 15k; ties choose the smaller episode",
+    "fallback_reason": "Phase 13 persisted validation summaries but did not persist any 5k, 10k, or 15k Treatment policy checkpoint; retraining to recreate one is prohibited",
+    "frozen_before_eri_evaluation": true,
+    "selections": [
+      {
+        "seed": 20260816,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260816-treatment-15000.pt",
+        "reason": "Conservative fallback to the Phase 13 preregistered 15k primary endpoint because candidate policies were not persisted",
+        "present_at_freeze": false
+      },
+      {
+        "seed": 20260818,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260818-treatment-15000.pt",
+        "reason": "Conservative fallback to the Phase 13 preregistered 15k primary endpoint because candidate policies were not persisted",
+        "present_at_freeze": false
+      },
+      {
+        "seed": 20260819,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260819-treatment-15000.pt",
+        "reason": "Conservative fallback to the Phase 13 preregistered 15k primary endpoint because candidate policies were not persisted",
+        "present_at_freeze": false
+      }
+    ]
+  },
+  "checkpoint_preflight": {
+    "ready": false,
+    "records": [
+      {
+        "seed": 20260816,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260816-treatment-15000.pt",
+        "present": false,
+        "sha256": null,
+        "metadata_valid": false,
+        "metadata_error": null
+      },
+      {
+        "seed": 20260818,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260818-treatment-15000.pt",
+        "present": false,
+        "sha256": null,
+        "metadata_valid": false,
+        "metadata_error": null
+      },
+      {
+        "seed": 20260819,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260819-treatment-15000.pt",
+        "present": false,
+        "sha256": null,
+        "metadata_valid": false,
+        "metadata_error": null
+      }
+    ],
+    "missing": [
+      "checkpoints/phase13-longrun-stability/seed20260816-treatment-15000.pt",
+      "checkpoints/phase13-longrun-stability/seed20260818-treatment-15000.pt",
+      "checkpoints/phase13-longrun-stability/seed20260819-treatment-15000.pt"
+    ],
+    "invalid": [],
+    "new_training_performed": false,
+    "eri_evaluation_started": false
+  },
+  "development_holdout": {
+    "manifest": "experiments/splits/scrp_split_v1.json",
+    "source_split": "validation",
+    "selection_rule": "For every sorted parameter group, exclude the lexicographically first validation base layout used by fixed_development_refs(per_group=1), then include the remaining four",
+    "historical_limitation": "The full validation split was evaluated during the earlier Phase 7B training workflow; this is the maximum legal development-only holdout and is disjoint from the Phase 11/12/13 fixed probes, lambda selection, and current checkpoint selection, but it is not globally untouched development data",
+    "excluded_prior_selection_base_layouts": 48,
+    "base_layouts": 192,
+    "datasets": [
+      "DS1",
+      "DS2"
+    ],
+    "static_variants": 384,
+    "scenario_indices": {
+      "start": 0,
+      "count": 20
+    },
+    "paired_coordinates_per_seed": 7680,
+    "total_paired_coordinates": 23040,
+    "test_split_usage": 0,
+    "verified_base_layouts": 192
+  },
+  "cuda_identity": {
+    "device": "cuda:0",
+    "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "pytorch_version": "2.13.0+cu132",
+    "pytorch_cuda_runtime": "13.2",
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "driver_version": "595.97",
+    "model_parameters_on_cuda": false,
+    "nvidia_smi_python_process_seen": false,
+    "reason": "No Phase 13 policy checkpoint was available to load"
+  },
+  "metrics": null,
+  "RL_BEATS_ERI_DEVELOPMENT": "NOT_EVALUATED",
+  "blocker": "Phase 13 did not persist the frozen 15k Treatment policies. Phase 14 is not authorized to retrain or reconstruct them, so no RL-vs-ERI rollout ran.",
+  "formal_test_episode_usage": 0,
+  "phase8_raw_rows_accessed": false,
+  "formal_test_rerun": false,
+  "test_split_accessed": false,
+  "new_training_performed": false,
+  "test_suite": {
+    "command": "py -3.12 -m pytest -q",
+    "passed": 256,
+    "failed": 0,
+    "warnings": 1,
+    "warning_note": "Synthetic constant-difference t-test emitted the expected SciPy precision-loss warning"
+  },
+  "OPTIMIZATION_STABILITY_WARNING": "YES"
+}

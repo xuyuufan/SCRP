@@ -1,0 +1,89 @@
+{
+  "phase14_version": "phase14-rl-vs-eri-development-v1",
+  "base_sha": "6cc94b667f017044ab9cbf530f043088ec02cac0",
+  "stacked_on_pr": 14,
+  "stacked_on_branch": "phase/scrp-phase-13-longrun-stability",
+  "scope": "DEVELOPMENT_ONLY_DIRECT_RL_VS_ERI",
+  "research_question": "Does the best frozen development-stage RL policy match or beat ERI under paired public-information evaluation?",
+  "delta_definition": "RL_minus_ERI",
+  "frozen_policy_seeds": [20260816, 20260818, 20260819],
+  "checkpoint_selection": {
+    "rule": "fallback_to_phase13_preregistered_primary_endpoint_when_5k_10k_15k_checkpoints_are_not_recoverable",
+    "selection_inputs": "Phase 13 artifacts only; Phase 14 ERI results are prohibited",
+    "preferred_rule_if_all_candidates_exist": "argmin Phase 13 fixed-validation Treatment mean relocations among 5k, 10k, 15k; ties choose the smaller episode",
+    "fallback_reason": "Phase 13 persisted validation summaries but did not persist any 5k, 10k, or 15k Treatment policy checkpoint; retraining to recreate one is prohibited",
+    "frozen_before_eri_evaluation": true,
+    "selections": [
+      {
+        "seed": 20260816,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260816-treatment-15000.pt",
+        "reason": "Conservative fallback to the Phase 13 preregistered 15k primary endpoint because candidate policies were not persisted",
+        "present_at_freeze": false
+      },
+      {
+        "seed": 20260818,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260818-treatment-15000.pt",
+        "reason": "Conservative fallback to the Phase 13 preregistered 15k primary endpoint because candidate policies were not persisted",
+        "present_at_freeze": false
+      },
+      {
+        "seed": 20260819,
+        "episode": 15000,
+        "relative_path": "checkpoints/phase13-longrun-stability/seed20260819-treatment-15000.pt",
+        "reason": "Conservative fallback to the Phase 13 preregistered 15k primary endpoint because candidate policies were not persisted",
+        "present_at_freeze": false
+      }
+    ]
+  },
+  "development_holdout": {
+    "manifest": "experiments/splits/scrp_split_v1.json",
+    "source_split": "validation",
+    "selection_rule": "For every sorted parameter group, exclude the lexicographically first validation base layout used by fixed_development_refs(per_group=1), then include the remaining four",
+    "historical_limitation": "The full validation split was evaluated during the earlier Phase 7B training workflow; this is the maximum legal development-only holdout and is disjoint from the Phase 11/12/13 fixed probes, lambda selection, and current checkpoint selection, but it is not globally untouched development data",
+    "excluded_prior_selection_base_layouts": 48,
+    "base_layouts": 192,
+    "datasets": ["DS1", "DS2"],
+    "static_variants": 384,
+    "scenario_indices": {"start": 0, "count": 20},
+    "paired_coordinates_per_seed": 7680,
+    "total_paired_coordinates": 23040,
+    "test_split_usage": 0
+  },
+  "evaluation": {
+    "device": "cuda:0",
+    "policy_action": "argmax legal policy probability with repository deterministic tie handling",
+    "policy_mode": "eval",
+    "gradient_enabled": false,
+    "online_updates": false,
+    "eri_version": "eri_reproduction_v1",
+    "common_initial_state": true,
+    "common_scenario_realization": true,
+    "public_information_only": true,
+    "bootstrap": {
+      "method": "hierarchical paired bootstrap seed -> dataset -> base layout -> scenario",
+      "repetitions": 20000,
+      "seed": 20260818
+    }
+  },
+  "success_gate": {
+    "pooled_delta_below_zero": true,
+    "pooled_ci95_upper_below_zero": true,
+    "minimum_favorable_seeds": 2,
+    "DS1_delta_not_above_zero": true,
+    "DS2_delta_not_above_zero": true,
+    "paired_distribution_consistent": true,
+    "requires_zero_invalid_actions": true,
+    "requires_zero_truncations": true,
+    "requires_zero_numerical_failures": true,
+    "requires_zero_scenario_mismatches": true,
+    "requires_zero_hidden_information_leaks": true,
+    "requires_frozen_checkpoint_selection": true,
+    "requires_zero_test_split_usage": true
+  },
+  "phase8_raw_access": "PROHIBITED",
+  "formal_test_rerun": "PROHIBITED",
+  "new_training": "PROHIBITED",
+  "optimization_stability_warning": "YES"
+}
