@@ -1,0 +1,71 @@
+{
+  "phase13_version": "phase13-longrun-stability-v1",
+  "base_main_sha": "dbb18a5e50a7309e9bbc8f3f6c4e38c37cff89c2",
+  "scope": "DEVELOPMENT_ONLY_TRAIN_VALIDATION",
+  "frozen_seeds": [20260816, 20260818, 20260819],
+  "seed_selection_rationale": {
+    "20260816": "Phase 12 clearly favorable seed",
+    "20260818": "Phase 12 clearly favorable seed",
+    "20260819": "Phase 12 only overall unfavorable seed"
+  },
+  "episodes_per_arm": 15000,
+  "total_training_episodes": 90000,
+  "validation_checkpoints": [2500, 5000, 7500, 10000, 12500, 15000],
+  "control_eri_aux_coefficient": 0.0,
+  "treatment_config": {
+    "training_protocol_version": "scrp-training-protocol-v1",
+    "dataset_version": "ku-galle-bacci-ds1-ds2-ec672df",
+    "split_manifest_version": "scrp-static-split-v1",
+    "observation_version": "O2",
+    "Mmax": 6,
+    "feature_dim": 12,
+    "training_strategy": "mixed_ds1_ds2_base_balanced_bucket_by_S",
+    "optimizer": "Adam",
+    "learning_rate": 0.00025,
+    "gamma": 1.0,
+    "entropy_coeff": 0.01,
+    "batch_size": 4,
+    "gradient_clip": 0.5,
+    "baseline_type": "frozen_greedy_policy",
+    "baseline_update_rule": "paired_one_sided_t_test_p_lt_0.05",
+    "seed": 20260816,
+    "device": "cuda:0",
+    "checkpoint_interval": 10,
+    "validation_interval": 10,
+    "embed_dim": 32,
+    "num_encoder_layers": 1,
+    "num_heads": 4,
+    "ffn_dim": 64,
+    "clip_constant": 10.0,
+    "max_steps": 10000,
+    "hyperparameter_status": "NOT FINAL HYPERPARAMETERS",
+    "eri_aux_coefficient": 0.1,
+    "eri_auxiliary_version": "eri-set-public-v1"
+  },
+  "trajectory_classification": {
+    "material_change": 0.25,
+    "high_range": 1.0,
+    "high_variance_sign_changes": 2
+  },
+  "success_gate": {
+    "required_endpoint_favorable_seeds": 2,
+    "maximum_endpoint_CI_upper_for_non_large_degradation": 0.5,
+    "severe_dataset_degradation": 0.25,
+    "requires_no_consecutive_systematic_late_reversal": true,
+    "requires_endpoint_ERI_mechanism_retention": true,
+    "requires_no_integrity_failure": true,
+    "requires_cuda_integrity": true
+  },
+  "optimization_warning_gate": {
+    "late_clipping_frequency": 0.99,
+    "consecutive_late_windows": 2,
+    "entropy_decline": 0.1,
+    "validation_material_change": 0.25,
+    "gradient_increase_ratio": 1.2,
+    "divergent_seed_delta_range": 1.0,
+    "divergent_seed_entropy_range": 0.5
+  },
+  "formal_test_access": "PROHIBITED",
+  "adaptive_early_stopping": false,
+  "automatic_25k_extension": false
+}
